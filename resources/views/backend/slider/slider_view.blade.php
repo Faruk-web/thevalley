@@ -4,7 +4,7 @@
 
 @section('admin')
 
-<div class="container-full"> 
+<div class="container-full">
  <section class="content">
 
 <div class="row">
@@ -25,48 +25,39 @@
                          <th>Discraption</th>
                          <th>Status</th>
                          <th>Action</th>
-                        
+
                      </tr>
                  </thead>
                  <tbody>
-
                    @foreach ($sliders as $item)
                    <tr>
                     <td> <img src="{{ asset($item->slider_img) }}" style="height:80px; width:200px;"> </td>
-                       <td>{{ $item->title }}r</td>
+                       <td>{{ $item->title }}</td>
                        <td>{{ $item->description }}</td>
-
                        <td>
-                        @if($item->status == 1)
+                        @if($item->status == '1')
                            <span class="badge badge-pill badge-success">Active</span>
                         @else
-                        <span class="badge badge-pill badge-success">Deactive</span>
+                        <span class="badge badge-pill badge-warning">Deactive</span>
                         @endif
                      </td>
-
                        <td width="30%">
                         <a href="{{ route('slider.edit',$item->id) }}" class="btn btn-info btn-sm" title="Edit Data"><i class="fa fa-pencil"></i> </a>
-
                            <a href="{{ route('slider.delete', $item->id ) }}" class="btn btn-danger btn-sm" id="#">Delete</a>
-                       
                            @if($item->status == 1)
                            <a href="{{ route('slider.deactive',$item->id) }}" class="btn btn-danger btn-sm" title="Product Deactive Now"><i class="fa fa-arrow-down"></i> </a>
                         @else
                         <a href="{{ route('slider.active',$item->id) }}" class="btn btn-success btn-sm" title="Product Active Now"><i class="fa fa-arrow-up"></i> </a>
                         @endif
-                       
-                        </td> 
-                   </tr>  
+                        </td>
+                   </tr>
                    @endforeach
-                     
-                     
                  </tbody>
-             
                </table>
                </div> <!-- table res.. end -->
-             </div>  <!-- box body end -->      
-          </div>      <!-- box end -->       
-     </div> <!-- col end --> 
+             </div>  <!-- box body end -->
+          </div>      <!-- box end -->
+     </div> <!-- col end -->
 
 
 
@@ -81,57 +72,40 @@
    <!-- /.box-header -->
    <div class="box-body">
        <div class="table-responsive">
-        
-
          <form  method="POST" action="{{ route('slider.store') }}" enctype="multipart/form-data" >
-           @csrf           
-            
+           @csrf
                   <div class="form-group">
                       <h5> <span class="text-danger">*</span> Slider Title</h5>
                       <div class="controls">
-                      <input type="text" id="title" name="title" class="form-control" > 
-                     
+                      <input type="text" id="title" name="title" class="form-control" >
                      </div>
-
-                                        
-
-
-                      </div>                  
-              
+                      </div>
+                      <div class="form-group">
+                        <h5>Short Discraption <span class="text-danger"></span></h5>
+                        <div class="controls">
+                        <input type="text"  id="short_description" name="description" class="form-control" >
+                       </div>
+                        </div>
                   <div class="form-group">
-                      <h5>Slider Discraption <span class="text-danger">*</span></h5>
+                      <h5>Slider Discraption <span class="text-danger"></span></h5>
                       <div class="controls">
-                      <input type="text"  id="description" name="description" class="form-control" > 
-                     </div>             
-
-
-                      </div>                   
-
-                   
+                      <input type="text"  id="description" name="description" class="form-control" >
+                     </div>
+                      </div>
                       <div class="form-group">
                       <h5> Slider Img <span class="text-danger">*</span></h5>
                       <div class="controls">
-                      <input type="file" id="slider_img" name="slider_img" class="form-control" required=""> 
-                       
-                     
+                      <input type="file" id="slider_img" name="slider_img" class="form-control" required="">
                       @error('slider_img')
                       <span class="invalid-feedback" role="alert">
-                      <strong>{{ $message }}</strong>	
+                      <strong>{{ $message }}</strong>
                       </span>
                   @enderror
-                     
-                     
                      </div>
-
-
-
-
-                      </div>   
-              
+                      </div>
                   <div class="text-xs-right">
                   <input type="submit" class="btn btn-rounded btn-info" value="Add Slider">
               </div>
-
           </form>
 
 
@@ -139,8 +113,8 @@
 
 
          </div> <!-- table res.. end -->
-       </div>  <!-- box body end -->      
-    </div>      <!-- box end -->       
+       </div>  <!-- box body end -->
+    </div>      <!-- box end -->
 </div> <!-- col end -->
 
 </div> <!--  row end-->

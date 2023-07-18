@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBannersTable extends Migration
+class CreateBoardDirectorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateBannersTable extends Migration
      */
     public function up()
     {
-        Schema::create('banners', function (Blueprint $table) {
+        Schema::create('board_directors', function (Blueprint $table) {
             $table->id();
-            $table->string('bennar_img');
-            $table->string('title')->nullable();
-            $table->text('description')->nullable();
-            $table->integer('status')->default(1);
+            $table->string('director_name');
+            $table->string('director_image');
+            $table->string('director_short_descp');
+            $table->string('director_designation');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateBannersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('banners');
+        Schema::dropIfExists('board_directors');
     }
 }

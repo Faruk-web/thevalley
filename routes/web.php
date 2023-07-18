@@ -65,7 +65,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     $user = User::find($id);
     return view('dashboard', compact('user'));
 })->name('dashboard');
-// Frontend Route
 Route::get('/', [IndexController::class, 'index'])->name('user.index');
 //amfl
 Route::get('/about', [IndexController::class, 'aboutus'])->name('user.bout');
@@ -203,9 +202,10 @@ Route::prefix('news')->group(function(){
 // Admin Banner  Route Group
 Route::prefix('banner')->group(function(){
     Route::get('/view',[BannerController::class,'BennarView'])->name('bennar.manage');
-    Route::post('/store',[BannerController::class,'BennarStore'])->name('bennar.store');
-    Route::get('/edit/{id}',[BannerController::class,'BennarEdit'])->name('bennar.edit');
-    Route::post('/update',[BannerController::class,'BennarUpdate'])->name('bennar.update');
+    Route::get('/show',[BannerController::class,'Bennarshow'])->name('bennar.show');
+    Route::post('/store',[BannerController::class,'ValleyStore'])->name('valley.store');
+    Route::get('/edit/{id}',[BannerController::class,'ValleyEdit'])->name('valley.edit');
+    Route::post('/update',[BannerController::class,'ValleyUpdate'])->name('valley.update');
     Route::get('/dalete{id}',[BannerController::class,'BennarDelete'])->name('bennar.delete');
  // for Deactive
     Route::get('/deactive/{id}', [BannerController::class, 'BennarDeactive'])->name('bennar.deactive');

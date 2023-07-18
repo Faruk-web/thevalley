@@ -69,28 +69,9 @@ $prefix = Request::route()->getPrefix();
           <ul class="treeview-menu">
             <li><a href="{{ route('all.category') }}"><i class="ti-more"></i>All Category</a></li>
             <li><a href="{{ route('all.subcategory') }}"><i class="ti-more"></i>All Sub Category</a></li>
-            <li><a href="{{ route('all.subsubcategory') }}"><i class="ti-more"></i>All Sub-Sub Category</a></li>
           </ul>
         </li>
         @else
-        @endif
-
-		   @if($product == true)
-        <li class="treeview  {{ ($prefix=='/product')?'active':'' }}  ">
-          <a href="#">
-            <i class="fa fa-list-alt fa-5x"></i>
-            <span>Products</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-right pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="{{ route('product.add')}}"><i class="ti-more"></i>Add Products </a></li>
-            <li><a href="{{ route('manage-product') }}"><i class="ti-more"></i>Manage All Products</a></li>
-            <li><a href="{{ route('porduct.hotDeals') }}"><i class="ti-more"></i>Manage Hot Deals Time</a></li>
-          </ul>
-        </li>
-           @else
         @endif
         @if($slider == true)
         <li class="treeview  {{ ($prefix=='/slider')?'active':'' }}  ">
@@ -107,37 +88,17 @@ $prefix = Request::route()->getPrefix();
         </li>
         @else
         @endif
-        @if($cupons == true)
-        <li class="treeview  {{ ($prefix=='/cupons')?'active':'' }}  ">
-          <a href="#">
-            <i class="fa fa-gift fa-5x"></i>
-            <span>Cupon Option</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-right pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-
-            <li class="{{ ($route == 'manage.coupon')? 'active':'' }}">
-              <a href="{{ route('manage.coupon') }}"><i class="ti-more"></i>Manage Coupon</a></li>
-            {{-- <li><a href="{{ route('manage.cupon')}}"><i class="ti-more"></i>Manage Cupon </a></li> --}}
-          </ul>
-        </li>
-        @else
-        @endif
         <li class="treeview  {{ ($prefix=='/banner')?'active':'' }}  ">
           <a href="#">
             <i class="fa fa-picture-o fa-5x"></i>
-            <span>Banner Option</span>
+            <span>The Valley</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-
-            <li class="{{ ($route == 'bennar.manage')? 'active':'' }}">
-              <a href="{{ route('bennar.manage') }}"><i class="ti-more"></i>Manage Banner</a></li>
-            {{-- <li><a href="{{ route('manage.cupon')}}"><i class="ti-more"></i>Manage Cupon </a></li> --}}
+            <li><a href="{{ route('bennar.manage') }}"><i class="ti-more"></i>Create Valley</a></li>
+            <li><a href="{{ route('bennar.show') }}"><i class="ti-more"></i>Create Show</a></li>
           </ul>
         </li>
         {{-- Ashim Banner Category --}}
@@ -315,8 +276,6 @@ $prefix = Request::route()->getPrefix();
             </a>
             <ul class="treeview-menu">
 
-              <li ><a href="{{ route('salary-add') }}"><i class="ti-more"></i>Pay Salary</a></li>
-              <li ><a href="{{ route('paid_salary') }}"><i class="ti-more"></i>Paid Salary List</a></li>
 
             </ul>
           </li>
@@ -330,10 +289,6 @@ $prefix = Request::route()->getPrefix();
                    </span>
                  </a>
                  <ul class="treeview-menu">
-
-               <li class="{{ ($route == 'expense.add')? 'active':'' }}">
-               <li class="{{ ($route == 'expense.add')? 'active':'' }}"><a href="{{ route('expense.add') }}"><i class="ti-more"></i>Add Expense</a></li>
-               <li class="{{ ($route == 'expense.list')? 'active':'' }}"><a href="{{ route('expense.list') }}"><i class="ti-more"></i>View Expanse</a></li>
                  </ul>
                </li>
 

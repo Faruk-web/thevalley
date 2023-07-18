@@ -223,7 +223,7 @@ $("#submitE").on('click',function(e){
 
 				type:'POST',
 
-				url:'{{ route('employee.find') }}',
+				url:'',
 
 				data:data,
 				dataType: 'json',

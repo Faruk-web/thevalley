@@ -17,6 +17,8 @@ class SliderController extends Controller
         $projects = Project::latest()->select('id','project_name')->get();
 		return view('backend.slider.slider_view',compact('sliders','projects'));
 	} // end mathod
+
+
      // Store Slider
   public function SliderStore(Request $request){
     // validation
@@ -33,6 +35,7 @@ class SliderController extends Controller
        // Brand Insert
           Slider::insert([
            'title' => $request->title,
+           'short_description' => $request->short_description,
            'description' => $request->description,
            'project_id' => $request->project_id,
            'slider_img' => $save_url,
@@ -55,7 +58,9 @@ class SliderController extends Controller
             $slider_id = $request->id;
             $old_img = $request->old_img;
             if ($request->file('slider_img')) {
-            unlink($old_img);
+                if (file_exists($old_img)){
+                    unlink($old_img);
+                }
             $image = $request->file('slider_img');
             $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
             Image::make($image)->resize(1920,860)->save('upload/slider/'.$name_gen);
@@ -64,8 +69,10 @@ class SliderController extends Controller
             'title' => $request->title,
             'project_id' => $request->project_id,
             'short_description' => $request->short_description,
+            'short_description' => $request->short_description,
             'description' => $request->description,
             'slider_img' => $save_url,
+            'status' => $request->status,
             ]);
 
             $notification = array(

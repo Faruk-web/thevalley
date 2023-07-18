@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBannerCatagoriesTable extends Migration
+class CreateLeadingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreateBannerCatagoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('banner_catagories', function (Blueprint $table) {
+        Schema::create('leadings', function (Blueprint $table) {
             $table->id();
-            $table->string('bennar_img');
-            $table->integer('status')->default(1);
+            $table->string('title');
+            $table->string('icon');
+            $table->string('short_description');
+            $table->string('log_short_description');
             $table->timestamps();
         });
     }
@@ -28,6 +30,6 @@ class CreateBannerCatagoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('banner_catagories');
+        Schema::dropIfExists('leadings');
     }
 }

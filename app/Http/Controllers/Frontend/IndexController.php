@@ -13,7 +13,7 @@ use App\Models\Slider;
 use App\Models\Product;
 use App\Models\Project;
 use App\Models\MultiImg;
-use App\Models\Brand;
+use App\Models\Valley;
 use App\Models\BoardDirector;
 use App\Models\Banner;
 use App\Models\ContactUs;
@@ -21,7 +21,6 @@ use App\Models\SubCategory;
 use App\Models\News;
 use App\Models\Subscriber;
 use App\Models\review;
-use App\Models\BannerCatagory;
 use Illuminate\Support\Carbon;
 use App\Models\Leading;
 use App\Models\OrderItem;
@@ -42,13 +41,10 @@ class IndexController extends Controller
     // end slider
     $categories = Category::all();
     // home page banner-category
-    $bannerCatagory = BannerCatagory::where('status',1)->orderBy('id','DESC')->first();
-    $bennars = Banner::where('status',1)->orderBy('id','DESC')->limit(3)->get();
     $todayDate = Carbon::now();
       $leadings=Leading::orderBy('id','ASC')->limit(6)->get();
        return view('frontend.index',
-        compact('categories','sliders', 'products','featureds','bannerCatagory','leadings',
-         'bennars'));
+        compact('categories','sliders', 'products','featureds','leadings'));
    }
   // user logout
    public function UserLogout(){
@@ -352,8 +348,9 @@ class IndexController extends Controller
     }
     //project
     public function theValley(){
-        $projects = Project::limit(30)->orderBy('id', 'desc')->paginate(9);
-        return view('frontend.valley.the_valley');
+        $sliders = Slider::where('status', 0)->orderBy('id', 'DESC')->limit(10)->get();
+        $valley = Valley::find(2);
+        return view('frontend.valley.the_valley',compact('sliders','valley'));
     }
     //nature
     public function nature(){

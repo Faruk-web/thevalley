@@ -5,110 +5,192 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-use App\Models\Banner;
+use App\Models\Valley;
 use Image;
 
 class BannerController extends Controller
 {
     // Banner view
     public function BennarView(){
-        $bennars =Banner::all();
-        return view('backend.banner.banner_view',compact('bennars'));
+
+        return view('backend.valley.banner_view');
 
     } // end mathod
-
-
+        // banner Bennarshow
+        public function Bennarshow(){
+            $valleys =Valley::all();
+            return view('backend.valley.banner_show',compact('valleys'));
+        }
    // Banner Store
-    public function BennarStore(Request $request){
+    public function ValleyStore(Request $request){
 
-   $request->validate([
-
-    'title' => 'required',
-    'description' => 'required',
-    'bennar_img' => 'required',
-   ],[
-
-    'bennar_img.required' => 'Input The Banner Img',
-   ]);
-
-   // Banner Img upload and save
-   $image = $request->file('bennar_img');
+   // frist Img upload and save
+   $image = $request->file('frist_image');
    $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
-   Image::make($image)->resize(870,370)->save('upload/banner/'.$name_gen );
-   $save_url = 'upload/banner/'.$name_gen;
+   Image::make($image)->resize(1000,1000)->save('upload/valley/'.$name_gen );
+   $save_url_frist = 'upload/valley/'.$name_gen;
+   // second Img upload and save
+   $image = $request->file('sec_image');
+   $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
+   Image::make($image)->resize(1000,1000)->save('upload/valley/'.$name_gen );
+   $save_url_sec = 'upload/valley/'.$name_gen;
+   // third Img upload and save
+   $image = $request->file('thi_image');
+   $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
+   Image::make($image)->resize(1000,1000)->save('upload/valley/'.$name_gen );
+   $save_url_thi = 'upload/valley/'.$name_gen;
 
-   Banner::insert([
-            'title' => $request->title,
-            'description' => $request->description,
-            'bennar_img' => $save_url,
+   Valley::insert([
+            'frist_name' => $request->frist_name,
+            'frist_short_descrip' => $request->frist_short_descrip,
+            'frist_descrip' => $request->frist_descrip,
+            'frist_image' => $request->frist_image,
+            'sec_name' => $request->sec_name,
+            'sec_short_descrip' => $request->sec_short_descrip,
+            'sec_descrip' => $request->sec_descrip,
+            'sec_image' => $request->sec_image,
+            'thi_name' => $request->thi_name,
+            'vedio_link' => $request->vedio_link,
+            'thi_short_descrip' => $request->thi_short_descrip,
+            'thi_descrip' => $request->thi_descrip,
+            'thi_image' => $request->thi_image,
+            'frist_image' => $save_url_frist,
+            'sec_image' => $save_url_sec,
+            'thi_image' => $save_url_thi,
         ]);
-
-
         $notification = array(
-            'message' =>'Banner Create sucessfully',
+            'message' =>'Valley Create sucessfully',
             'alert-type' =>'success'
         );
-
         return redirect()->back();
 
           } // end mathod
-
-
-
     // Banner Edit
-        public function BennarEdit($id){
-            $bennars = Banner::findOrFail($id);
-            return view('backend.banner.banner_edit', compact('bennars'));
+        public function ValleyEdit($id){
+            $valleys = Valley::findOrFail($id);
+            return view('backend.valley.banner_edit', compact('valleys'));
         } // end mathod
 
         // Banner Update
-        public function BennarUpdate( Request $request){
+        public function ValleyUpdate( Request $request){
+        $valley_id = $request->id;
+        $old_img_frist = $request->old_img_frist;
+        $old_img_sec = $request->old_img_sec;
+        $old_img_thi = $request->old_img_thi;
 
+        $old_img_frist_ba = $request->old_img_frist_ba;
+        $old_img_sec_ba = $request->old_img_sec_ba;
+        $old_img_thi_ba = $request->old_img_thi_ba;
 
-        $bennar_id = $request->id;
-        $old_img = $request->old_img;
-
-        if ( $request->file('bennar_img')) {
-            unlink($old_img);
-            $image = $request->file('bennar_img');
+        if ( $request->file('frist_image')) {
+            if (file_exists($old_img_frist)){
+                unlink($old_img_frist);
+            }
+            $image = $request->file('frist_image');
         $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
-        Image::make($image)->resize(870,370)->save('upload/banner/'.$name_gen );
-        $save_url = 'upload/banner/'.$name_gen;
+        Image::make($image)->resize(1000,1000)->save('upload/valley/'.$name_gen );
+        $save_url_frist = 'upload/valley/'.$name_gen;
 
-        Banner::findOrFail($bennar_id)->update([
-            'title' => $request->title,
-            'description' => $request->description,
-            'bennar_img' => $save_url,
+            if (file_exists($old_img_sec)){
+                unlink($old_img_sec);
+            }
+            $image = $request->file('sec_image');
+        $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
+        Image::make($image)->resize(1000,1000)->save('upload/valley/'.$name_gen );
+        $save_url_sec = 'upload/valley/'.$name_gen;
+        if (file_exists($old_img_thi)){
+            unlink($old_img_thi);
+        }
+            $image = $request->file('thi_image');
+        $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
+        Image::make($image)->resize(1000,1000)->save('upload/valley/'.$name_gen );
+        $save_url_thi = 'upload/valley/'.$name_gen;
+// ==============================
+                if (file_exists($old_img_frist_ba)){
+                    unlink($old_img_frist_ba);
+                }
+                $image = $request->file('ba_frist_image');
+            $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
+            Image::make($image)->resize(2000,400)->save('upload/valley/'.$name_gen );
+            $save_url_frist_ba = 'upload/valley/'.$name_gen;
 
+            if (file_exists($old_img_sec_ba)){
+                unlink($old_img_sec_ba);
+            }
+            $image = $request->file('ba_sec_image');
+        $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
+        Image::make($image)->resize(2000,400)->save('upload/valley/'.$name_gen );
+        $save_url_sec_ba = 'upload/valley/'.$name_gen;
+        if (file_exists($old_img_thi_ba)){
+            unlink($old_img_thi_ba);
+        }
+            $image = $request->file('ba_thi_image');
+        $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
+        Image::make($image)->resize(2000,400)->save('upload/valley/'.$name_gen );
+        $save_url_thi_ba = 'upload/valley/'.$name_gen;
+
+        Valley::findOrFail($valley_id)->update([
+            'frist_name' => $request->frist_name,
+            'frist_short_descrip' => $request->frist_short_descrip,
+            'frist_descrip' => $request->frist_descrip,
+            'frist_image' => $request->frist_image,
+            'sec_name' => $request->sec_name,
+            'sec_short_descrip' => $request->sec_short_descrip,
+            'sec_descrip' => $request->sec_descrip,
+            'sec_image' => $request->sec_image,
+            'thi_name' => $request->thi_name,
+            'vedio_link' => $request->vedio_link,
+            'thi_short_descrip' => $request->thi_short_descrip,
+            'thi_descrip' => $request->thi_descrip,
+            'thi_image' => $request->thi_image,
+            'frist_image' => $save_url_frist,
+            'sec_image' => $save_url_sec,
+            'thi_image' => $save_url_thi,
+
+            'ba_frist_image' => $save_url_frist_ba,
+            'ba_sec_image' => $save_url_sec_ba,
+            'ba_thi_image' => $save_url_thi_ba,
         ]);
 
 
         $notification = array(
-            'message' =>'Banner update sucessfully',
+            'message' =>'Valley update sucessfully',
             'alert-type' =>'success'
         );
 
-            return redirect()->route('bennar.manage')->with($notification);
+        return redirect()->back()->with($notification);
 
             }else{
-                Banner::findOrFail($slider_id)->update([
-                'title' => $request->title,
-                'description' => $request->description,
+                Valley::findOrFail($valley_id)->update([
+                    'frist_name' => $request->frist_name,
+                    'frist_short_descrip' => $request->frist_short_descrip,
+                    'frist_descrip' => $request->frist_descrip,
+                    'frist_image' => $request->frist_image,
+                    'sec_name' => $request->sec_name,
+                    'sec_short_descrip' => $request->sec_short_descrip,
+                    'sec_descrip' => $request->sec_descrip,
+                    'sec_image' => $request->sec_image,
+                    'thi_name' => $request->thi_name,
+                    'vedio_link' => $request->vedio_link,
+                    'thi_short_descrip' => $request->thi_short_descrip,
+                    'thi_descrip' => $request->thi_descrip,
+                    'thi_image' => $request->thi_image,
+                    'frist_image' => $save_url_frist,
+                    'sec_image' => $save_url_sec,
+                    'thi_image' => $save_url_thi,
 
-            ]);
+                    'ba_frist_image' => $save_url_frist_ba,
+                    'ba_sec_image' => $save_url_sec_ba,
+                    'ba_thi_image' => $save_url_thi_ba,
+                ]);
                 $notification = array(
-                'message' =>'Bennar update sucessfully',
+                'message' =>'Valley update sucessfully',
                 'alert-type' =>'info'
             );
             return redirect()->back()->with($notification);
 
             }
          }  // end mathod
-
-
-
-
-
 
 
         // Banner Delete
