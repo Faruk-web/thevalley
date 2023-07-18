@@ -37,17 +37,17 @@
                         </ul>
                     </li>
                     <li class="menu-item menu-item-has-children">
-                        <a href="page-projects.html">The Nature</a>
+                        <a href="{{ route('user.nature') }}">The Nature</a>
                         <ul class="sub-menu">
-                            <li class="menu-item"><a href="page-projects.html">The Nature</a></li>
+                            <li class="menu-item"><a href="{{ route('user.nature') }}">The Nature</a></li>
                         </ul>
                     </li>
-                    <li class="menu-item menu-item-has-children" >
+                    {{-- <li class="menu-item menu-item-has-children" >
                         <a href="page-testimonial.html">The Desing</a>
                         <ul class="sub-menu">
                             <li class="menu-item"><a href="page-testimonial.html">The Desing</a></li>
                         </ul>
-                    </li>
+                    </li> --}}
                     <li class="menu-item menu-item-has-children">
                         <a href="{{ url('/about') }}">About</a>
                         <ul class="sub-menu right-sub-menu">

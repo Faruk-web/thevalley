@@ -113,63 +113,146 @@
                         </div><!-- /.container-fluid -->
                     </div>
                     <!-- END QUOTE -->
-                    <div class="row-about">
-                        <div class="container-fluid">
-                            <div class="row equalize sm-equalize-auto faruk_char">
-                                <div class="col-md-6 bg-light-grey">
-                                    <div class="themesflat-spacer clearfix" data-desktop="64" data-mobile="35" data-smobile="35"></div>
-                                    <div class="themesflat-content-box clearfix" data-margin="0 4% 0 4.5%" data-mobilemargin="0 0 0 4.5%">
-                                        <div class="themesflat-headings style-1 clearfix">
-                                            <h2 class="heading"> Plot Size</h2>
-                                            <div class="sep has-width w80 accent-bg margin-top-11 clearfix"></div>
-                                            <p class="sub-heading margin-top-0">In The Valley Bangladesh 3katha,4katha and 5katha plots are available.</p>
-                                            <p class="sub-heading margin-top-0"><b>3katha</b> plot is a top choice for small families. Ideal for making a villa with garden, water body with sitting arrangement in ground floor & one car parking.</p>
-                                            <p class="sub-heading margin-top-0"> <b>4katha</b> plot is a top choice for vacation home. Ideal for making a villa garden, water body with sitting arrangement in ground floor & two car parking.</p>
-                                            <p class="sub-heading margin-top-0"> <b>5katha </b>plot is a top choice for families. Ideal for making a Villa with garden, water body with sitting arrangement in the ground floor & car parking space.
-                                            </p>
-                                            {{-- <p class="sub-heading margin-top-0"><p class="sub-heading margin-top-0">He proved that, success is a result of hard work. He believed hard work should be rewarded. Thus, he was involved in developing a lifestyle that people deserve and that would serve as a social motivator to others to work hard and succeed. He added creativity to that and the result is Amin Mohammad Group.</p></p> --}}
-                                        </div>
-                                    </div><!-- /.themesflat-content-box -->
-                                    <div class="themesflat-spacer clearfix" data-desktop="76" data-mobile="60" data-smobile="60"></div>
-                                </div>
-                                <!-- /.col-md-6 -->
-                                <div class="col-md-6 half-background style-1" style="background-image: url('{{ asset('frontend/assets/img/valley/a1.png')}}');center center no-repeat; background-size: cover;">
-                                </div>
-                                <!-- /.col-md-6 -->
+                    <div class="row-services">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="themesflat-headings style-1 text-center clearfix">
+                                    </div>
+                                    <div class="themesflat-spacer clearfix" data-desktop="73" data-mobile="60" data-smobile="60"></div>
+                                    <h2 class="widget-title margin-bottom-30"><span>
+                                        Plot Type
+                                        </span></h2>
+                                    <ul class="themesflat-filter style-1 clearfix">
+                                        <li class="active"><a href="#" data-filter="*">All</a></li>
+                                        <li><a href="#" data-filter=".green"> 3 Katha </a></li>
+                                        <li><a href="#" data-filter=".architecture">4 Katha    </a></li>
+                                        <li><a href="#" data-filter=".construction">5 Katha  </a></li>
+                                        <li><a href="#" data-filter=".villa">6 Katha </a></li>
+                                        <li><a href="#" data-filter=".building">7 Katha </a></li>
+                                    </ul>
+                                    <div class="themesflat-spacer clearfix" data-desktop="40" data-mobile="35" data-smobile="35"></div>
+                                    <div class="themesflat-project style-2 isotope-project has-margin mg15 data-effect clearfix">
+                                        <div class="project-item green villa">
+                                            <div class="inner">
+                                                <div class="thumb data-effect-item has-effect-icon w40 offset-v-19 offset-h-49">
+                                                    <img src="{{ asset('frontend/assets/img/valley/a1.png')}}" alt="Image">
+                                                    <div class="elm-link">
+                                                        <a href="#" class="icon-1 icon-search"></a>
+                                                        <a href="#" class="icon-1"></a>
+                                                    </div>
+                                                    <div class="overlay-effect bg-color-3"></div>
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <h5 class="heading"><a href="#">LAKE MEADOWS APARTMENTS</a></h5>
+                                                    <div class="elm-meta">
+                                                        <span><a href="#">Green House</a></span>
+                                                        <span><a href="#">Villa</a></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- /.product-item -->
+                                        <div class="project-item architecture building construction">
+                                            <div class="inner">
+                                                <div class="thumb data-effect-item has-effect-icon w40 offset-v-19 offset-h-49">
+                                                    <img src="{{ asset('frontend/assets/img/valley/a1.png')}}" alt="Image">
+                                                    <div class="elm-link">
+                                                        <a href="#" class="icon-1 icon-search"></a>
+                                                        <a href="#" class="icon-1"></a>
+                                                    </div>
+                                                    <div class="overlay-effect bg-color-3"></div>
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <h5 class="heading"><a href="#">CAVAL RIDGE MINE PROJECT </a></h5>
+                                                    <div class="elm-meta">
+                                                        <span><a href="#">Architecture</a></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- /.product-item -->
+                                        <div class="project-item villa architecture building construction">
+                                            <div class="inner">
+                                                <div class="thumb data-effect-item has-effect-icon w40 offset-v-19 offset-h-49">
+                                                    <img src="{{ asset('frontend/assets/img/valley/a1.png')}}" alt="Image">
+                                                    <div class="elm-link">
+                                                        <a href="#" class="icon-1 icon-search"></a>
+                                                        <a href="#" class="icon-1"></a>
+                                                    </div>
+                                                    <div class="overlay-effect bg-color-3"></div>
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <h5 class="heading"><a href="#">GRAM HOTEL MAMZANA, MEWYORK</a></h5>
+                                                    <div class="elm-meta">
+                                                        <span><a href="#">Green House</a></span>
+                                                        <span><a href="#">Villa</a></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- /.product-item -->
+                                        <div class="project-item green villa">
+                                            <div class="inner">
+                                                <div class="thumb data-effect-item has-effect-icon w40 offset-v-19 offset-h-49">
+                                                    <img src="{{ asset('frontend/assets/img/valley/a1.png')}}" alt="Image">
+                                                    <div class="elm-link">
+                                                        <a href="#" class="icon-1 icon-search"></a>
+                                                        <a href="#" class="icon-1"></a>
+                                                    </div>
+                                                    <div class="overlay-effect bg-color-3"></div>
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <h5 class="heading"><a href="#">LAKE MEADOWS APARTMENTS</a></h5>
+                                                    <div class="elm-meta">
+                                                        <span><a href="#">Green House</a></span>
+                                                        <span><a href="#">Villa</a></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- /.product-item -->
+                                        <div class="project-item architecture building construction">
+                                            <div class="inner">
+                                                <div class="thumb data-effect-item has-effect-icon w40 offset-v-19 offset-h-49">
+                                                    <img src="{{ asset('frontend/assets/img/valley/a1.png')}}" alt="Image">
+                                                    <div class="elm-link">
+                                                        <a href="#" class="icon-1 icon-search"></a>
+                                                        <a href="#" class="icon-1"></a>
+                                                    </div>
+                                                    <div class="overlay-effect bg-color-3"></div>
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <h5 class="heading"><a href="#">CAVAL RIDGE MINE PROJECT </a></h5>
+                                                    <div class="elm-meta">
+                                                        <span><a href="#">Architecture</a></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- /.product-item -->
+                                        <div class="project-item villa green">
+                                            <div class="inner">
+                                                <div class="thumb data-effect-item has-effect-icon w40 offset-v-19 offset-h-49">
+                                                    <img src="{{ asset('frontend/assets/img/valley/a1.png')}}" alt="Image">
+                                                    <div class="elm-link">
+                                                        <a href="#" class="icon-1 icon-search"></a>
+                                                        <a href="#" class="icon-1"></a>
+                                                    </div>
+                                                    <div class="overlay-effect bg-color-3"></div>
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <h5 class="heading"><a href="#">GRAM HOTEL MAMZANA, MEWYORK</a></h5>
+                                                    <div class="elm-meta">
+                                                        <span><a href="#">Green House</a></span>
+                                                        <span><a href="#">Villa</a></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- /.product-item -->
+                                    </div><!-- /.themesflat-project -->
+                                    <div class="button-wrap has-icon icon-left size-14 pf21 text-center">
+                                        <a href="#" class="themesflat-button bg-accent pd32"><span>LOAD MORE <span class="icon"><i class="ion-load-c"></i></span></span></a>
+                                    </div>
+                                    <div class="themesflat-spacer clearfix" data-desktop="72" data-mobile="60" data-smobile="60"></div>
+                                </div><!-- /.col-md-12 -->
                             </div><!-- /.row -->
-                            {{-- ===================================vedio================================ --}}
-                            <div class="detail-gallery">
-                                {{-- <div class="themesflat-spacer clearfix" data-desktop="21" data-mobile="21" data-smobile="21"></div> --}}
-                                <div class="themesflat-headings style-2 clearfix">
-                                    <h2 class="heading">OVERVIEW PROJECT VIDEO</h2>
-                                    <div class="sep has-width w80 accent-bg margin-top-3 clearfix"></div>
-                                </div><!-- /.themesflat-heading -->
-                                {{-- <div class="themesflat-spacer clearfix" data-desktop="35" data-mobile="35" data-smobile="35"></div> --}}
-                                <div class="themesflat-gallery style-2 has-arrows arrow-center arrow-circle offset-v-82 has-thumb w185 clearfix" data-gap="0" data-column="1" data-column2="1" data-column3="1" data-auto="false">
-                                <iframe width="1500" height="800" type="video/mp4" src="https://www.youtube.com/embed/KQXQS7hBnjM?autoplay=1" allow="autoplay">
-                                    </iframe>
-                                </div><!-- /.themesflat-cousel-box -->
-                            </div>
-                            {{-- ========================================end vedio============================== --}}
-                            {{-- -----------------for mobile----------- --}}
-                            <div class="row equalize sm-equalize-auto faruk_cha">
-                                <div class="col-md-6 half-background style-1" style="background-image: url('{{ asset('frontend/assets/img/valley/a1.png')}}');center center no-repeat; background-size: cover;">
-                                </div><!-- /.col-md-6 -->
-                                <div class="col-md-6 bg-light-grey" style="height: 700px;">
-                                    <div class="themesflat-spacer clearfix" data-desktop="64" data-mobile="35" data-smobile="35"></div>
-                                    <div class="themesflat-content-box clearfix" data-margin="0 5% 0 4.5%" data-mobilemargin="0 0 0 4.5%">
-                                        <div class="themesflat-headings style-1 clearfix">
-                                            <h2 class="heading"> Explore the Natural Beauty</h2>
-                                            <div class="sep has-width w80 accent-bg margin-top-11 clearfix"></div>
-                                            <p class="sub-heading margin-top-30">There is a deep connection between humans & the nature. The Valley Bangladesh has all the best eco-friendly options combined with cutting edge landscape architecture that enables a sustainable living. The place where you can live near to nature. A good landscape has emotional and psychological value. Rain & Trees can be a process of creating memory, memory of childhood, memory that involves colors, light, shade and shadow. Nature is the place where you can explore. Explore each and every detail of nature here in The Valley Bangladesh. Because home is where the heart is & for many people, home extends beyond a house & includes the indescribable beauty of the great nature.</p>
-
-                                        </div>
-                                        <div class="themesflat-spacer clearfix" data-desktop="26" data-mobile="35" data-smobile="35"></div>
-                                    </div><!-- /.themesflat-content-box -->
-                                </div><!-- /.col-md-6 -->
-                            </div>
-                            {{-- ---------------------end mobile--------------- --}}
-                        </div><!-- /.container-fluid -->
+                        </div><!-- /.container -->
                     </div>
                     <div class="row-about">
                         <div class="container-fluid">
