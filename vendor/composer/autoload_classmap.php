@@ -68,6 +68,7 @@ return array(
     'App\\Mail\\OrderMail' => $baseDir . '/app/Mail/OrderMail.php',
     'App\\Models\\Admin' => $baseDir . '/app/Models/Admin.php',
     'App\\Models\\Asset' => $baseDir . '/app/Models/Asset.php',
+    'App\\Models\\BannerCatagory' => $baseDir . '/app/Models/BannerCatagory.php',
     'App\\Models\\Blog' => $baseDir . '/app/Models/Blog.php',
     'App\\Models\\BoardDirector' => $baseDir . '/app/Models/BoardDirector.php',
     'App\\Models\\Brand' => $baseDir . '/app/Models/Brand.php',

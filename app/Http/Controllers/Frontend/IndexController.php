@@ -32,6 +32,7 @@ class IndexController extends Controller
 {
   // Frontend Index show
    public function index(){
+ 
   //valley
    $products = Project::orderBy('id', 'DESC')->limit(4)->get();
   // for  featureds

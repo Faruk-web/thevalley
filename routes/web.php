@@ -15,6 +15,8 @@ use App\Http\Controllers\Backend\SiteSettingController;
 use App\Http\Controllers\Backend\AdminUserController;
 use App\Http\Controllers\Backend\EmployeeController;
 //amfl location
+use App\Http\Controllers\VisitorController;
+
 
 use App\Http\Controllers\Backend\plotTypeController;
 use App\Http\Controllers\Backend\BlogController;
@@ -94,6 +96,8 @@ Route::post('/user/profile/store', [IndexController::class, 'UserProfileStore'])
 Route::get('/user/change/password', [IndexController::class, 'UserChnagePassword'])->name('change.password');
 // user  Password Update
 Route::post('/user/password/update', [IndexController::class, 'UserPasswordUpdate'])->name('user.password.update');
+Route::get('/visitor-count', [VisitorController::class, 'count']);
+
 // Admin All Category Route Group
 Route::prefix('category')->group(function(){
     Route::get('/view', [CategoryController::class, 'CategoryView'])->name('all.category');

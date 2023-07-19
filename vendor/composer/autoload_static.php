@@ -689,6 +689,7 @@ class ComposerStaticInit836942e1b4cc4a33c925cf86b25d06a7
         'App\\Mail\\OrderMail' => __DIR__ . '/../..' . '/app/Mail/OrderMail.php',
         'App\\Models\\Admin' => __DIR__ . '/../..' . '/app/Models/Admin.php',
         'App\\Models\\Asset' => __DIR__ . '/../..' . '/app/Models/Asset.php',
+        'App\\Models\\BannerCatagory' => __DIR__ . '/../..' . '/app/Models/BannerCatagory.php',
         'App\\Models\\Blog' => __DIR__ . '/../..' . '/app/Models/Blog.php',
         'App\\Models\\BoardDirector' => __DIR__ . '/../..' . '/app/Models/BoardDirector.php',
         'App\\Models\\Brand' => __DIR__ . '/../..' . '/app/Models/Brand.php',
