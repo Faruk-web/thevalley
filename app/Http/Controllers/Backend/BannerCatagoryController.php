@@ -18,27 +18,29 @@ class BannerCatagoryController extends Controller
         $request->validate([
             'bennar_img' => 'required',
            ],[
-        
+
             'bennar_img.required' => 'Input The Banner Img',
            ]);
-        
+
            // Banner Img upload and save
            $image = $request->file('bennar_img');
            $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
-           Image::make($image)->resize(1100,259)->save('upload/banner_Category/'.$name_gen );
+           Image::make($image)->resize(500,500)->save('upload/banner_Category/'.$name_gen );
            $save_url = 'upload/banner_Category/'.$name_gen;
-        
+
            BannerCatagory::insert([
-                   
+                    'category_name' => $request->category_name,
+                    'plot_type' => $request->plot_type,
+                    'plot_short_descrip' => $request->plot_short_descrip,
                     'bennar_img' => $save_url,
                 ]);
-        
-        
+
+
                 $notification = array(
-                    'message' =>'Banner Catagory Create sucessfully',
+                    'message' =>'Plot Type Catagory Create sucessfully',
                     'alert-type' =>'success'
                 );
-        
+
                 return redirect()->back();
 
     } // end mathod
@@ -56,24 +58,26 @@ class BannerCatagoryController extends Controller
 
         $bennar_id = $request->id;
         $old_img = $request->old_img;
-      
+
 
         if ( $request->file('bennar_img')) {
             unlink($old_img);
             $image = $request->file('bennar_img');
         $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
-        Image::make($image)->resize(1100,259)->save('upload/banner_Category/'.$name_gen );
+        Image::make($image)->resize(500,500)->save('upload/banner_Category/'.$name_gen );
         $save_url = 'upload/banner_Category/'.$name_gen;
 
         BannerCatagory::findOrFail($bennar_id)->update([
-   
+            'category_name' => $request->category_name,
+            'plot_type' => $request->plot_type,
+            'plot_short_descrip' => $request->plot_short_descrip,
             'bennar_img' => $save_url,
 
     ]);
 
 
         $notification = array(
-            'message' =>'Banner update sucessfully',
+            'message' =>'Plot Type update sucessfully',
             'alert-type' =>'success'
         );
 
@@ -121,7 +125,7 @@ class BannerCatagoryController extends Controller
 
         return redirect()->back()->with($notification);
     }// end mathod
-    
+
  // Banner Delete
  public function BennarDelete($id){
     $bennar = BannerCatagory::findOrFail($id);

@@ -15,6 +15,8 @@ use App\Http\Controllers\Backend\SiteSettingController;
 use App\Http\Controllers\Backend\AdminUserController;
 use App\Http\Controllers\Backend\EmployeeController;
 //amfl location
+
+use App\Http\Controllers\Backend\plotTypeController;
 use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Backend\LocationController;
 use App\Http\Controllers\Backend\NewsController;
@@ -199,19 +201,30 @@ Route::prefix('news')->group(function(){
     // for Active
     Route::get('/active/{id}', [SliderController::class, 'SliderActive'])->name('slider.active');
 });
-// Admin Banner  Route Group
+// The valeey Route Group
 Route::prefix('banner')->group(function(){
     Route::get('/view',[BannerController::class,'BennarView'])->name('bennar.manage');
     Route::get('/show',[BannerController::class,'Bennarshow'])->name('bennar.show');
     Route::post('/store',[BannerController::class,'ValleyStore'])->name('valley.store');
     Route::get('/edit/{id}',[BannerController::class,'ValleyEdit'])->name('valley.edit');
     Route::post('/update',[BannerController::class,'ValleyUpdate'])->name('valley.update');
-    Route::get('/dalete{id}',[BannerController::class,'BennarDelete'])->name('bennar.delete');
- // for Deactive
-    Route::get('/deactive/{id}', [BannerController::class, 'BennarDeactive'])->name('bennar.deactive');
-    // for Active
-    Route::get('/active/{id}', [BannerController::class, 'BennarActive'])->name('bennar.active');
 });
+// Plot Tupe  Route Group
+Route::prefix('plot')->group(function(){
+    Route::get('/view',[plotTypeController::class,'PlotCreate'])->name('plot.manage');
+    Route::get('/show',[plotTypeController::class,'plotshow'])->name('plot.show');
+    Route::get('/edit/{id}',[plotTypeController::class,'PlotEdit'])->name('plot.edit');
+    Route::post('/update',[plotTypeController::class,'PlotUpdate'])->name('plot.update');
+
+});
+// Admin Banner  Route Group
+// Route::prefix('banner')->group(function(){
+//     Route::get('/view',[BannerController::class,'BennarView'])->name('bennar.manage');
+//     Route::get('/show',[BannerController::class,'Bennarshow'])->name('bennar.show');
+//     Route::post('/store',[BannerController::class,'ValleyStore'])->name('valley.store');
+//     Route::get('/edit/{id}',[BannerController::class,'ValleyEdit'])->name('valley.edit');
+//     Route::post('/update',[BannerController::class,'ValleyUpdate'])->name('valley.update');
+// });
 // Ashim bannerCategory  Route Group
 Route::prefix('bannerCategory')->group(function(){
     Route::get('/view',[BannerCatagoryController::class,'BennarView'])->name('bannerCategory.manage');

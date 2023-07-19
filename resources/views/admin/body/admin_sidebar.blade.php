@@ -57,11 +57,11 @@ $prefix = Request::route()->getPrefix();
           </ul>
         </li>
         @endif
-        @if($category == true)
+        {{-- @if($category == true)
         <li class="treeview {{ ($prefix=='/category')?'active':'' }} ">
           <a href="#">
             <i class="fa fa-list-alt fa-5x"></i>
-            <span>Category</span>
+            <span>Plot Category</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
@@ -72,7 +72,7 @@ $prefix = Request::route()->getPrefix();
           </ul>
         </li>
         @else
-        @endif
+        @endif --}}
         @if($slider == true)
         <li class="treeview  {{ ($prefix=='/slider')?'active':'' }}  ">
           <a href="#">
@@ -84,6 +84,7 @@ $prefix = Request::route()->getPrefix();
           </a>
           <ul class="treeview-menu">
             <li><a href="{{ route('manage.slider')}}"><i class="ti-more"></i>Manage Slider </a></li>
+
           </ul>
         </li>
         @else
@@ -97,26 +98,39 @@ $prefix = Request::route()->getPrefix();
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{ route('bennar.manage') }}"><i class="ti-more"></i>Create Valley</a></li>
-            <li><a href="{{ route('bennar.show') }}"><i class="ti-more"></i>Create Show</a></li>
+            {{-- <li><a href="{{ route('bennar.manage') }}"><i class="ti-more"></i>Add Valley</a></li> --}}
+            <li><a href="{{ route('bennar.show') }}"><i class="ti-more"></i>Create Valley</a></li>
           </ul>
         </li>
+        <li class="treeview">
+            <a href="#">
+              <i class="fa fa-picture-o fa-5x"></i>
+              <span>Plot Type</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-right pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              {{-- <li><a href="{{ route('bennar.manage') }}"><i class="ti-more"></i>Add Valley</a></li> --}}
+              {{-- <li><a href="{{ route('plot.manage') }}"><i class="ti-more"></i>Create Plot Type</a></li> --}}
+              <li><a href="{{ route('plot.show') }}"><i class="ti-more"></i> Plot Show</a></li>
+            </ul>
+          </li>
+          <li class="treeview  {{ ($prefix=='/bannerCategory')?'active':'' }}  ">
+            <a href="#">
+              <i class="fa fa-picture-o fa-5x"></i>
+              <span>Plot Category</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-right pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li class="{{ ($route == 'bannerCategory.manage')? 'active':'' }}">
+                <a href="{{ route('bannerCategory.manage') }}"><i class="ti-more"></i>Manage Plot Category</a></li>
+              {{-- <li><a href="{{ route('manage.cupon')}}"><i class="ti-more"></i>Manage Cupon </a></li> --}}
+            </ul>
+          </li>
         {{-- Ashim Banner Category --}}
-
-        <li class="treeview  {{ ($prefix=='/bannerCategory')?'active':'' }}  ">
-          <a href="#">
-            <i class="fa fa-picture-o fa-5x"></i>
-            <span>Banner Category</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-right pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li class="{{ ($route == 'bannerCategory.manage')? 'active':'' }}">
-              <a href="{{ route('bannerCategory.manage') }}"><i class="ti-more"></i>Manage Banner</a></li>
-            {{-- <li><a href="{{ route('manage.cupon')}}"><i class="ti-more"></i>Manage Cupon </a></li> --}}
-          </ul>
-        </li>
         @if($shipping == true)
         <li class="treeview  {{ ($prefix=='/shipping')?'active':'' }}  ">
           <a href="#">

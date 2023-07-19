@@ -17,7 +17,7 @@ use App\Models\Valley;
 use App\Models\BoardDirector;
 use App\Models\Banner;
 use App\Models\ContactUs;
-use App\Models\SubCategory;
+use App\Models\PlotType;
 use App\Models\News;
 use App\Models\Subscriber;
 use App\Models\review;
@@ -346,22 +346,21 @@ class IndexController extends Controller
         $boardof_directors = BoardDirector::get();
         return view('frontend.valley.about',compact('boardof_directors'));
     }
-    //project
+    //Valley
     public function theValley(){
         $sliders = Slider::where('status', 0)->orderBy('id', 'DESC')->limit(10)->get();
         $valley = Valley::find(2);
         return view('frontend.valley.the_valley',compact('sliders','valley'));
     }
+    //PlotType
+    public function plotType(){
+        $plottype = PlotType::find(1);
+        return view('frontend.valley.plot_type',compact('plottype'));
+    }
     //nature
     public function nature(){
         $projects = Project::limit(30)->orderBy('id', 'desc')->paginate(9);
         return view('frontend.valley.nature');
-    }
-
-    //ongoingProject
-    public function plotType(){
-        $projects = Project::limit(30)->orderBy('id', 'desc')->paginate(9);
-        return view('frontend.valley.plot_type');
     }
     //upcomingProject
     public function upcomingProject(){

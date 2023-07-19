@@ -208,40 +208,5 @@ class BannerController extends Controller
 
             } // end mathod
 
-
-
-
-
-
-
-
-
-     // Banner DeActive
-     public function BennarDeactive($id){
-        Banner::findOrFail($id)->update([ 'status' => 0, ]);
-
-        // pass the sms
-        $notification = array(
-            'message' => 'Banner Deactive Successfully',
-            'alert-type' => 'info'
-        );
-
-        return redirect()->back()->with($notification);
-    } // end mathod
-
-       // Active
-       public function BennarActive($id){
-        Banner::findOrFail($id)->update([ 'status' => 1, ]);
-
-        // pass the sms
-        $notification = array(
-            'message' => 'Banner Active Successfully',
-            'alert-type' => 'info'
-        );
-
-        return redirect()->back()->with($notification);
-    }// end mathod
-
-
 } // main end
 

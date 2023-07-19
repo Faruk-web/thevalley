@@ -5,7 +5,7 @@
     <div class="col-lg-12">
         <div class="box mt-2">
             <div class="box-header with-border text-center bg-secondary">
-              <h3 class="box-title ">Banner</h3>
+              <h3 class="box-title ">Plot Show</h3>
           </div>
           <!-- /.box-header -->
           <div class="box-body">
@@ -14,7 +14,7 @@
                     <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
                         <thead>
                             <tr role="row" class="btn-primary">
-                                <th >Valley Img</th>
+                                <th >Plot Img</th>
                                 <th>Name</th>
                                 <th >Discription</th>
                                 <th>Action</th>
@@ -30,7 +30,7 @@
                                 <td>{{$item->frist_name}}</td>
                                 <td>{{$item->frist_descrip}}</td>
                                 <td>
-                                    <a href="{{route('valley.edit',$item->id )}}" class="btn btn-primary">Update</a>
+                                    <a href="{{route('plot.edit',$item->id )}}" class="btn btn-primary">Update</a>
                                     {{-- <a href="{{route('bennar.delete',$item->id)}}" class="btn btn-primary">Delete</a> --}}
                                 </td>
                            </tr>
