@@ -85,7 +85,7 @@ Route::get('/contact_us', [IndexController::class, 'contactamfl'])->name('user.c
 Route::get('/boardof/director/{id}', [IndexController::class, 'BoardOfDirector'])->name('user.director');
 Route::get('/project/details/{id}', [IndexController::class, 'ProjectDetails'])->name('user.project.details');
 Route::get('/project/details/slide/{id}', [IndexController::class, 'ProjectDetailsSlide'])->name('user.project.details.slide');
-Route::get('/leading/detail/{id}', [IndexController::class, 'LeadingDetail'])->name('user.leading.detail');
+Route::get('/nature/detail', [IndexController::class, 'natureDetail'])->name('user.nature.detail');
 // User Logout Route
 Route::get('/user/logout', [IndexController::class, 'UserLogout'])->name('user.logout');
 // User Update Profile

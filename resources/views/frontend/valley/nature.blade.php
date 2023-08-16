@@ -4,7 +4,7 @@
 <section id="tt-intro" class="slideshow-intro">
     <div class="tt-intro-inner"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag! ) -->
         <div class="gl-carousel-wrap no-padding"> <!-- Optional: use class "no-padding" to disable paddings -->
-            <div class="owl-carousel cc-height-5 cursor-grab dots-right bg-dark" data-items="1" data-loop="true" data-nav="true" data-nav-speed="500" data-dots-speed="500" data-autoplay="true" data-autoplay-timeout="2000" data-autoplay-speed="500" data-autoplay-hover-pause="true">
+            <div class="owl-carousel cc-height-5 cursor-grab dots-right bg-dark" data-items="1" data-loop="true" data-nav="true" data-nav-speed="500" data-dots-speed="500" data-autoplay="true" data-autoplay-timeout="4000" data-autoplay-speed="500" data-autoplay-hover-pause="true">
                 <!-- Begin carousel item
                 ========================= -->
                 @foreach ($sliders as $item)
@@ -83,12 +83,12 @@
                                 <article class="blog-list-item">
 
                                     <!-- Blog list item image -->
-                                    <a href="blog-single.html" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/7.png" alt="image"></a>
+                                    <a href="{{ route('user.nature.detail') }}"><img src="{{asset('frontend') }}/assets/img/valley/7.png" alt="image"></a>
 
                                     <!-- Begin blog list item info -->
                                     <div class="bl-item-info">
                                         <div class="bl-item-category"><a href="blog-archive.html">Photography</a></div>
-                                        <a href="blog-single.html" class="bl-item-title"><h2>5 Reasons You Should Fall In Love With Photography</h2></a>
+                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-title"><h2>5 Reasons You Should Fall In Love With Photography</h2></a>
                                         <div class="bl-item-meta">
                                             <span class="published">May 26, 2017</span>
                                             <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">Martin Vegas</a></span>
@@ -97,13 +97,13 @@
                                         <!-- Use data attributes to set text maximum characters or words (example: data-max-characters="120" or data-max-words="40") -->
                                         <div class="bl-item-desc" data-max-words="14">Suspendisse imperdiet ante at tortor consequat consectetur. Quisque rhoncus blandit justo praesen congue convallis artula ellis.</div>
 
-                                        <a href="blog-single.html" class="bl-item-read-more" title="Read More"><span></span></a>
+                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-read-more" title="Read More"><span></span></a>
 
                                         <!-- Begin blog list item attributes -->
                                         <ul class="bl-item-attr">
                                             <li>
                                                 <!-- Begin comments count -->
-                                                <a href="blog-single.html#blog-post-comments" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 10</a>
+                                                <a href="{{ route('user.nature.detail') }}" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 10</a>
                                                 <!-- End comments count -->
                                             </li>
                                             <li>
@@ -140,12 +140,12 @@
                                 <article class="blog-list-item">
 
                                     <!-- Blog list item image -->
-                                    <a href="blog-single.html" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/6.png" alt="image"></a>
+                                    <a href="{{ route('user.nature.detail') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/6.png" alt="image"></a>
 
                                     <!-- Begin blog list item info -->
                                     <div class="bl-item-info">
                                         <div class="bl-item-category"><a href="blog-archive.html">Equipment</a></div>
-                                        <a href="blog-single.html" class="bl-item-title"><h2>10 Top Choices for Aerial Photography</h2></a>
+                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-title"><h2>10 Top Choices for Aerial Photography</h2></a>
                                         <div class="bl-item-meta">
                                             <span class="published">May 26, 2017</span>
                                             <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">John Young</a></span>
@@ -154,13 +154,13 @@
                                         <!-- Use data attributes to set text maximum characters or words (example: data-max-characters="120" or data-max-words="40") -->
                                         <div class="bl-item-desc" data-max-words="14">Suspendisse imperdiet ante at tortor consequat consectetur. Quisque rhoncus blandit justo praesen congue convallis artula ellis.</div>
 
-                                        <a href="blog-single.html" class="bl-item-read-more" title="Read More"><span></span></a>
+                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-read-more" title="Read More"><span></span></a>
 
                                         <!-- Begin blog list item attributes -->
                                         <ul class="bl-item-attr">
                                             <li>
                                                 <!-- Begin comments count -->
-                                                <a href="blog-single.html#blog-post-comments" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 66</a>
+                                                <a href="{{ route('user.nature.detail') }}" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 66</a>
                                                 <!-- End comments count -->
                                             </li>
                                             <li>
@@ -197,12 +197,12 @@
                                 <article class="blog-list-item">
 
                                     <!-- Blog list item image -->
-                                    <a href="blog-single.html" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/7.png" alt="image"></a>
+                                    <a href="{{ route('user.nature.detail') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/7.png" alt="image"></a>
 
                                     <!-- Begin blog list item info -->
                                     <div class="bl-item-info">
                                         <div class="bl-item-category"><a href="blog-archive.html">Travel</a></div>
-                                        <a href="blog-single.html" class="bl-item-title"><h2>How to Take Professional Travel Photos</h2></a>
+                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-title"><h2>How to Take Professional Travel Photos</h2></a>
                                         <div class="bl-item-meta">
                                             <span class="published">May 26, 2017</span>
                                             <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">Anna Vernik</a></span>
@@ -211,13 +211,13 @@
                                         <!-- Use data attributes to set text maximum characters or words (example: data-max-characters="120" or data-max-words="40") -->
                                         <div class="bl-item-desc" data-max-words="14">Suspendisse imperdiet ante at tortor consequat consectetur. Quisque rhoncus blandit justo praesen congue convallis artula ellis.</div>
 
-                                        <a href="blog-single.html" class="bl-item-read-more" title="Read More"><span></span></a>
+                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-read-more" title="Read More"><span></span></a>
 
                                         <!-- Begin blog list item attributes -->
                                         <ul class="bl-item-attr">
                                             <li>
                                                 <!-- Begin comments count -->
-                                                <a href="blog-single.html#blog-post-comments" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 3</a>
+                                                <a href="{{ route('user.nature.detail') }}" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 3</a>
                                                 <!-- End comments count -->
                                             </li>
                                             <li>
@@ -254,12 +254,12 @@
                                 <article class="blog-list-item">
 
                                     <!-- Blog list item image -->
-                                    <a href="blog-single.html" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/about_1.png" alt="image"></a>
+                                    <a href="{{ route('user.nature.detail') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/about_1.png" alt="image"></a>
 
                                     <!-- Begin blog list item info -->
                                     <div class="bl-item-info">
                                         <div class="bl-item-category"><a href="blog-archive.html">Photography</a></div>
-                                        <a href="blog-single.html" class="bl-item-title"><h2>5 Tips Your Camera Manual Never Told You About Portrait Photography</h2></a>
+                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-title"><h2>5 Tips Your Camera Manual Never Told You About Portrait Photography</h2></a>
                                         <div class="bl-item-meta">
                                             <span class="published">May 26, 2017</span>
                                             <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">Julia Beck</a></span>
@@ -268,13 +268,13 @@
                                         <!-- Use data attributes to set text maximum characters or words (example: data-max-characters="120" or data-max-words="40") -->
                                         <div class="bl-item-desc" data-max-words="14">Suspendisse imperdiet ante at tortor consequat consectetur. Quisque rhoncus blandit justo praesen congue convallis artula ellis.</div>
 
-                                        <a href="blog-single.html" class="bl-item-read-more" title="Read More"><span></span></a>
+                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-read-more" title="Read More"><span></span></a>
 
                                         <!-- Begin blog list item attributes -->
                                         <ul class="bl-item-attr">
                                             <li>
                                                 <!-- Begin comments count -->
-                                                <a href="blog-single.html#blog-post-comments" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 0</a>
+                                                <a href="{{ route('user.nature.detail') }}" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 0</a>
                                                 <!-- End comments count -->
                                             </li>
                                             <li>
@@ -311,12 +311,12 @@
                                 <article class="blog-list-item">
 
                                     <!-- Blog list item image -->
-                                    <a href="blog-single.html" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/about.png" alt="image"></a>
+                                    <a href="{{ route('user.nature.detail') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/about.png" alt="image"></a>
 
                                     <!-- Begin blog list item info -->
                                     <div class="bl-item-info">
                                         <div class="bl-item-category"><a href="blog-archive.html">Photography</a></div>
-                                        <a href="blog-single.html" class="bl-item-title"><h2>Most Common Wedding Photography Mistakes Every Beginner Will Make</h2></a>
+                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-title"><h2>Most Common Wedding Photography Mistakes Every Beginner Will Make</h2></a>
                                         <div class="bl-item-meta">
                                             <span class="published">May 26, 2017</span>
                                             <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">Martin Vegas</a></span>
@@ -325,13 +325,13 @@
                                         <!-- Use data attributes to set text maximum characters or words (example: data-max-characters="120" or data-max-words="40") -->
                                         <div class="bl-item-desc" data-max-words="14">Suspendisse imperdiet ante at tortor consequat consectetur. Quisque rhoncus blandit justo praesen congue convallis artula ellis.</div>
 
-                                        <a href="blog-single.html" class="bl-item-read-more" title="Read More"><span></span></a>
+                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-read-more" title="Read More"><span></span></a>
 
                                         <!-- Begin blog list item attributes -->
                                         <ul class="bl-item-attr">
                                             <li>
                                                 <!-- Begin comments count -->
-                                                <a href="blog-single.html#blog-post-comments" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 8</a>
+                                                <a href="{{ route('user.nature.detail') }}" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 8</a>
                                                 <!-- End comments count -->
                                             </li>
                                             <li>
@@ -368,12 +368,12 @@
                                 <article class="blog-list-item">
 
                                     <!-- Blog list item image -->
-                                    <a href="blog-single.html" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/1.png" alt="image"></a>
+                                    <a href="{{ route('user.nature.detail') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/1.png" alt="image"></a>
 
                                     <!-- Begin blog list item info -->
                                     <div class="bl-item-info">
                                         <div class="bl-item-category"><a href="blog-archive.html">Food</a> <a href="#">Photography</a></div>
-                                        <a href="blog-single.html" class="bl-item-title"><h2>The Serious Eats Guide to Food Photography</h2></a>
+                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-title"><h2>The Serious Eats Guide to Food Photography</h2></a>
                                         <div class="bl-item-meta">
                                             <span class="published">May 26, 2017</span>
                                             <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">Martin Vegas</a></span>
@@ -382,13 +382,13 @@
                                         <!-- Use data attributes to set text maximum characters or words (example: data-max-characters="120" or data-max-words="40") -->
                                         <div class="bl-item-desc" data-max-words="14">Suspendisse imperdiet ante at tortor consequat consectetur. Quisque rhoncus blandit justo praesen congue convallis artula ellis.</div>
 
-                                        <a href="blog-single.html" class="bl-item-read-more" title="Read More"><span></span></a>
+                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-read-more" title="Read More"><span></span></a>
 
                                         <!-- Begin blog list item attributes -->
                                         <ul class="bl-item-attr">
                                             <li>
                                                 <!-- Begin comments count -->
-                                                <a href="blog-single.html#blog-post-comments" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 28</a>
+                                                <a href="{{ route('user.nature.detail') }}" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 28</a>
                                                 <!-- End comments count -->
                                             </li>
                                             <li>
@@ -425,12 +425,12 @@
                                 <article class="blog-list-item">
 
                                     <!-- Blog list item image -->
-                                    <a href="blog-single.html" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/2.png" alt="image"></a>
+                                    <a href="{{ route('user.nature.detail') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/2.png" alt="image"></a>
 
                                     <!-- Begin blog list item info -->
                                     <div class="bl-item-info">
                                         <div class="bl-item-category"><a href="blog-archive.html">Fashion</a></div>
-                                        <a href="blog-single.html" class="bl-item-title"><h2>How to Become a Fashion Photographer</h2></a>
+                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-title"><h2>How to Become a Fashion Photographer</h2></a>
                                         <div class="bl-item-meta">
                                             <span class="published">May 26, 2017</span>
                                             <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">Jack Jackson</a></span>
@@ -439,13 +439,13 @@
                                         <!-- Use data attributes to set text maximum characters or words (example: data-max-characters="120" or data-max-words="40") -->
                                         <div class="bl-item-desc" data-max-words="14">Suspendisse imperdiet ante at tortor consequat consectetur. Quisque rhoncus blandit justo praesen congue convallis artula ellis.</div>
 
-                                        <a href="blog-single.html" class="bl-item-read-more" title="Read More"><span></span></a>
+                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-read-more" title="Read More"><span></span></a>
 
                                         <!-- Begin blog list item attributes -->
                                         <ul class="bl-item-attr">
                                             <li>
                                                 <!-- Begin comments count -->
-                                                <a href="blog-single.html#blog-post-comments" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 2</a>
+                                                <a href="{{ route('user.nature.detail') }}" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 2</a>
                                                 <!-- End comments count -->
                                             </li>
                                             <li>
@@ -482,12 +482,12 @@
                                 <article class="blog-list-item">
 
                                     <!-- Blog list item image -->
-                                    <a href="blog-single.html" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/3.png" alt="image"></a>
+                                    <a href="{{ route('user.nature.detail') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/3.png" alt="image"></a>
 
                                     <!-- Begin blog list item info -->
                                     <div class="bl-item-info">
                                         <div class="bl-item-category"><a href="blog-archive.html">Fashion</a></div>
-                                        <a href="blog-single.html" class="bl-item-title"><h2>Best Lighting Tips For High Fashion Photography</h2></a>
+                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-title"><h2>Best Lighting Tips For High Fashion Photography</h2></a>
                                         <div class="bl-item-meta">
                                             <span class="published">May 26, 2017</span>
                                             <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">Martin Vegas</a></span>
@@ -496,13 +496,13 @@
                                         <!-- Use data attributes to set text maximum characters or words (example: data-max-characters="120" or data-max-words="40") -->
                                         <div class="bl-item-desc" data-max-words="14">Suspendisse imperdiet ante at tortor consequat consectetur. Quisque rhoncus blandit justo praesen congue convallis artula ellis.</div>
 
-                                        <a href="blog-single.html" class="bl-item-read-more" title="Read More"><span></span></a>
+                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-read-more" title="Read More"><span></span></a>
 
                                         <!-- Begin blog list item attributes -->
                                         <ul class="bl-item-attr">
                                             <li>
                                                 <!-- Begin comments count -->
-                                                <a href="blog-single.html#blog-post-comments" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 79</a>
+                                                <a href="{{ route('user.nature.detail') }}" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 79</a>
                                                 <!-- End comments count -->
                                             </li>
                                             <li>
@@ -539,12 +539,12 @@
                                 <article class="blog-list-item">
 
                                     <!-- Blog list item image -->
-                                    <a href="blog-single.html" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/4.png" alt="image"></a>
+                                    <a href="{{ route('user.nature.detail') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/4.png" alt="image"></a>
 
                                     <!-- Begin blog list item info -->
                                     <div class="bl-item-info">
                                         <div class="bl-item-category"><a href="blog-archive.html">Streets</a></div>
-                                        <a href="blog-single.html" class="bl-item-title"><h2>These Ideas Will Get Your Street Photography Rocking</h2></a>
+                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-title"><h2>These Ideas Will Get Your Street Photography Rocking</h2></a>
                                         <div class="bl-item-meta">
                                             <span class="published">May 26, 2017</span>
                                             <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">Mike Leon</a></span>
@@ -553,13 +553,13 @@
                                         <!-- Use data attributes to set text maximum characters or words (example: data-max-characters="120" or data-max-words="40") -->
                                         <div class="bl-item-desc" data-max-words="14">Suspendisse imperdiet ante at tortor consequat consectetur. Quisque rhoncus blandit justo praesen congue convallis artula ellis.</div>
 
-                                        <a href="blog-single.html" class="bl-item-read-more" title="Read More"><span></span></a>
+                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-read-more" title="Read More"><span></span></a>
 
                                         <!-- Begin blog list item attributes -->
                                         <ul class="bl-item-attr">
                                             <li>
                                                 <!-- Begin comments count -->
-                                                <a href="blog-single.html#blog-post-comments" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 9</a>
+                                                <a href="{{ route('user.nature.detail') }}" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 9</a>
                                                 <!-- End comments count -->
                                             </li>
                                             <li>

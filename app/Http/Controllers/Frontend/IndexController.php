@@ -415,9 +415,8 @@ class IndexController extends Controller
         $boardof_directors = BoardDirector::find($id);
         return view('frontend.valley.boardof_director',compact('boardof_directors'));
     }
-    public function LeadingDetail($id){
-        $leading = Leading::find($id);
-        return view('frontend.valley.leading_detail',compact('leading'));
+    public function natureDetail(){
+        return view('frontend.valley.nature_detail');
     }
 
 } // main end

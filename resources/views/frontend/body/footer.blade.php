@@ -118,7 +118,39 @@
         </div> <!-- /.footer-bottom -->
 
     </div> <!-- /.footer-inner -->
+    <style>
+        body {
+        font-family: sans-serif;
+        }
+        /* Add WA floating button CSS */
+        .floating {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 120px;
+        right: 15px;
+        background-color:#4d933a;
+        color: #fff;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 100;
+        }
+        .fab-icon {
+        margin-top: 16px;
+        }
+        </style>
 
+        <!--<a href="tel:16711" class="themesflat-button bg-white small"><span> 16711 <span class="icon"><i class="autora-icon-phone-contact"></i></span></span></a>-->
+       <!-- <a href="tel:16711" class="floating" target="_blank">-->
+       <!-- <i style="margin-top: 15px;" class="fa fa-phone-square" aria-hidden="true"></i>-->
+       <!--</a>-->
+
+        <!-- render the button and direct it to wa.me -->
+        <a href="https://api.WhatsApp.com/send?phone=+88 01810-103999&text=Can I speak to an Agent ?" class="floating" target="_blank">
+        <i class="fab fa-whatsapp fab-icon"></i>
+       </a>
     <!-- Scroll to top button -->
     <a href="#body" class="scrolltotop sm-scroll" title="Scroll to top"><i class="fas fa-chevron-up"></i></a>
 

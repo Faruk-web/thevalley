@@ -5,7 +5,7 @@
 <section id="tt-intro" class="slideshow-intro">
     <div class="tt-intro-inner"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag! ) -->
         <div class="gl-carousel-wrap no-padding"> <!-- Optional: use class "no-padding" to disable paddings -->
-            <div class="owl-carousel cc-height-5 cursor-grab dots-right bg-dark" data-items="1" data-loop="true" data-nav="true" data-nav-speed="500" data-dots-speed="500" data-autoplay="true" data-autoplay-timeout="2000" data-autoplay-speed="500" data-autoplay-hover-pause="true">
+            <div class="owl-carousel cc-height-5 cursor-grab dots-right bg-dark" data-items="1" data-loop="true" data-nav="true" data-nav-speed="500" data-dots-speed="500" data-autoplay="true" data-autoplay-timeout="4000" data-autoplay-speed="500" data-autoplay-hover-pause="true">
 
                 <!-- Begin carousel item
                 ========================= -->
@@ -955,7 +955,7 @@
                         <div class="pr-box price-heading bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/5.png);">
                             <div class="price-heading-inner">
                                 <i class="fas fa-umbrella"></i>
-                                <h3 class="price-title">Studio</h3>
+                                <h3 class="price-title">3 Katha</h3>
                                 <div class="price-heading-text">Studio Photo Session</div>
                             </div>
                         </div>
@@ -971,8 +971,8 @@
                             </ul>
                         </div>
                         <div class="pr-box">
-                            <a href="contact.html" class="btn btn-price-box btn-dark btn-lg">Purchase Now</a>
-                            <a href="page-dummy-classic-sidebar-right.html" class="btn btn-link btn-lg btn-block">or Read More...</a>
+                            {{-- <a href="contact.html" class="btn btn-price-box btn-dark btn-lg">Purchase Now</a> --}}
+                            <a href="{{ url('/plot_detail') }}" class="btn btn-link btn-lg btn-block">or Read More...</a>
                         </div>
                     </div>
                     <!-- End price box -->
@@ -986,7 +986,7 @@
                         <div class="pr-box price-heading bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/6.png);">
                             <div class="price-heading-inner">
                                 <i class="fas fa-tree"></i>
-                                <h3 class="price-title">Outdoor</h3>
+                                <h3 class="price-title">4 Katha</h3>
                                 <div class="price-heading-text">Outdoor Photo Session</div>
                             </div>
                         </div>
@@ -1002,8 +1002,8 @@
                             </ul>
                         </div>
                         <div class="pr-box">
-                            <a href="contact.html" class="btn btn-price-box btn-dark btn-lg">Purchase Now</a>
-                            <a href="page-dummy-classic-sidebar-right.html" class="btn btn-link btn-lg btn-block">or Read More...</a>
+                            {{-- <a href="contact.html" class="btn btn-price-box btn-dark btn-lg">Purchase Now</a> --}}
+                            <a href="{{ url('/plot_detail') }}" class="btn btn-link btn-lg btn-block">or Read More...</a>
                         </div>
                     </div>
                     <!-- End price box -->
@@ -1017,7 +1017,7 @@
                         <div class="pr-box price-heading bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/7.png);">
                             <div class="price-heading-inner">
                                 <i class="fas fa-user"></i>
-                                <h3 class="price-title">Personal</h3>
+                                <h3 class="price-title">10 Katha</h3>
                                 <div class="price-heading-text">Personal Photo Session</div>
                             </div>
                         </div>
@@ -1033,8 +1033,8 @@
                             </ul>
                         </div>
                         <div class="pr-box">
-                            <a href="contact.html" class="btn btn-price-box btn-dark btn-lg">Purchase Now</a>
-                            <a href="page-dummy-classic-sidebar-right.html" class="btn btn-link btn-lg btn-block">or Read More...</a>
+                            {{-- <a href="contact.html" class="btn btn-price-box btn-dark btn-lg">Purchase Now</a> --}}
+                            <a href="{{ url('/plot_detail') }}" class="btn btn-link btn-lg btn-block">or Read More...</a>
                         </div>
                     </div>
                     <!-- End price box -->
@@ -1048,7 +1048,7 @@
                         <div class="pr-box price-heading bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/about.png);">
                             <div class="price-heading-inner">
                                 <i class="fas fa-gem"></i>
-                                <h3 class="price-title">Wedding</h3>
+                                <h3 class="price-title">Commertial</h3>
                                 <div class="price-heading-text">Wedding Photo Session</div>
                             </div>
                         </div>
@@ -1064,8 +1064,8 @@
                             </ul>
                         </div>
                         <div class="pr-box">
-                            <a href="contact.html" class="btn btn-price-box btn-dark btn-lg">Purchase Now</a>
-                            <a href="page-dummy-classic-sidebar-right.html" class="btn btn-link btn-lg btn-block">or Read More...</a>
+                            {{-- <a href="contact.html" class="btn btn-price-box btn-dark btn-lg">Purchase Now</a> --}}
+                            <a href="{{ url('/plot_detail') }}" class="btn btn-link btn-lg btn-block">or Read More...</a>
                         </div>
                     </div>
                     <!-- End price box -->
@@ -1104,64 +1104,6 @@
         * Use class "tm-center" or "tm-right" to align testimonials.
         -->
         <div class="testimonials-carousel tm-center">
-
-            <!-- Begin tt-heading
-            ======================
-            * Use class "padding-on" to enable heading paddings (useful if you use tt-heading as stand alone element).
-            * Use class "text-center" or "text-right" to align tt-heading.
-            * Use classes "tt-heading-xs", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set tt-heading size.
-            -->
-            <!-- <div class="tt-heading tt-heading-lg text-center">
-                <div class="tt-heading-inner tt-wrap">
-                    <h1 class="tt-heading-title text-white">Testimonials</h1>
-                    <div class="tt-heading-subtitle text-gray-3">What customers say</div>
-                    <hr class="hr-short">
-                </div>
-            </div> -->
-            <!-- End tt-heading -->
-
-
-            <!-- Begin content carousel (https://owlcarousel2.github.io/OwlCarousel2/)
-            ====================================================================
-            * Use class "nav-outside" for outside nav (requires boxed layout).
-            * Use class "nav-outside-top" for outside top nav (requires enough space at the top of the carousel).
-            * Use class "nav-bottom-right" for bottom right nav.
-            * Use class "nav-rounded" for rounded nav.
-            * Use class "nav-light" to enable nav light style.
-            * Use class "dots-outside" for outside dots (requires enough space at the bottom of the carousel).
-            * Use class "dots-left", "dots-right" or "dots-center-right" to align dots.
-            * Use class "dots-rounded" for rounded dots.
-            * Use class "owl-mousewheel" to enable mousewheel support.
-            * Use class "cursor-grab" to enable cursor grab icon (no effect on links!).
-            * Use class "cc-hover-light", "cc-hover-dark" or "cc-hover-zoom" to enable carousel items hover effect.
-            * Use class "cc-height-1", "cc-height-2", "cc-height-3", "cc-height-4", "cc-height-5", "cc-height-6" or "cc-height-full" to set carousel height (do not use with data-autoheight="true"!!!).
-            * Use class "cc-height-m" to set full height for small screens (do not use with data-autoheight="true"!!!).
-            ================================================================
-            * Available carousel data attributes:
-                    data-items="5".......................(items visible on desktop)
-                    data-tablet-landscape="4"............(items visible on mobiles)
-                    data-tablet-portrait="3".............(items visible on mobiles)
-                    data-mobile-landscape="2"............(items visible on tablets)
-                    data-mobile-portrait="1".............(items visible on tablets)
-                    data-loop="true".....................(true/false)
-                    data-margin="10".....................(space between items)
-                    data-center="true"...................(true/false)
-                    data-start-position="0"..............(item start position)
-                    data-animate-in="fadeIn".............(fade-in animation)
-                    data-animate-out="fadeOut"...........(fade-out animation)
-                    data-mouse-drag="false"..............(true/false)
-                    data-touch-drag="false"..............(true/false)
-                    data-autoheight="true"...............(true/false)
-                    data-autoplay="true".................(true/false)
-                    data-autoplay-timeout="5000".........(milliseconds)
-                    data-autoplay-hover-pause="true".....(true/false)
-                    data-autoplay-speed="800"............(milliseconds)
-                    data-drag-end-speed="800"............(milliseconds)
-                    data-nav="true"......................(true/false)
-                    data-nav-speed="800".................(milliseconds)
-                    data-dots="false"....................(true/false)
-                    data-dots-speed="800"................(milliseconds)
-            -->
             <div class="owl-carousel cursor-grab nav-outside dots-outside" data-items="1" data-loop="true" data-autoheight="true" data-nav="true" data-nav-speed="500" data-dots-speed="500" data-autoplay="true" data-autoplay-timeout="8000" data-autoplay-speed="500" data-autoplay-hover-pause="true">
 
                 <!-- Begin carousel item
@@ -1261,12 +1203,12 @@
                     <article class="blog-list-item">
 
                         <!-- Blog list item image -->
-                        <a href="{{ url('/the-valley') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/4.png" alt="image"></a>
+                        <a href="{{ route('user.nature.detail') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/4.png" alt="image"></a>
 
                         <!-- Begin blog list item info -->
                         <div class="bl-item-info">
-                            <div class="bl-item-category"><a href="blog-archive.html">Photography</a></div>
-                            <a href="{{ url('/the-valley') }}" class="bl-item-title"><h2>5 Reasons You Should Fall In Love With Photography</h2></a>
+                            <div class="bl-item-category"><a href="{{ route('user.nature.detail') }}">Photography</a></div>
+                            <a href="{{ route('user.nature.detail') }}" class="bl-item-title"><h2>5 Reasons You Should Fall In Love With Photography</h2></a>
                             <div class="bl-item-meta">
                                 <span class="published">May 26, 2017</span>
                                 <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">Martin Vegas</a></span>
@@ -1275,7 +1217,7 @@
                             <!-- Use data attributes to set text maximum characters or words (example: data-max-characters="120" or data-max-words="40") -->
                             <div class="bl-item-desc" data-max-words="14">Suspendisse imperdiet ante at tortor consequat consectetur. Quisque rhoncus blandit justo praesen congue convallis artula ellis.</div>
 
-                            <a href="blog-single.html" class="bl-item-read-more" title="Read More"><span></span></a>
+                            <a href="{{ url('/nature') }}" class="bl-item-read-more" title="Read More"><span></span></a>
 
                             <!-- Begin blog list item attributes -->
                             <ul class="bl-item-attr">
@@ -1317,12 +1259,12 @@
                     <article class="blog-list-item">
 
                         <!-- Blog list item image -->
-                        <a href="{{ url('/the-valley') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/5.png" alt="image"></a>
+                        <a href="{{ route('user.nature.detail') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/5.png" alt="image"></a>
 
                         <!-- Begin blog list item info -->
                         <div class="bl-item-info">
-                            <div class="bl-item-category"><a href="blog-archive.html">Equipment</a></div>
-                            <a href="{{ url('/the-valley') }}" class="bl-item-title"><h2>10 Top Choices for Aerial Photography</h2></a>
+                            <div class="bl-item-category"><a href="{{ route('user.nature.detail') }}">Equipment</a></div>
+                            <a href="{{ route('user.nature.detail') }}" class="bl-item-title"><h2>10 Top Choices for Aerial Photography</h2></a>
                             <div class="bl-item-meta">
                                 <span class="published">May 26, 2017</span>
                                 <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">John Young</a></span>
@@ -1331,7 +1273,7 @@
                             <!-- Use data attributes to set text maximum characters or words (example: data-max-characters="120" or data-max-words="40") -->
                             <div class="bl-item-desc" data-max-words="14">Suspendisse imperdiet ante at tortor consequat consectetur. Quisque rhoncus blandit justo praesen congue convallis artula ellis.</div>
 
-                            <a href="blog-single.html" class="bl-item-read-more" title="Read More"><span></span></a>
+                            <a href="{{ url('/nature') }}" class="bl-item-read-more" title="Read More"><span></span></a>
 
                             <!-- Begin blog list item attributes -->
                             <ul class="bl-item-attr">
@@ -1373,12 +1315,12 @@
                     <article class="blog-list-item">
 
                         <!-- Blog list item image -->
-                        <a href="{{ url('/the-valley') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/6.png" alt="image"></a>
+                        <a href="{{ route('user.nature.detail') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/6.png" alt="image"></a>
 
                         <!-- Begin blog list item info -->
                         <div class="bl-item-info">
-                            <div class="bl-item-category"><a href="blog-archive.html">Travel</a></div>
-                            <a href="{{ url('/the-valley') }}" class="bl-item-title"><h2>How to Take Professional Travel Photos</h2></a>
+                            <div class="bl-item-category"><a href="{{ route('user.nature.detail') }}">Travel</a></div>
+                            <a href="{{ route('user.nature.detail') }}" class="bl-item-title"><h2>How to Take Professional Travel Photos</h2></a>
                             <div class="bl-item-meta">
                                 <span class="published">May 26, 2017</span>
                                 <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">Anna Vernik</a></span>
@@ -1387,7 +1329,7 @@
                             <!-- Use data attributes to set text maximum characters or words (example: data-max-characters="120" or data-max-words="40") -->
                             <div class="bl-item-desc" data-max-words="14">Suspendisse imperdiet ante at tortor consequat consectetur. Quisque rhoncus blandit justo praesen congue convallis artula ellis.</div>
 
-                            <a href="blog-single.html" class="bl-item-read-more" title="Read More"><span></span></a>
+                            <a href="{{ url('/nature') }}" class="bl-item-read-more" title="Read More"><span></span></a>
 
                             <!-- Begin blog list item attributes -->
                             <ul class="bl-item-attr">
@@ -1429,12 +1371,12 @@
                     <article class="blog-list-item">
 
                         <!-- Blog list item image -->
-                        <a href="{{ url('/the-valley') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/6.png" alt="image"></a>
+                        <a href="{{ route('user.nature.detail') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/6.png" alt="image"></a>
 
                         <!-- Begin blog list item info -->
                         <div class="bl-item-info">
-                            <div class="bl-item-category"><a href="blog-archive.html">Photography</a></div>
-                            <a href="{{ url('/the-valley') }}" class="bl-item-title"><h2>5 Tips Your Camera Manual Never Told You About Portrait Photography</h2></a>
+                            <div class="bl-item-category"><a href="{{ route('user.nature.detail') }}">Photography</a></div>
+                            <a href="{{ route('user.nature.detail') }}" class="bl-item-title"><h2>5 Tips Your Camera Manual Never Told You About Portrait Photography</h2></a>
                             <div class="bl-item-meta">
                                 <span class="published">May 26, 2017</span>
                                 <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">Julia Beck</a></span>
@@ -1443,7 +1385,7 @@
                             <!-- Use data attributes to set text maximum characters or words (example: data-max-characters="120" or data-max-words="40") -->
                             <div class="bl-item-desc" data-max-words="14">Suspendisse imperdiet ante at tortor consequat consectetur. Quisque rhoncus blandit justo praesen congue convallis artula ellis.</div>
 
-                            <a href="blog-single.html" class="bl-item-read-more" title="Read More"><span></span></a>
+                            <a href="{{ url('/nature') }}" class="bl-item-read-more" title="Read More"><span></span></a>
 
                             <!-- Begin blog list item attributes -->
                             <ul class="bl-item-attr">
@@ -1485,12 +1427,12 @@
                     <article class="blog-list-item">
 
                         <!-- Blog list item image -->
-                        <a href="{{ url('/the-valley') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/7.png" alt="image"></a>
+                        <a href="{{ route('user.nature.detail') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/7.png" alt="image"></a>
 
                         <!-- Begin blog list item info -->
                         <div class="bl-item-info">
-                            <div class="bl-item-category"><a href="blog-archive.html">Photography</a></div>
-                            <a href="{{ url('/the-valley') }}" class="bl-item-title"><h2>Most Common Wedding Photography Mistakes Every Beginner Will Make</h2></a>
+                            <div class="bl-item-category"><a href="{{ route('user.nature.detail') }}">Photography</a></div>
+                            <a href="{{ route('user.nature.detail') }}" class="bl-item-title"><h2>Most Common Wedding Photography Mistakes Every Beginner Will Make</h2></a>
                             <div class="bl-item-meta">
                                 <span class="published">May 26, 2017</span>
                                 <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">Martin Vegas</a></span>
@@ -1499,7 +1441,7 @@
                             <!-- Use data attributes to set text maximum characters or words (example: data-max-characters="120" or data-max-words="40") -->
                             <div class="bl-item-desc" data-max-words="14">Suspendisse imperdiet ante at tortor consequat consectetur. Quisque rhoncus blandit justo praesen congue convallis artula ellis.</div>
 
-                            <a href="blog-single.html" class="bl-item-read-more" title="Read More"><span></span></a>
+                            <a href="{{ url('/nature') }}" class="bl-item-read-more" title="Read More"><span></span></a>
 
                             <!-- Begin blog list item attributes -->
                             <ul class="bl-item-attr">
@@ -1541,12 +1483,12 @@
                     <article class="blog-list-item">
 
                         <!-- Blog list item image -->
-                        <a href="{{ url('/the-valley') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/about.png" alt="image"></a>
+                        <a href="{{ route('user.nature.detail') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/about.png" alt="image"></a>
 
                         <!-- Begin blog list item info -->
                         <div class="bl-item-info">
-                            <div class="bl-item-category"><a href="blog-archive.html">Food</a> <a href="#">Photography</a></div>
-                            <a href="{{ url('/the-valley') }}" class="bl-item-title"><h2>The Serious Eats Guide to Food Photography</h2></a>
+                            <div class="bl-item-category"><a href="{{ route('user.nature.detail') }}">Food</a> <a href="#">Photography</a></div>
+                            <a href="{{ route('user.nature.detail') }}" class="bl-item-title"><h2>The Serious Eats Guide to Food Photography</h2></a>
                             <div class="bl-item-meta">
                                 <span class="published">May 26, 2017</span>
                                 <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">Martin Vegas</a></span>
@@ -1555,7 +1497,7 @@
                             <!-- Use data attributes to set text maximum characters or words (example: data-max-characters="120" or data-max-words="40") -->
                             <div class="bl-item-desc" data-max-words="14">Suspendisse imperdiet ante at tortor consequat consectetur. Quisque rhoncus blandit justo praesen congue convallis artula ellis.</div>
 
-                            <a href="blog-single.html" class="bl-item-read-more" title="Read More"><span></span></a>
+                            <a href="{{ url('/nature') }}" class="bl-item-read-more" title="Read More"><span></span></a>
 
                             <!-- Begin blog list item attributes -->
                             <ul class="bl-item-attr">
@@ -1608,7 +1550,7 @@
                 <div class="col-lg-12 col-lg-height col-lg-middle no-padding">
 
                     <!-- Begin split box content -->
-                    <div class="split-box-content" style="padding: 6% 10%;">
+                    <div class="split-box-content" style="padding:0px 10%!important;">
 
                         <!-- Begin contact form
                         ========================= -->
@@ -1708,47 +1650,59 @@
     "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
     });
     </script>
-<!-- ===================================
-
-///// Begin call to action section /////
-==================================== -->
-<section class="call-to-action-section bg-gray-3 margin-top-60">
-
-    <div class="full-cover for-light-style bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/about_1.png); background-position: 50% 50%;"></div>
-    <div class="full-cover for-dark-style bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/about_1.png); background-position: 50% 50%;"></div>
-
-    <div class="call-to-action-inner tt-wrap"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag! ) -->
-        <div class="row">
-            <div class="col-md-12 text-center">
-
-                <!-- Begin tt-heading
-                ======================
-                * Use class "padding-on" to enable heading paddings (useful if you use tt-heading as stand alone element).
-                * Use class "text-center" or "text-right" to align tt-heading.
-                * Use classes "tt-heading-xs", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set tt-heading size.
-                -->
-                <div class="tt-heading tt-heading-lg text-center">
-                    <div class="tt-heading-inner tt-wrap">
-                        <h1 class="tt-heading-title">What Next?</h1>
-                        <div class="tt-heading-subtitle">Interested in working with me?</div>
-                        <hr class="hr-short">
+ <section id="tt-intro" class="video-intro">
+    <div class="tt-intro-inner full-height-vh bg-dark tt-wrap"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag! ) -->
+        <!-- Element cover -->
+        <div class="cover bg-transparent-2-dark"></div>
+        <div class="youtube-bg-wrap ytp-full"> <!-- Class "ytp-full" is for full cover (depend on parent element size). -->
+            <div class="youtube-bg"
+                style="background-image: url({{asset('frontend') }}/assets/img/valley/about.png); background-position: 50% 50%;"
+                data-property="{
+                    videoURL: 'https://www.youtube.com/embed/31nXbsXmhfs',
+                    containment: 'self',
+                    quality: 'default',
+                    startAt: 12,
+                    stopAt: 80,
+                    autoPlay: true,
+                    loop: true,
+                    mute: true,
+                    showControls: false,
+                    showYTLogo: false,
+                    realfullscreen: true,
+                    addRaster: false,
+                    optimizeDisplay: true,
+                    stopMovieOnBlur: true
+                }">
+            </div> <!-- /.youtube-bg -->
+        </div>
+        <div class="intro-caption caption-animate intro-caption-xxlg center">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="tt-heading tt-heading-lg text-center">
+                        <div class="tt-heading-inner tt-wrap">
+                            <h1 class="tt-heading-title">What Next?</h1>
+                            <div class="tt-heading-subtitle">Interested in working with me?</div>
+                            <hr class="hr-short">
+                        </div>
                     </div>
-                </div>
-                <!-- End tt-heading -->
+                    <!-- End tt-heading -->
+                    <div class="margin-top-30 max-width-1000 margin-auto">
+                        <p>Fusce et velit sed augue rhoncus tempor. Sed ac lacinia augue, nec lacinia felis. Sed sit amet diam leo. Praesent vel malesuada arcu. Donec mattis, arcu vel vehicula feugiat, sem turpis dignissim ex, eu sollicitudin neque.</p>
 
-                <div class="margin-top-30 max-width-1000 margin-auto">
-                    <p>Fusce et velit sed augue rhoncus tempor. Sed ac lacinia augue, nec lacinia felis. Sed sit amet diam leo. Praesent vel malesuada arcu. Donec mattis, arcu vel vehicula feugiat, sem turpis dignissim ex, eu sollicitudin neque.</p>
-
-                    <div class="margin-top-30">
-                        <a href="page-dummy-modern.html" class="btn btn-dark margin-top-5 margin-right-5">Read More</a>
-                        <a href="contact.html" class="btn btn-primary margin-top-5">Let's Work Together!</a>
+                        <div class="margin-top-30">
+                            <a href="https://www.youtube.com/@thevalleybangladesh" target="_blank" class="btn btn-dark margin-top-5 margin-right-5">Read More</a>
+                            <a href="https://www.youtube.com/@thevalleybangladesh" target="_blank" class="btn btn-primary margin-top-5">Let's Work Together!</a>
+                        </div>
                     </div>
-                </div>
 
-            </div> <!-- /.col -->
-        </div> <!-- /.row -->
-    </div> <!-- /.call-to-action-inner -->
+                </div> <!-- /.col -->
+            </div> <!-- /.row -->
+        </div>
+        <!-- End intro caption -->
+
+    </div> <!-- /.tt-intro-inner -->
 </section>
+<!-- End intro section -->
 
 @endsection
 
