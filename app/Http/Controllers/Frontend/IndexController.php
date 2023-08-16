@@ -403,9 +403,8 @@ class IndexController extends Controller
         return view('frontend.valley.blog',compact('blogs'));
     }
     //blogDetails
-    public function blogDetails($id){
-        $blogs = Blog::find($id);
-         return view('frontend.valley.blog_details',compact('blogs'));
+    public function blogDetails(){
+         return view('frontend.valley.blog_details');
     }
      //contactvalley
      public function contactamfl(){

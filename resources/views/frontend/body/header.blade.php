@@ -6,12 +6,12 @@
         <!-- Begin logo
         ================ -->
         <div id="logo">
-            <a href="{{ url('/') }}" class="logo-dark"><img src="{{ asset('frontend') }}/assets/img/Valley_logo.png" alt="logo"></a>
-            <a href="{{ url('/') }}" class="logo-light"><img src="{{ asset('frontend') }}/assets/img/Valley_logo.png" alt="logo"></a>
+            <a href="{{ url('/') }}" class="logo-dark"><img style="max-height: 60px;" src="{{ asset('frontend') }}/assets/img/Valley_logo.png" alt="logo"></a>
+            <a href="{{ url('/') }}" class="logo-light"><img style="max-height: 60px;" src="{{ asset('frontend') }}/assets/img/Valley_logo.png" alt="logo"></a>
 
             <!-- for small screens -->
-            <a href="{{ url('/') }}" class="logo-dark-m"><img src="{{ asset('frontend') }}/assets/img/Valley_logo.png" alt="logo"></a>
-            <a href="{{ url('/') }}" class="logo-light-m"><img src="{{ asset('frontend') }}/assets/img/Valley_logo.png" alt="logo"></a>
+            <a href="{{ url('/') }}" class="logo-dark-m"><img style="max-height: 60px;" src="{{ asset('frontend') }}/assets/img/Valley_logo.png" alt="logo"></a>
+            <a href="{{ url('/') }}" class="logo-light-m"><img style="max-height: 60px;" src="{{ asset('frontend') }}/assets/img/Valley_logo.png" alt="logo"></a>
         </div>
         <!-- End logo -->
 
@@ -58,7 +58,7 @@
 
                     <!-- Begin submenu (submenu master)
                     ==================================== -->
-                    <li class="tt-submenu-wrap tt-submenu-master">
+                    <li >
                         <a href="{{ url('/') }}">Home</a>
                         {{-- <ul class="tt-submenu">
                             <li><a href="{{ url('/') }}">Home</a></li>
@@ -69,7 +69,7 @@
 
                     <!-- Begin submenu (submenu master)
                     ==================================== -->
-                    <li class="tt-submenu-wrap tt-submenu-master">
+                    <li>
                         <a href="{{ url('/about') }}">About</a>
                         {{-- <ul class="tt-submenu">
                             <li><a href="{{ url('/about') }}">About Me</a></li>
@@ -80,7 +80,7 @@
 
                     <!-- Begin submenu (submenu master)
                     ==================================== -->
-                    <li class="tt-submenu-wrap tt-submenu-master">
+                    <li >
                         <a href="{{ url('/the-valley') }}">The Valley</a>
                             <!-- Begin submenu
                             =================== -->
@@ -93,8 +93,8 @@
 
                             <!-- Begin submenu
                             =================== -->
-                            <li class="tt-submenu-wrap">
-                                <a href="{{url('/plot/type') }}">Plot Typet</a>
+                            <li>
+                                <a href="{{url('/plot/type') }}">Plot Type</a>
                                     <!-- Begin submenu
                                     =================== -->
                                     {{-- <li class="tt-submenu-wrap">
@@ -106,12 +106,15 @@
 
                             <!-- Begin submenu
                             =================== -->
-                            <li class="tt-submenu-wrap">
+                            <li >
                                 <a href="{{ url('/the/nature') }}">The Nature</a>
                                     {{-- <li><a href="{{ url('/the/nature') }}">The Nature</a></li> --}}
                                  <!-- /.tt-submenu -->
                             </li>
                             <!-- End submenu -->
+                            <li >
+                                <a href="{{ url('/blog') }}">Event</a>
+                            </li>
                             <li >
                                 <a href="{{ url('/contact_us') }}">Contact</a>
                             </li>

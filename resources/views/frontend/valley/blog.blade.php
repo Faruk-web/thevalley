@@ -1,276 +1,558 @@
-<!DOCTYPE html>
-<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><!--<![endif]-->
+@extends('frontend.main_master')
+@section('index')
 
-<head>
-    <!-- Basic Page Needs -->
-    <meta charset="utf-8">
-    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-    <title>AMFL</title>
-    <meta name="author" content="themesflat.com">
-    <!-- Mobile Specific Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<section id="blog-list-section" class="blog-list-classic">
+    <div class="blog-list-inner tt-wrap"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag! ) -->
 
-    <!-- Theme Style -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('frontend/style.css')}}">
-    <!-- Colors -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('frontend/assets/css/colors/color1.css')}}" id="colors">
-    <!-- Favicon and Touch Icons  -->
-    <link rel="shortcut icon" href="{{ asset('frontend/assets/img/amfl/Icon.png')}}">
-    <link rel="apple-touch-icon-precomposed" href="{{ asset('frontend/assets/icon/apple-touch-icon-158-precomposed.png')}}">
-    <!--[if lt IE 9]>
-        <script src="javascript/html5shiv.js"></script>
-        <script src="javascript/respond.min.js"></script>
-    <![endif]-->
+        <div class="row no-margin">
 
-</head>
-<body class="header-fixed sidebar-right header-style-2 topbar-style-1 menu-has-search">
-<div id="wrapper" class="animsition">
-    <div id="page" class="clearfix">
-        <!-- Header Wrap -->
-        <div id="site-header-wrap">
-            @include('frontend.body.top_bar')
-            <!-- /#top-bar -->
-            <!-- Header -->
-            @include('frontend.body.header')
-            <!-- /#site-header -->
-            <!-- /#site-header -->
-        </div><!-- #site-header-wrap -->
-        <!-- Featured Title -->
-        <div id="featured-title" class="featured-title clearfix">
-            <div id="featured-title-inner" class="container clearfix">
-                <div class="featured-title-inner-wrap">
-                    <div id="breadcrumbs">
-                        <div class="breadcrumbs-inner">
-                            <div class="breadcrumb-trail">
-                                <a href="{{ url('/') }}" class="trail-begin">Home</a>
-                                <span class="sep">|</span>
-                                <span class="trail-end">Event</span>
-                            </div>
-                        </div>
+            <!-- Content column -->
+            <div class="col-md-8 no-padding-left no-padding-right">
+
+                <div class="isotope-wrap">
+
+                    <!-- Begin archive info box -->
+                    <div class="archive-info-box text-center" style="background-image: url({{asset('frontend') }}/assets/img/valley/about_13.png); background-position: 50% 50%;">
+                        <div class="ai-box-subtitle">Browsing Category:</div>
+                        <!-- <div class="ai-box-subtitle">Browsing Tag:</div> -->
+                        <h1 class="ai-box-title">Photography</h1>
+                        <hr class="hr-short">
                     </div>
-                    <div class="featured-title-heading-wrap">
-                        <h1 class="feautured-title-heading">
-                            Blog
-                        </h1>
-                    </div>
-                </div><!-- /.featured-title-inner-wrap -->
-            </div><!-- /#featured-title-inner -->
-        </div>
-        <!-- End Featured Title -->
-        <!-- Main Content -->
-        <div id="main-content" class="site-main clearfix">
-            <div id="content-wrap" class="container">
-                <div id="site-content" class="site-content clearfix">
-                    <div id="inner-content" class="inner-content-wrap">
-                        @foreach($blogs as $item)
-                        <article class="hentry data-effect">
-                            <div class="post-media has-effect-icon offset-v-25 offset-h-24 data-effect-item clerafix">
-                                <a href="{{ url('/blog/details',$item->id) }}"><img src="{{ asset($item->blog_image)}}" alt="Image"></a>
-                                <div class="post-calendar">
-                                    <span class="inner">
-                                        <span class="entry-calendar">
-                                            <span class="day">30</span>
-                                            <span class="month">YEARS</span>
-                                        </span>
-                                    </span>
-                                </div>
-                                <a href="{{ url('/blog/details',$item->id) }}">
-                                <div class="overlay-effect bg-color-1"></div>
-                                </a>
-                                <div class="elm-link">
-                                    <a href="{{ url('/blog/details',$item->id) }}" class="icon-1"></a>
-                                </div>
-                            </div><!-- /.post-media -->
-                            <div class="post-content-wrap clearfix">
-                                <h2 class="post-title">
-                                    <span class="post-title-inner">
-                                        <a href="{{ url('/blog/details',$item->id) }}">{{$item->blog_name}}</a>
-                                    </span>
-                                </h2><!-- /.post-title -->
-                                <div class="post-meta">
-                                    <div class="post-meta-content">
-                                        <div class="post-meta-content-inner">
-                                            <span class="post-date item"><span class="inner"><span class="entry-date">May 23, 2018</span></span></span>
-                                            <span class="post-by-author item"><span class="inner"><a href="#">By: Admin</a></span></span>
-                                            <span class="comment item"><span class="inner"><a href="#">3 Comments</a></span></span>
-                                        </div>
-                                    </div>
-                                </div><!-- /.post-meta -->
-                                <div class="post-content post-excerpt">
-                                    <p>{{ $item->blog_short_descp }}</p>
-                                </div><!-- /.post-excerpt -->
-                                <div class="post-read-more">
-                                    <div class="post-link">
-                                        <a href="{{ url('/blog/details',$item->id) }}">READ MORE</a>
-                                    </div>
-                                </div>
-                            </div><!-- /.post-content-wrap -->
-                        </article><!-- /.hentry -->
-                        @endforeach
-                        <div class="themesflat-pagination clearfix">
-                            <ul>
-                                <li><a href="#" class="page-numbers prev"><span class="fa fa-angle-left"></span></a></li>
-                                <li><a href="#" class="page-numbers current">1</a></li>
-                                <li><a href="#" class="page-numbers">2</a></li>
-                                <li><a href="#" class="page-numbers next"><span class="fa fa-angle-right"></span></a></li>
-                            </ul>
-                        </div>
-                    </div><!-- /#inner-content -->
-                </div><!-- /#site-content -->
-                <div id="sidebar">
-                    <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="60" data-smobile="60"></div>
-                    <div id="inner-sidebar" class="inner-content-wrap">
-                        <div class="widget widget_search">
-                            <form action="#" method="get" role="search" class="search-form style-1">
-                                <input type="search" class="search-field" placeholder="Search..." value="" name="s" title="Search for">
-                                <button class="search-submit" type="submit" title="Search">Search</button>
-                            </form>
-                        </div><!-- /.widget_search -->
+                    <!-- End archive info box -->
 
-                        <div class="widget widget_follow">
-                            <h2 class="widget-title"><span>FOLLOW US</span></h2>
-                            <div class="follow-wrap clearfix col3 g8">
-                                <div class="follow-item facebook">
-                                    <div class="inner">
-                                        <span class="socials">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
-                                            <span class="text">43217 likes</span>
-                                        </span>
+                    <!-- Begin isotope
+                    ===================
+                    * Use class "gutter-1", "gutter-2" or "gutter-3" to add more space between items.
+                    * Use class "col-1", "col-2", "col-3", "col-4", "col-5" or "col-6" for columns.
+                    -->
+                    <div class="isotope col-1">
+
+                        <!-- Begin isotope items wrap
+                        ============================== -->
+                        <div class="isotope-items-wrap no-margin-top">
+
+                            <!-- Grid sizer (do not remove!!!) -->
+                            <div class="grid-sizer"></div>
+
+
+                            <!-- =====================
+                            /// Begin isotope item ///
+                            ====================== -->
+                            <div class="isotope-item">
+
+                                <!-- Begin blog list item -->
+                                <article class="blog-list-item">
+
+                                    <!-- Blog list item image -->
+                                    <a href="{{ route('user.blog.details') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/4.png" alt="image"></a>
+
+                                    <!-- Begin blog list item info -->
+                                    <div class="bl-item-info">
+                                        <div class="bl-item-category"><a href="blog-archive-2.html">Photography</a></div>
+                                        <a href="{{ route('user.blog.details') }}" class="bl-item-title"><h2>5 Reasons You Should Fall In Love With Photography</h2></a>
+                                        <div class="bl-item-meta">
+                                            <span class="published">May 26, 2017</span>
+                                            <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">Martin Vegas</a></span>
+                                        </div>
+                                        <div class="bl-item-desc">
+                                            Etiam sollicitudin dolor lorem, non aliquet quam dignissim vel. Nunc at eros non odio vestibulum porttitor egestas ut nisl. Proin in cursus nisi, id feugiat magna. Aliquam nec elit a lorem egestas vehicula vel eu erat. Pellentesque a lacus sed risus cursus venenatis...
+                                        </div>
+                                        <a href="blog-single.html" class="btn btn-primary btn-sm margin-top-30">Read More</a>
+
+                                        <!-- Begin blog list item attributes -->
+                                        <ul class="bl-item-attr">
+                                            <li>
+                                                <!-- Begin comments count -->
+                                                <a href="blog-single.html#blog-post-comments" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 10</a>
+                                                <!-- End comments count -->
+                                            </li>
+                                            <li>
+                                                <!-- Begin favorite button -->
+                                                <div class="favorite-btn active">
+                                                    <div class="fav-inner">
+                                                        <div class="icon-heart">
+                                                            <span class="icon-heart-empty"></span>
+                                                            <span class="icon-heart-filled"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fav-count">48</div>
+                                                </div>
+                                                <!-- End favorite button -->
+                                            </li>
+                                        </ul>
+                                        <!-- End blog list item attributes -->
+
                                     </div>
-                                </div>
-                                <div class="follow-item twitter">
-                                    <div class="inner">
-                                        <span class="socials">
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                            <span class="text">3752 flowers</span>
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="follow-item google">
-                                    <div class="inner">
-                                        <span class="socials">
-                                            <a href="#"><i class="fa fa-google"></i></a>
-                                            <span class="text">432 contacter</span>
-                                        </span>
-                                    </div>
-                                </div>
+                                    <!-- End blog list item info -->
+
+                                </article>
+                                <!-- End blog list item -->
+
                             </div>
-                        </div><!-- /.widget_follow -->
+                            <!-- End isotope item -->
 
-                        <div class="widget widget_lastest">
-                            <h2 class="widget-title"><span>RECENT POST</span></h2>
-                            <ul class="lastest-posts data-effect clearfix">
-                                @foreach($blogs->take(5) as $item)
-                                <li class="clearfix">
-                                    <div class="thumb data-effect-item has-effect-icon ">
-                                        <img src="{{ asset($item->blog_image)}}" alt="Image">
-                                        <div class="overlay-effect bg-color-2"></div>
-                                        <div class="elm-link">
-                                            <a href="{{ url('/blog/details',$item->id) }}" class="icon-2"></a>
-                                        </div>
-                                    </div>
-                                    <div class="text">
-                                        <h3><a href="{{ url('/blog/details',$item->id) }}">{{$item->blog_name}}</a></h3>
-                                        <h3 style="width: 100px;
-                                        white-space: nowrap;
-                                        overflow: hidden;
-                                        text-overflow: ellipsis;"><a href="{{ url('/blog/details',$item->id) }}">{{$item->blog_short_descp}}</a></h3>
-                                        <span class="post-date"><span class="entry-date">29 June 2018</span></span>
-                                    </div>
-                                </li>
-                                @endforeach
-                                {{-- <li class="clearfix">
-                                    <div class="thumb data-effect-item has-effect-icon">
-                                        <img src="{{ asset('frontend/assets/img/news/post-2-65x65.jpg')}}" alt="Image">
-                                        <div class="overlay-effect bg-color-2"></div>
-                                        <div class="elm-link">
-                                            <a href="page-blog-single.html" class="icon-2"></a>
-                                        </div>
-                                    </div>
-                                    <div class="text">
-                                        <h3><a href="page-blog-single.html">HI-TECH WOODEN HOUSE BUILT WITHOUT GLUE</a></h3>
-                                        <span class="post-date"><span class="entry-date">31 June 2018</span></span>
-                                    </div>
-                                </li>
-                                <li class="clearfix">
-                                    <div class="thumb data-effect-item has-effect-icon" >
-                                        <img src="{{ asset('frontend/assets/img/news/post-3-65x65.jpg')}}" alt="Image">
-                                        <div class="overlay-effect bg-color-2"></div>
-                                        <div class="elm-link">
-                                            <a href="page-blog-single.html" class="icon-2"></a>
-                                        </div>
-                                    </div>
-                                    <div class="text">
-                                        <h3><a href="page-blog-single.html">HI-TECH WOODEN HOUSE BUILT WITHOUT GLUE</a></h3>
-                                        <span class="post-date"><span class="entry-date">31 June 2018</span></span>
-                                    </div>
-                                </li> --}}
-                            </ul>
-                        </div><!-- /.widget_lastest -->
+                            <!-- =====================
+                            /// Begin isotope item ///
+                            ====================== -->
+                            <div class="isotope-item">
 
-                        <div class="widget widget_tags margin-top-55">
-                            <h2 class="widget-title"><span>TAGS</span></h2>
-                            <div class="tags-list">
-                                <a href="#">Building</a>
-                                <a href="#">Smart House</a>
-                                <a href="#">Costruction</a>
-                                <a href="#">Villa</a>
-                                <a href="#">Residential</a>
-                                <a href="#">Interior</a>
-                                <a href="#">Resort</a>
-                                <a href="#">Commercial</a>
+                                <!-- Begin blog list item -->
+                                <article class="blog-list-item">
+
+                                    <!-- Blog list item image -->
+                                    <a href="{{ route('user.blog.details') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/1.png" alt="image"></a>
+
+                                    <!-- Begin blog list item info -->
+                                    <div class="bl-item-info">
+                                        <div class="bl-item-category"><a href="blog-archive-2.html">Equipment</a></div>
+                                        <a href="{{ route('user.blog.details') }}" class="bl-item-title"><h2>10 Top Choices for Aerial Photography</h2></a>
+                                        <div class="bl-item-meta">
+                                            <span class="published">May 26, 2017</span>
+                                            <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">John Young</a></span>
+                                        </div>
+                                        <div class="bl-item-desc">
+                                            Etiam sollicitudin dolor lorem, non aliquet quam dignissim vel. Nunc at eros non odio vestibulum porttitor egestas ut nisl. Proin in cursus nisi, id feugiat magna. Aliquam nec elit a lorem egestas vehicula vel eu erat. Pellentesque a lacus sed risus cursus venenatis...
+                                        </div>
+                                        <a href="blog-single.html" class="btn btn-primary btn-sm margin-top-30">Read More</a>
+
+                                        <!-- Begin blog list item attributes -->
+                                        <ul class="bl-item-attr">
+                                            <li>
+                                                <!-- Begin comments count -->
+                                                <a href="blog-single.html#blog-post-comments" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 66</a>
+                                                <!-- End comments count -->
+                                            </li>
+                                            <li>
+                                                <!-- Begin favorite button -->
+                                                <div class="favorite-btn">
+                                                    <div class="fav-inner">
+                                                        <div class="icon-heart">
+                                                            <span class="icon-heart-empty"></span>
+                                                            <span class="icon-heart-filled"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fav-count">98</div>
+                                                </div>
+                                                <!-- End favorite button -->
+                                            </li>
+                                        </ul>
+                                        <!-- End blog list item attributes -->
+
+                                    </div>
+                                    <!-- End blog list item info -->
+
+                                </article>
+                                <!-- End blog list item -->
+
                             </div>
+                            <!-- End isotope item -->
+
+                            <!-- =====================
+                            /// Begin isotope item ///
+                            ====================== -->
+                            <div class="isotope-item">
+
+                                <!-- Begin blog list item -->
+                                <article class="blog-list-item">
+
+                                    <!-- Blog list item image -->
+                                    <a href="{{ route('user.blog.details') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/2.png" alt="image"></a>
+
+                                    <!-- Begin blog list item info -->
+                                    <div class="bl-item-info">
+                                        <div class="bl-item-category"><a href="blog-archive-2.html">Travel</a></div>
+                                        <a href="{{ route('user.blog.details') }}" class="bl-item-title"><h2>How to Take Professional Travel Photos</h2></a>
+                                        <div class="bl-item-meta">
+                                            <span class="published">May 26, 2017</span>
+                                            <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">Anna Vernik</a></span>
+                                        </div>
+                                        <div class="bl-item-desc">
+                                            Etiam sollicitudin dolor lorem, non aliquet quam dignissim vel. Nunc at eros non odio vestibulum porttitor egestas ut nisl. Proin in cursus nisi, id feugiat magna. Aliquam nec elit a lorem egestas vehicula vel eu erat. Pellentesque a lacus sed risus cursus venenatis...
+                                        </div>
+                                        <a href="blog-single.html" class="btn btn-primary btn-sm margin-top-30">Read More</a>
+
+                                        <!-- Begin blog list item attributes -->
+                                        <ul class="bl-item-attr">
+                                            <li>
+                                                <!-- Begin comments count -->
+                                                <a href="blog-single.html#blog-post-comments" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 3</a>
+                                                <!-- End comments count -->
+                                            </li>
+                                            <li>
+                                                <!-- Begin favorite button -->
+                                                <div class="favorite-btn active">
+                                                    <div class="fav-inner">
+                                                        <div class="icon-heart">
+                                                            <span class="icon-heart-empty"></span>
+                                                            <span class="icon-heart-filled"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fav-count">54</div>
+                                                </div>
+                                                <!-- End favorite button -->
+                                            </li>
+                                        </ul>
+                                        <!-- End blog list item attributes -->
+
+                                    </div>
+                                    <!-- End blog list item info -->
+
+                                </article>
+                                <!-- End blog list item -->
+
+                            </div>
+                            <!-- End isotope item -->
+
+                            <!-- =====================
+                            /// Begin isotope item ///
+                            ====================== -->
+                            <div class="isotope-item">
+
+                                <!-- Begin blog list item -->
+                                <article class="blog-list-item">
+
+                                    <!-- Blog list item image -->
+                                    <a href="{{ route('user.blog.details') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/3.png" alt="image"></a>
+
+                                    <!-- Begin blog list item info -->
+                                    <div class="bl-item-info">
+                                        <div class="bl-item-category"><a href="blog-archive-2.html">Photography</a></div>
+                                        <a href="{{ route('user.blog.details') }}" class="bl-item-title"><h2>5 Tips Your Camera Manual Never Told You About Portrait Photography</h2></a>
+                                        <div class="bl-item-meta">
+                                            <span class="published">May 26, 2017</span>
+                                            <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">Julia Beck</a></span>
+                                        </div>
+                                        <div class="bl-item-desc">
+                                            Etiam sollicitudin dolor lorem, non aliquet quam dignissim vel. Nunc at eros non odio vestibulum porttitor egestas ut nisl. Proin in cursus nisi, id feugiat magna. Aliquam nec elit a lorem egestas vehicula vel eu erat. Pellentesque a lacus sed risus cursus venenatis...
+                                        </div>
+                                        <a href="blog-single.html" class="btn btn-primary btn-sm margin-top-30">Read More</a>
+
+                                        <!-- Begin blog list item attributes -->
+                                        <ul class="bl-item-attr">
+                                            <li>
+                                                <!-- Begin comments count -->
+                                                <a href="blog-single.html#blog-post-comments" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 0</a>
+                                                <!-- End comments count -->
+                                            </li>
+                                            <li>
+                                                <!-- Begin favorite button -->
+                                                <div class="favorite-btn active">
+                                                    <div class="fav-inner">
+                                                        <div class="icon-heart">
+                                                            <span class="icon-heart-empty"></span>
+                                                            <span class="icon-heart-filled"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fav-count">3</div>
+                                                </div>
+                                                <!-- End favorite button -->
+                                            </li>
+                                        </ul>
+                                        <!-- End blog list item attributes -->
+
+                                    </div>
+                                    <!-- End blog list item info -->
+
+                                </article>
+                                <!-- End blog list item -->
+
+                            </div>
+                            <!-- End isotope item -->
+
+                            <!-- =====================
+                            /// Begin isotope item ///
+                            ====================== -->
+                            <div class="isotope-item">
+
+                                <!-- Begin blog list item -->
+                                <article class="blog-list-item">
+
+                                    <!-- Blog list item image -->
+                                    <a href="{{ route('user.blog.details') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/4.png" alt="image"></a>
+
+                                    <!-- Begin blog list item info -->
+                                    <div class="bl-item-info">
+                                        <div class="bl-item-category"><a href="blog-archive-2.html">Photography</a></div>
+                                        <a href="{{ route('user.blog.details') }}" class="bl-item-title"><h2>Most Common Wedding Photography Mistakes Every Beginner Will Make</h2></a>
+                                        <div class="bl-item-meta">
+                                            <span class="published">May 26, 2017</span>
+                                            <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">Martin Vegas</a></span>
+                                        </div>
+                                        <div class="bl-item-desc">
+                                            Suspendisse imperdiet ante at tortor consequat consectetur. Quisque rhoncus blandit justo praesent congue convallis...
+                                        </div>
+                                        <a href="blog-single.html" class="btn btn-primary btn-sm margin-top-30">Read More</a>
+
+                                        <!-- Begin blog list item attributes -->
+                                        <ul class="bl-item-attr">
+                                            <li>
+                                                <!-- Begin comments count -->
+                                                <a href="blog-single.html#blog-post-comments" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 8</a>
+                                                <!-- End comments count -->
+                                            </li>
+                                            <li>
+                                                <!-- Begin favorite button -->
+                                                <div class="favorite-btn">
+                                                    <div class="fav-inner">
+                                                        <div class="icon-heart">
+                                                            <span class="icon-heart-empty"></span>
+                                                            <span class="icon-heart-filled"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fav-count">71</div>
+                                                </div>
+                                                <!-- End favorite button -->
+                                            </li>
+                                        </ul>
+                                        <!-- End blog list item attributes -->
+
+                                    </div>
+                                    <!-- End blog list item info -->
+
+                                </article>
+                                <!-- End blog list item -->
+
+                            </div>
+                            <!-- End isotope item -->
+
                         </div>
+                        <!-- End isotope items wrap -->
+
                     </div>
-                </div><!-- /#sidebar -->
-            </div><!-- /#content-wrap -->
-        </div><!-- /#main-content -->
+                    <!-- End isotope -->
 
-        <!-- Footer -->
-        @include('frontend.body.footer')
-        <!-- /#footer -->
+                </div> <!-- /.isotope-wrap -->
 
-        <!-- Bottom -->
-        @include('frontend.body.bottom')
-        <!-- /#bottom -->
+                <!-- Begin pagination -->
+                <nav class="pagination-wrap">
+                    <ul class="pagination">
+                        <li>
+                            <a href="" aria-label="Previous">
+                                <span aria-hidden="true">First</span>
+                            </a>
+                        </li>
+                        <li><a href="">Prev</a></li>
+                        <li class="active"><a href="#0">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li>...</li>
+                        <li><a href="">6</a></li>
+                        <li><a href="">7</a></li>
+                        <li><a href="">8</a></li>
+                        <li><a href="">Next</a></li>
+                        <li>
+                            <a href="" aria-label="Next">
+                                <span aria-hidden="true">Last</span>
+                            </a>
+                        </li>
+                    </ul>
 
-    </div><!-- /#page -->
-</div><!-- /#wrapper -->
+                    <!-- Begin pagination info -->
+                    <div class="pagination-info">
+                        <span>Showing page 1 of 8</span>
+                        <span>Items 1 - 5 of 40</span>
+                    </div>
+                    <!-- End pagination info -->
+                </nav>
+                <!-- End pagination -->
 
-<a id="scroll-top"></a>
+            </div> <!-- /.col (Content column) -->
 
-<!-- Javascript -->
-<script src="{{ asset('frontend/assets/js/jquery.min.js')}}"></script>
-<script src="{{ asset('frontend/assets/js/plugins.js')}}"></script>
-<script src="{{ asset('frontend/assets/js/tether.min.js')}}"></script>
-<script src="{{ asset('frontend/assets/js/bootstrap.min.js')}}"></script>
-<script src="{{ asset('frontend/assets/js/animsition.js')}}"></script>
-<script src="{{ asset('frontend/assets/js/owl.carousel.min.js')}}"></script>
-<script src="{{ asset('frontend/assets/js/countto.js')}}"></script>
-<script src="{{ asset('frontend/assets/js/equalize.min.js')}}"></script>
-<script src="{{ asset('frontend/assets/js/jquery.isotope.min.js')}}"></script>
-<script src="{{ asset('frontend/assets/js/owl.carousel2.thumbs.js')}}"></script>
-<script src="{{ asset('frontend/assets/js/jquery.cookie.js')}}"></script>
-<script src="{{ asset('frontend/assets/js/gmap3.min.js')}}"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIEU6OT3xqCksCetQeNLIPps6-AYrhq-s&region=GB"></script>
-<script src="{{ asset('frontend/assets/js/shortcodes.js')}}"></script>
-<script src="{{ asset('frontend/assets/js/main.js')}}"></script>
-<!-- Revolution Slider -->
-<script src="{{ asset('frontend/includes/rev-slider/js/jquery.themepunch.tools.min.js')}}"></script>
-<script src="{{ asset('frontend/includes/rev-slider/js/jquery.themepunch.revolution.min.js')}}"></script>
-<script src="{{ asset('frontend/assets/js/rev-slider.js')}}"></script>
-<!-- Load Extensions only on Local File Systems ! The following part can be removed on Server for On Demand Loading -->
-<script src="{{ asset('frontend/includes/rev-slider/js/extensions/revolution.extension.actions.min.js')}}"></script>
-<script src="{{ asset('frontend/includes/rev-slider/js/extensions/revolution.extension.carousel.min.js')}}"></script>
-<script src="{{ asset('frontend/includes/rev-slider/js/extensions/revolution.extension.kenburn.min.js')}}"></script>
-<script src="{{ asset('frontend/includes/rev-slider/js/extensions/revolution.extension.layeranimation.min.js')}}"></script>
-<script src="{{ asset('frontend/includes/rev-slider/js/extensions/revolution.extension.migration.min.js')}}"></script>
-<script src="{{ asset('frontend/includes/rev-slider/js/extensions/revolution.extension.navigation.min.js')}}"></script>
-<script src="{{ asset('frontend/includes/rev-slider/js/extensions/revolution.extension.parallax.min.js')}}"></script>
-<script src="{{ asset('frontend/includes/rev-slider/js/extensions/revolution.extension.slideanims.min.js')}}"></script>
-<script src="{{ asset('frontend/includes/rev-slider/js/extensions/revolution.extension.video.min.js')}}"></script>
+            <!-- Sidebar column -->
+            <div class="col-md-4 no-padding-left no-padding-right">
 
-</body>
-</html>
+                <!-- Begin sidebar (sidebar right)
+                =================================== -->
+                <div class="sidebar sidebar-right">
+                    <div class="row">
 
+                        <div class="col-sm-12">
+
+                            <!-- Begin sidebar widget -->
+                            <div class="sidebar-widget blog-author no-margin-top">
+                                <h3 class="sidebar-heading">About Me</h3>
+                                <a href="about-me.html" class="blog-author-img bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/5.png); background-position: 50% 50%;"></a>
+                                <div class="blog-author-info">
+                          <h4 class="blog-author-name"><a href="about-me.html">Martin Vegas</a></h4>
+                                    <div class="blog-author-sub">Artist &amp; Photographer</div>
+
+                                    <!-- Use data attributes to set text maximum characters or words (example: data-max-characters="120" or data-max-words="40") -->
+                                    <p class="blog-author-text" data-max-words="15">Debitis sociis phasellus feugiat luctus diam. Vitae aenean odio ligula interdum suscipit antimoa arte lacus ante.</p>
+
+                      </div>
+                            </div>
+                            <!-- End sidebar widget -->
+
+                        </div> <!-- /.col -->
+
+                        <div class="col-sm-12">
+
+                            <!-- Begin sidebar widget -->
+                            <div class="sidebar-widget sidebar-social">
+                                <h3 class="sidebar-heading">Follow</h3>
+                                <!-- Begin social buttons -->
+                                <div class="social-buttons">
+                                    <ul>
+                                        <li><a href="https://www.facebook.com/themetorium" class="btn btn-social-min btn-facebook" title="Follow me on Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="https://twitter.com/Themetorium" class="btn btn-social-min btn-twitter" title="Follow me on Twitter" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="https://plus.google.com/+SiiliOnu" class="btn btn-social-min btn-google" title="Follow me on Google+" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
+                                        <li><a href="https://www.pinterest.com/themetorium" class="btn btn-social-min btn-pinterest" title="Follow me on Pinterest" target="_blank"><i class="fab fa-pinterest-p"></i></a></li>
+                                        <li><a href="https://dribbble.com/Themetorium" class="btn btn-social-min btn-dribbble" title="Follow me on Dribbble" target="_blank"><i class="fab fa-dribbble"></i></a></li>
+                                        <li><a href="https://instagram.com" class="btn btn-social-min btn-instagram" title="Follow me on instagram" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                                <!-- End social buttons -->
+                            </div>
+                            <!-- End sidebar widget -->
+
+                        </div> <!-- /.col -->
+
+                        <div class="col-sm-12">
+
+                            <!-- Begin sidebar widget -->
+                            <div class="sidebar-widget sidebar-search">
+                                <h3 class="sidebar-heading">Search</h3>
+                                <form id="blog-search-form" class="form-btn-inside" method="get" action="search-results.html">
+                                    <div class="form-group no-margin">
+                                        <input type="text" class="form-control" id="blog-search" name="search" placeholder="Search...">
+                                        <button type="submit"><i class="fas fa-search"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- End sidebar widget -->
+
+                        </div> <!-- /.col -->
+
+                        <div class="col-md-12 col-sm-6">
+
+                            <!-- Begin sidebar widget -->
+                            <div class="sidebar-widget sidebar-categories">
+                                <h3 class="sidebar-heading">Categories</h3>
+                                <ul class="list-unstyled">
+                                    <li><a href="">Photography <span>26</span></a></li>
+                                    <li><a href="">Equipment <span>54</span></a></li>
+                                    <li><a href="">Travel <span>17</span></a></li>
+                                    <li><a href="">Fashion <span>19</span></a></li>
+                                    <li><a href="">Food <span>67</span></a></li>
+                                    <li><a href="">Macro <span>67</span></a></li>
+                                </ul>
+                            </div>
+                            <!-- End sidebar widget -->
+
+                        </div> <!-- /.col -->
+
+                        <div class="col-md-12 col-sm-6">
+
+                            <!-- Begin sidebar widget -->
+                            <div class="sidebar-widget sidebar-post-list">
+                                <h3 class="sidebar-heading">Most Popular</h3>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="" class="post-thumb bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/6.png); background-position: 50% 50%;"></a>
+                                        <div class="post-data">
+                                            <h5 class="post-title"><a href="blog-single.html">10 Top Choices for Aerial Photography</a></h5>
+                                            <!-- <span class="author">By: <a href="">Martin Vegas</a></span> -->
+                                            <span class="date">May 26, 2017</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="" class="post-thumb bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/7.png); background-position: 50% 50%;"></a>
+                                        <div class="post-data">
+                                            <h5 class="post-title"><a href="blog-single.html">How to Take Professional Travel Photos</a></h5>
+                                            <!-- <span class="author">By: <a href="">John Doe</a></span> -->
+                                            <span class="date">May 12, 2017</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="" class="post-thumb bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/1.png); background-position: 50% 50%;"></a>
+                                        <div class="post-data">
+                                            <h5 class="post-title"><a href="blog-single.html">5 Tips Your Camera Manual Never Told You About Portrait Photography</a></h5>
+                                            <!-- <span class="author">By: <a href="">Henry Harrison</a></span> -->
+                                            <span class="date">April 17, 2017</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="" class="post-thumb bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/2.png); background-position: 50% 50%;"></a>
+                                        <div class="post-data">
+                                            <h5 class="post-title"><a href="blog-single.html">Most Common Wedding Photography Mistakes Every Beginner Will Make</a></h5>
+                                            <!-- <span class="author">By: <a href="">Henry Harrison</a></span> -->
+                                            <span class="date">March 21, 2017</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- End sidebar widget -->
+
+                        </div> <!-- /.col -->
+                        <div class="col-md-12 col-sm-6">
+                            <!-- Begin sidebar widget -->
+                            <div class="sidebar-widget sidebar-tags">
+                                <h3 class="sidebar-heading">Popular Tags</h3>
+                                <ul>
+                                    <li><a href="">#portfolio</a></li>
+                                    <li><a href="">#multipurpose</a></li>
+                                    <li><a href="">#minimal</a></li>
+                                    <li><a href="">#agency</a></li>
+                                    <li><a href="">#creatives</a></li>
+                                    <li><a href="">#freelancers</a></li>
+                                    <li><a href="">#design</a></li>
+                                    <li><a href="">#bootstrap</a></li>
+                                    <li><a href="">#responsive</a></li>
+                                    <li><a href="">#simple</a></li>
+                                    <li><a href="">#creative</a></li>
+                                    <li><a href="">#retina</a></li>
+                                    <li><a href="">#blog</a></li>
+                                    <li><a href="">#wordpress</a></li>
+                                    <li><a href="">#black &amp; white</a></li>
+                                </ul>
+                            </div>
+                            <!-- End sidebar widget -->
+                        </div> <!-- /.col -->
+                        <div class="col-md-12 col-sm-6">
+                            <!-- Begin sidebar widget -->
+                            <div class="sidebar-widget sidebar-subscribe">
+                                <h3 class="sidebar-heading">Subscribe</h3>
+                                <p class="small text-gray">Subscribe to our newsletter and stay updated on the latest news! Do not worry, we will not send spam.</p>
+
+                                <!-- Begin subscribe form -->
+                                <form id="sidebar-subscribe-form">
+                                    <div class="form-group no-margin">
+                                        <input type="email" class="form-control" id="sidebar-subscribe" name="subscribe" placeholder="Enter your email address..." required="">
+                                        <button type="submit" class="btn btn-primary btn-block btn-lg">Subscribe</button>
+                                    </div>
+                                </form>
+                                <!-- End subscribe form -->
+
+                            </div>
+                            <!-- End sidebar widget -->
+
+                        </div> <!-- /.col -->
+
+                        <div class="col-md-12 col-sm-6">
+
+                            <!-- Begin sidebar widget -->
+                            <div class="sidebar-widget sidebar-meta">
+                                <h3 class="sidebar-heading">Meta</h3>
+                                <ul class="list-unstyled">
+                                    <li><a href="">Log In</a></li>
+                                    <li><a href="">Entries RSS</a></li>
+                                    <li><a href="">Comments RSS</a></li>
+                                    <li><a href="https://wordpress.org/">WordPress.org</a></li>
+                                </ul>
+                            </div>
+                            <!-- End sidebar widget -->
+
+                        </div> <!-- /.col -->
+
+                    </div> <!-- /.row -->
+                </div>
+                <!-- End sidebar -->
+
+            </div> <!-- /.col (Sidebar column) -->
+
+        </div> <!-- /.row -->
+
+    </div> <!-- /.blog-list-inner -->
+</section>
+<!-- End blog list section -->
+@endsection

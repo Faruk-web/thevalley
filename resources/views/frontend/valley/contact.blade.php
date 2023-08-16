@@ -75,9 +75,9 @@
                                 <!-- Begin contact info -->
                                 <div class="contact-info-wrap">
                                     <div class="contact-info">
-                                        <p><i class="fas fa-home"></i> address: 121 King Street, Melbourne, Australia</p>
-                                        <p><i class="fas fa-phone"></i> phone: +123 456 789 000</p>
-                                        <p><i class="fas fa-envelope"></i> email: <a href="mailto:company@email.com" target="_blank">company@email.com</a></p>
+                                        <p><i class="fas fa-home"></i> Address: The Valley Bangladesh, Mawa, Bangladesh</p>
+                                        <p><i class="fas fa-phone"></i> Phone: 01810-103999</p>
+                                        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:company@email.com" target="_blank">thevalley@amgbd.net</a></p>
                                     </div>
 
                                     <!-- Begin social buttons -->
@@ -148,19 +148,17 @@
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="form-group">
+                                                    <input type="text" class="form-control" name="Phone" placeholder="Phone" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
                                                     <input type="email" class="form-control" name="email" placeholder="Your Email" required>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" name="subject" placeholder="Subject" required>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-12">
+                                            <div class="col-lg-6">
                                                 <div class="form-group">
                                                     <select class="form-control" name="option" required>
                                                         <option value="" disabled selected>Select an option</option>
@@ -175,7 +173,7 @@
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="form-group">
-                                                    <textarea class="form-control" name="message" rows="4" placeholder="Your Message" required></textarea>
+                                                    <textarea class="form-control" name="message" rows="2" placeholder="Your Message" required></textarea>
                                                 </div>
                                             </div>
                                         </div>

@@ -186,7 +186,7 @@
                         <div class="gl-item-image-wrap">
 
                             <!-- Begin gallery list item image inner -->
-                            <a href="gallery-single-grid.html" class="gl-item-image-inner">
+                            <a href="{{ url('/the-valley') }}" class="gl-item-image-inner">
                                 <div class="gl-item-image bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/2.png); background-position: 50% 50%"></div>
 
                                 <span class="gl-item-image-zoom"></span>
@@ -243,7 +243,7 @@
                         <div class="gl-item-image-wrap">
 
                             <!-- Begin gallery list item image inner -->
-                            <a href="gallery-single-grid.html" class="gl-item-image-inner">
+                            <a href="{{ url('/the-valley') }}" class="gl-item-image-inner">
                                 <div class="gl-item-image bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/3.png); background-position: 50% 50%"></div>
 
                                 <span class="gl-item-image-zoom"></span>
@@ -303,7 +303,7 @@
                         <div class="gl-item-image-wrap">
 
                             <!-- Begin gallery list item image inner -->
-                            <a href="gallery-single-grid.html" class="gl-item-image-inner">
+                            <a href="{{ url('/the-valley') }}" class="gl-item-image-inner">
                                 <div class="gl-item-image bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/4.png); background-position: 50% 50%"></div>
 
                                 <span class="gl-item-image-zoom"></span>
@@ -363,7 +363,7 @@
                         <div class="gl-item-image-wrap">
 
                             <!-- Begin gallery list item image inner -->
-                            <a href="gallery-single-grid.html" class="gl-item-image-inner">
+                            <a href="{{ url('/the-valley') }}" class="gl-item-image-inner">
                                 <div class="gl-item-image bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/5.png); background-position: 50% 50%"></div>
 
                                 <span class="gl-item-image-zoom"></span>
@@ -423,7 +423,7 @@
                         <div class="gl-item-image-wrap">
 
                             <!-- Begin gallery list item image inner -->
-                            <a href="gallery-single-grid.html" class="gl-item-image-inner">
+                            <a href="{{ url('/the-valley') }}" class="gl-item-image-inner">
                                 <div class="gl-item-image bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/6.png); background-position: 50% 50%"></div>
 
                                 <span class="gl-item-image-zoom"></span>
@@ -483,7 +483,7 @@
                         <div class="gl-item-image-wrap">
 
                             <!-- Begin gallery list item image inner -->
-                            <a href="gallery-single-grid.html" class="gl-item-image-inner">
+                            <a href="{{ url('/the-valley') }}" class="gl-item-image-inner">
                                 <div class="gl-item-image bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/7.png); background-position: 50% 50%"></div>
 
                                 <span class="gl-item-image-zoom"></span>
@@ -543,7 +543,7 @@
                         <div class="gl-item-image-wrap">
 
                             <!-- Begin gallery list item image inner -->
-                            <a href="gallery-single-grid.html" class="gl-item-image-inner">
+                            <a href="{{ url('/the-valley') }}" class="gl-item-image-inner">
                                 <div class="gl-item-image bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/about.png); background-position: 50% 50%"></div>
 
                                 <span class="gl-item-image-zoom"></span>
@@ -603,7 +603,7 @@
                         <div class="gl-item-image-wrap">
 
                             <!-- Begin gallery list item image inner -->
-                            <a href="gallery-single-grid.html" class="gl-item-image-inner">
+                            <a href="{{ url('/the-valley') }}" class="gl-item-image-inner">
                                 <div class="gl-item-image bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/about_1.png); background-position: 50% 50%"></div>
 
                                 <span class="gl-item-image-zoom"></span>
@@ -663,7 +663,7 @@
                         <div class="gl-item-image-wrap">
 
                             <!-- Begin gallery list item image inner -->
-                            <a href="gallery-single-grid.html" class="gl-item-image-inner">
+                            <a href="{{ url('/the-valley') }}" class="gl-item-image-inner">
                                 <div class="gl-item-image bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/1.png); background-position: 50% 50%"></div>
 
                                 <span class="gl-item-image-zoom"></span>
@@ -723,7 +723,7 @@
                         <div class="gl-item-image-wrap">
 
                             <!-- Begin gallery list item image inner -->
-                            <a href="gallery-single-grid.html" class="gl-item-image-inner">
+                            <a href="{{ url('/the-valley') }}" class="gl-item-image-inner">
                                 <div class="gl-item-image bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/2.png); background-position: 50% 50%"></div>
 
                                 <span class="gl-item-image-zoom"></span>
@@ -783,7 +783,7 @@
                         <div class="gl-item-image-wrap">
 
                             <!-- Begin gallery list item image inner -->
-                            <a href="gallery-single-grid.html" class="gl-item-image-inner">
+                            <a href="{{ url('/the-valley') }}" class="gl-item-image-inner">
                                 <div class="gl-item-image bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/3.png); background-position: 50% 50%"></div>
 
                                 <span class="gl-item-image-zoom"></span>
@@ -843,7 +843,7 @@
                         <div class="gl-item-image-wrap">
 
                             <!-- Begin gallery list item image inner -->
-                            <a href="gallery-single-grid.html" class="gl-item-image-inner">
+                            <a href="{{ url('/the-valley') }}" class="gl-item-image-inner">
                                 <div class="gl-item-image bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/4.png); background-position: 50% 50%"></div>
 
                                 <span class="gl-item-image-zoom"></span>
@@ -1251,48 +1251,6 @@
         <!-- Begin latest news carousel
         ================================ -->
         <div class="latest-news-carousel">
-
-            <!-- Begin content carousel (https://owlcarousel2.github.io/OwlCarousel2/)
-            ====================================================================
-            * Use class "nav-outside" for outside nav (requires boxed layout).
-            * Use class "nav-outside-top" for outside top nav (requires enough space at the top of the carousel).
-            * Use class "nav-bottom-right" for bottom right nav.
-            * Use class "nav-rounded" for rounded nav.
-            * Use class "nav-light" to enable nav light style.
-            * Use class "dots-outside" for outside dots (requires enough space at the bottom of the carousel).
-            * Use class "dots-left", "dots-right" or "dots-center-right" to align dots.
-            * Use class "dots-rounded" for rounded dots.
-            * Use class "owl-mousewheel" to enable mousewheel support.
-            * Use class "cursor-grab" to enable cursor grab icon (no effect on links!).
-            * Use class "cc-hover-light", "cc-hover-dark" or "cc-hover-zoom" to enable carousel items hover effect.
-            * Use class "cc-height-1", "cc-height-2", "cc-height-3", "cc-height-4", "cc-height-5", "cc-height-6" or "cc-height-full" to set carousel height (do not use with data-autoheight="true"!!!).
-            * Use class "cc-height-m" to set full height for small screens (do not use with data-autoheight="true"!!!).
-            ================================================================
-            * Available carousel data attributes:
-                    data-items="5".......................(items visible on desktop)
-                    data-tablet-landscape="4"............(items visible on mobiles)
-                    data-tablet-portrait="3".............(items visible on mobiles)
-                    data-mobile-landscape="2"............(items visible on tablets)
-                    data-mobile-portrait="1".............(items visible on tablets)
-                    data-loop="true".....................(true/false)
-                    data-margin="10".....................(space between items)
-                    data-center="true"...................(true/false)
-                    data-start-position="0"..............(item start position)
-                    data-animate-in="fadeIn".............(fade-in animation)
-                    data-animate-out="fadeOut"...........(fade-out animation)
-                    data-mouse-drag="false"..............(true/false)
-                    data-touch-drag="false"..............(true/false)
-                    data-autoheight="true"...............(true/false)
-                    data-autoplay="true".................(true/false)
-                    data-autoplay-timeout="5000".........(milliseconds)
-                    data-autoplay-hover-pause="true".....(true/false)
-                    data-autoplay-speed="800"............(milliseconds)
-                    data-drag-end-speed="800"............(milliseconds)
-                    data-nav="true"......................(true/false)
-                    data-nav-speed="800".................(milliseconds)
-                    data-dots="false"....................(true/false)
-                    data-dots-speed="800"................(milliseconds)
-            -->
             <div class="owl-carousel cursor-grab nav-outside-top" data-items="3" data-margin="30" data-loop="true" data-dots="false" data-nav="true" data-nav-speed="500" data-autoplay="true" data-autoplay-timeout="5000" data-autoplay-speed="500" data-autoplay-hover-pause="true" data-tablet-landscape="3" data-tablet-portrait="2" data-mobile-landscape="1" data-mobile-portrait="1">
 
                 <!-- Begin carousel item
@@ -1303,12 +1261,12 @@
                     <article class="blog-list-item">
 
                         <!-- Blog list item image -->
-                        <a href="blog-single.html" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/4.png" alt="image"></a>
+                        <a href="{{ url('/the-valley') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/4.png" alt="image"></a>
 
                         <!-- Begin blog list item info -->
                         <div class="bl-item-info">
                             <div class="bl-item-category"><a href="blog-archive.html">Photography</a></div>
-                            <a href="blog-single.html" class="bl-item-title"><h2>5 Reasons You Should Fall In Love With Photography</h2></a>
+                            <a href="{{ url('/the-valley') }}" class="bl-item-title"><h2>5 Reasons You Should Fall In Love With Photography</h2></a>
                             <div class="bl-item-meta">
                                 <span class="published">May 26, 2017</span>
                                 <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">Martin Vegas</a></span>
@@ -1359,12 +1317,12 @@
                     <article class="blog-list-item">
 
                         <!-- Blog list item image -->
-                        <a href="blog-single.html" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/5.png" alt="image"></a>
+                        <a href="{{ url('/the-valley') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/5.png" alt="image"></a>
 
                         <!-- Begin blog list item info -->
                         <div class="bl-item-info">
                             <div class="bl-item-category"><a href="blog-archive.html">Equipment</a></div>
-                            <a href="blog-single.html" class="bl-item-title"><h2>10 Top Choices for Aerial Photography</h2></a>
+                            <a href="{{ url('/the-valley') }}" class="bl-item-title"><h2>10 Top Choices for Aerial Photography</h2></a>
                             <div class="bl-item-meta">
                                 <span class="published">May 26, 2017</span>
                                 <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">John Young</a></span>
@@ -1415,12 +1373,12 @@
                     <article class="blog-list-item">
 
                         <!-- Blog list item image -->
-                        <a href="blog-single.html" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/6.png" alt="image"></a>
+                        <a href="{{ url('/the-valley') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/6.png" alt="image"></a>
 
                         <!-- Begin blog list item info -->
                         <div class="bl-item-info">
                             <div class="bl-item-category"><a href="blog-archive.html">Travel</a></div>
-                            <a href="blog-single.html" class="bl-item-title"><h2>How to Take Professional Travel Photos</h2></a>
+                            <a href="{{ url('/the-valley') }}" class="bl-item-title"><h2>How to Take Professional Travel Photos</h2></a>
                             <div class="bl-item-meta">
                                 <span class="published">May 26, 2017</span>
                                 <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">Anna Vernik</a></span>
@@ -1471,12 +1429,12 @@
                     <article class="blog-list-item">
 
                         <!-- Blog list item image -->
-                        <a href="blog-single.html" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/6.png" alt="image"></a>
+                        <a href="{{ url('/the-valley') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/6.png" alt="image"></a>
 
                         <!-- Begin blog list item info -->
                         <div class="bl-item-info">
                             <div class="bl-item-category"><a href="blog-archive.html">Photography</a></div>
-                            <a href="blog-single.html" class="bl-item-title"><h2>5 Tips Your Camera Manual Never Told You About Portrait Photography</h2></a>
+                            <a href="{{ url('/the-valley') }}" class="bl-item-title"><h2>5 Tips Your Camera Manual Never Told You About Portrait Photography</h2></a>
                             <div class="bl-item-meta">
                                 <span class="published">May 26, 2017</span>
                                 <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">Julia Beck</a></span>
@@ -1527,12 +1485,12 @@
                     <article class="blog-list-item">
 
                         <!-- Blog list item image -->
-                        <a href="blog-single.html" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/7.png" alt="image"></a>
+                        <a href="{{ url('/the-valley') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/7.png" alt="image"></a>
 
                         <!-- Begin blog list item info -->
                         <div class="bl-item-info">
                             <div class="bl-item-category"><a href="blog-archive.html">Photography</a></div>
-                            <a href="blog-single.html" class="bl-item-title"><h2>Most Common Wedding Photography Mistakes Every Beginner Will Make</h2></a>
+                            <a href="{{ url('/the-valley') }}" class="bl-item-title"><h2>Most Common Wedding Photography Mistakes Every Beginner Will Make</h2></a>
                             <div class="bl-item-meta">
                                 <span class="published">May 26, 2017</span>
                                 <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">Martin Vegas</a></span>
@@ -1583,12 +1541,12 @@
                     <article class="blog-list-item">
 
                         <!-- Blog list item image -->
-                        <a href="blog-single.html" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/about.png" alt="image"></a>
+                        <a href="{{ url('/the-valley') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/about.png" alt="image"></a>
 
                         <!-- Begin blog list item info -->
                         <div class="bl-item-info">
                             <div class="bl-item-category"><a href="blog-archive.html">Food</a> <a href="#">Photography</a></div>
-                            <a href="blog-single.html" class="bl-item-title"><h2>The Serious Eats Guide to Food Photography</h2></a>
+                            <a href="{{ url('/the-valley') }}" class="bl-item-title"><h2>The Serious Eats Guide to Food Photography</h2></a>
                             <div class="bl-item-meta">
                                 <span class="published">May 26, 2017</span>
                                 <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">Martin Vegas</a></span>
@@ -1641,8 +1599,117 @@
 </section>
 <!-- End latest news section -->
 
+<!-- End about me section -->
+<div class="split-box">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="row-lg-height full-height-vh">
+                <!-- Column -->
+                <div class="col-lg-12 col-lg-height col-lg-middle no-padding">
 
+                    <!-- Begin split box content -->
+                    <div class="split-box-content" style="padding: 6% 10%;">
+
+                        <!-- Begin contact form
+                        ========================= -->
+                        <form id="contact-form">
+                            <div class="contact-form-inner text-left">
+
+                                <div class="contact-form-info">
+                                    <div class="tt-heading">
+                                        <div class="tt-heading-inner">
+                                            <h1 class="tt-heading-title">SET AN ONLINE APPOINTMENT WITH US</h1>
+                                            <!-- <div class="tt-heading-subtitle">Subtitle Here</div> -->
+                                            <hr class="hr-short">
+                                        </div> <!-- /.tt-heading-inner -->
+                                    </div>
+                                    <!-- End tt-heading -->
+
+                                    <div class="margin-top-30">
+                                        <p>Would you like to speak to one of our financial advisers over the phone? Just submit your details and we’ll be in touch shortly.</p>
+                                    </div>
+
+                                </div> <!-- /.contact-form-info -->
+
+                                <!-- Begin hidden required fields (https://github.com/agragregra/uniMail) -->
+                                <input type="hidden" name="project_name" value="yourwebsiteaddress.com"> <!-- Change value to your site name -->
+                                <input type="hidden" name="admin_email" value="your@email.com"> <!-- Change value to your valid email address (where a message will be sent) -->
+                                <input type="hidden" name="form_subject" value="Message from yourwebsiteaddress.com"> <!-- Change value to your own message subject -->
+                                <!-- End Hidden Required Fields -->
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" tabindex="2" id="phone" name="phone" value="" class="wpcf7-form-control" placeholder="Phone Number" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="datetime-local" class="form-control" name="email" placeholder="Date Time" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <textarea class="form-control" name="message" rows="4" placeholder="Your Message" required></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="small text-gray"><em>* All fields are required!</em></div>
+
+                            </div> <!-- /.contact-form-inner -->
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <button type="submit" class="btn btn-primary btn-lg margin-top-40">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- End contact form -->
+
+                    </div>
+                    <!-- End split box content -->
+
+                </div> <!-- /.col -->
+            </div> <!-- /.row-height -->
+        </div> <!-- /.row -->
+    </div> <!-- /.container -->
+</div>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    </head>
+    <style>
+    .iti {
+    position: relative;
+    display: block;
+    }
+    </style>
+    <script>
+    const phoneInputField = document.querySelector("#phone");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+    utilsScript:
+    "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+    </script>
 <!-- ===================================
+
 ///// Begin call to action section /////
 ==================================== -->
 <section class="call-to-action-section bg-gray-3 margin-top-60">

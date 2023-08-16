@@ -6,12 +6,12 @@
 
                     <!-- Begin footer logo -->
                     <div id="footer-logo">
-                        <a href="{{ url('/') }}" class="logo-dark"><img style="margin-top: -10%;" src="{{ asset('frontend') }}/assets/img/main_logo.png" alt="logo"></a>
-                        <a href="{{ url('/') }}" class="logo-light"><img style="margin-top: -10%;" src="{{ asset('frontend') }}/assets/img/main_logo.png" alt="logo"></a>
+                        <a href="{{ url('/') }}" class="logo-dark"><img style="margin-top: -6%;max-width: 70%;" src="{{ asset('frontend') }}/assets/img/main_logo.png" alt="logo"></a>
+                        <a href="{{ url('/') }}" class="logo-light"><img style="margin-top: -6%;max-width: 70%;" src="{{ asset('frontend') }}/assets/img/main_logo.png" alt="logo"></a>
 
                         <!-- for small screens -->
-                        <a href="{{ url('/') }}" class="logo-dark-m"><img style="margin-top: -10%;" src="{{ asset('frontend') }}/assets/img/main_logo.png" alt="logo"></a>
-                        <a href="{{ url('/') }}" class="logo-light-m"><img style="margin-top: -10%;" src="{{ asset('frontend') }}/assets/img/main_logo.png" alt="logo"></a>
+                        <a href="{{ url('/') }}" class="logo-dark-m"><img style="margin-top: -6%;max-width: 70%;" src="{{ asset('frontend') }}/assets/img/main_logo.png" alt="logo"></a>
+                        <a href="{{ url('/') }}" class="logo-light-m"><img style="margin-top: -6%;max-width: 70%;" src="{{ asset('frontend') }}/assets/img/main_logo.png" alt="logo"></a>
                     </div>
                     <!-- End footer logo -->
 
@@ -82,7 +82,7 @@
                                         <!-- Begin submenu
                                         =================== -->
                                         <li >
-                                            <a href="{{url('/plot/type') }}">Plot Typet</a> |
+                                            <a href="{{url('/plot/type') }}">Plot Type</a> |
                                         </li>
                                         <!-- End submenu -->
                                         <!-- Begin submenu
@@ -91,6 +91,9 @@
                                             <a href="{{ url('/the/nature') }}">The Nature</a> |
                                         </li>
                                         <!-- End submenu -->
+                                        <li >
+                                            <a href="{{ url('/blog') }}">Event</a> |
+                                        </li>
                                         <li >
                                             <a href="{{ url('/contact_us') }}">Contact</a>
                                         </li>
@@ -104,7 +107,7 @@
 
                         <!-- Begin footer copyright -->
                         <div class="footer-copyright">
-                            <p>&copy; AMG 2003 / All rights reserved</p>
+                            <p>&copy; Copyright AMHL 2018 / All rights reserved</p>
                             <p>Design by: <a href="http://www.thevalleybd.com/" target="_blank">The Valley</a></p>
                         </div>
                         <!-- End footer copyright -->

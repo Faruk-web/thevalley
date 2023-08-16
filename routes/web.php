@@ -80,7 +80,7 @@ Route::get('/plot_detail', [IndexController::class, 'plotDetail'])->name('user.p
 Route::get('/news', [IndexController::class, 'news'])->name('user.news');
 Route::get('/news/details/{id}', [IndexController::class, 'newsDetails'])->name('user.news.details');
 Route::get('/blog', [IndexController::class, 'blog'])->name('user.blog');
-Route::get('/blog/details/{id}', [IndexController::class, 'blogDetails'])->name('user.blog.details');
+Route::get('/blog/details', [IndexController::class, 'blogDetails'])->name('user.blog.details');
 Route::get('/contact_us', [IndexController::class, 'contactamfl'])->name('user.contact');
 Route::get('/boardof/director/{id}', [IndexController::class, 'BoardOfDirector'])->name('user.director');
 Route::get('/project/details/{id}', [IndexController::class, 'ProjectDetails'])->name('user.project.details');

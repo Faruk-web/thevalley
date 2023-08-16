@@ -646,14 +646,14 @@
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                                            <input type="text" class="form-control" name="Phone" placeholder="Phone" required>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                                            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
