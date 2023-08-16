@@ -1,79 +1,131 @@
-<header id="site-header">
-    <marquee style="background-color: #c1924e;color: #fff;" behavior="scroll" direction="left"
-        onmouseover="this.stop();"
-        onmouseout="this.start();"> Facelift under construction.. new website coming soon…
-    </marquee>
-    <div id="site-header-inner" class="container">
-        <div class="wrap-inner clearfix">
-            <div id="site-logo" class="clearfix">
-                <div id="site-log-inner">
-                    <a href="{{ url('/') }}" rel="home" class="main-logo">
-                        <img src="{{ asset('frontend/assets/img/logo-white-small.png')}}" alt="Autora" width="169" height="39" data-retina="{{ asset('frontend/assets/img/logo-white-small.png')}}" data-width="169" data-height="39">
-                    </a>
-                </div>
-            </div><!-- /#site-logo -->
-            <div class="mobile-button">
+<header id="header" class="menu-align-right">
+
+    <!-- Begin header inner -->
+    <div class="header-inner tt-wrap"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag! ) -->
+
+        <!-- Begin logo
+        ================ -->
+        <div id="logo">
+            <a href="{{ url('/') }}" class="logo-dark"><img src="{{ asset('frontend') }}/assets/img/Valley_logo.png" alt="logo"></a>
+            <a href="{{ url('/') }}" class="logo-light"><img src="{{ asset('frontend') }}/assets/img/Valley_logo.png" alt="logo"></a>
+
+            <!-- for small screens -->
+            <a href="{{ url('/') }}" class="logo-dark-m"><img src="{{ asset('frontend') }}/assets/img/Valley_logo.png" alt="logo"></a>
+            <a href="{{ url('/') }}" class="logo-light-m"><img src="{{ asset('frontend') }}/assets/img/Valley_logo.png" alt="logo"></a>
+        </div>
+        <!-- End logo -->
+
+        <!-- ====================
+        //// Begin main menu ////
+        ===================== -->
+        <nav class="tt-main-menu">
+
+            <!-- Begin mobile menu toggle button -->
+            <div id="tt-m-menu-toggle-btn">
                 <span></span>
             </div>
-            <!-- /.mobile-button -->
-            <nav id="main-nav" class="main-nav">
-                <ul id="menu-primary-menu" class="menu">
-                    <li class="menu-item menu-item-has-children current-menu-item">
-                        <a href="{{ url('/') }}">HOME</a>
-                        <ul class="sub-menu">
-                            <li class="menu-item current-item"><a href="{{ url('/') }}">HOME</a></li>
-                        </ul>
+            <!-- End mobile menu toggle button -->
+
+            <!-- Begin menu tools
+            ====================== -->
+            <div class="tt-menu-tools">
+                <ul>
+                    <!-- Begin search -->
+                    <li>
+                        <a href="#" class="tt-clobal-search-trigger"><i class="fas fa-search"></i></a>
+                        <div class="tt-clobal-search">
+                            <div class="tt-clobal-search-inner">
+                                <span class="tt-clobal-search-title">Search</span>
+                                <form id="tt-clobal-search-form" class="form-btn-inside" method="get" action="search-results.html">
+                                    <input type="text" id="tt-clobal-search-input" name="search" placeholder="Type your keywords ...">
+                                    <button type="submit"><i class="fas fa-search"></i></button>
+                                </form>
+                            </div> <!-- /.tt-clobal-search-inner -->
+                            <div class="tt-clobal-search-close"><i class="tt-close-btn tt-close-light"></i></div>
+                        </div> <!-- /.tt-clobal-search -->
                     </li>
-                    <li class="menu-item menu-item-has-children">
-                        <a href="{{ route('user.thevalley') }}">Life At The Valley </a>
-                        <ul class="sub-menu">
-                            <li class="menu-item"><a href="{{ route('user.thevalley') }}">Life At The Valley</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item menu-item-has-children">
-                        <a href="{{ route('user.plot.type') }}">Plot Type</a>
-                        <ul class="sub-menu">
-                            <li class="menu-item"><a href="{{ route('user.plot.type') }}">Plot Type</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item menu-item-has-children">
-                        <a href="{{ route('user.nature') }}">The Nature</a>
-                        <ul class="sub-menu">
-                            <li class="menu-item"><a href="{{ route('user.nature') }}">The Nature</a></li>
-                        </ul>
-                    </li>
-                    {{-- <li class="menu-item menu-item-has-children" >
-                        <a href="page-testimonial.html">The Desing</a>
-                        <ul class="sub-menu">
-                            <li class="menu-item"><a href="page-testimonial.html">The Desing</a></li>
-                        </ul>
-                    </li> --}}
-                    <li class="menu-item menu-item-has-children">
-                        <a href="{{ url('/about') }}">About</a>
-                        <ul class="sub-menu right-sub-menu">
-                            <li class="menu-item"><a href="{{ url('/about') }}">About</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item menu-item-has-children">
-                        <a href="{{ url('/contact_us') }}">CONTACT</a>
-                        <ul class="sub-menu right-sub-menu">
-                            <li class="menu-item"><a href="{{ url('/contact_us') }}">CONTACT</a></li>
-                            <!-- <li class="menu-item"><a href="page-contact-2.html">CONTACT 2</a></li> -->
-                        </ul>
-                    </li>
+                    <!-- End search -->
                 </ul>
-            </nav><!-- /#main-nav -->
-            <div id="header-search">
-                <a href="#" class="header-search-icon">
-                    <span class="search-icon fa fa-search">
-                    </span>
-                </a>
-                <form role="search" method="get" class="header-search-form" action="#">
-                    <label class="screen-reader-text">Search for:</label>
-                    <input type="text" value="" name="s" class="header-search-field" placeholder="Search...">
-                    <button type="submit" class="header-search-submit" title="Search"><i class="fa fa-search"></i></button>
-                </form>
-            </div><!-- /#header-search -->
-        </div><!-- /.wrap-inner -->
-    </div><!-- /#site-header-inner -->
+            </div>
+            <!-- End menu tools -->
+
+            <!-- Collect the nav links for toggling
+            ========================================
+            * Use class "tt-submenu-dark" to enable submenu dark style.
+            -->
+            <div class="tt-menu-collapse tt-submenu-dark">
+                <ul class="tt-menu-nav">
+
+                    <!-- Begin submenu (submenu master)
+                    ==================================== -->
+                    <li class="tt-submenu-wrap tt-submenu-master">
+                        <a href="{{ url('/') }}">Home</a>
+                        {{-- <ul class="tt-submenu">
+                            <li><a href="{{ url('/') }}">Home</a></li>
+                        </ul> --}}
+                        <!-- /.tt-submenu -->
+                    </li>
+                    <!-- End submenu (sub-master) -->
+
+                    <!-- Begin submenu (submenu master)
+                    ==================================== -->
+                    <li class="tt-submenu-wrap tt-submenu-master">
+                        <a href="{{ url('/about') }}">About</a>
+                        {{-- <ul class="tt-submenu">
+                            <li><a href="{{ url('/about') }}">About Me</a></li>
+                        </ul> --}}
+                         <!-- /.tt-submenu -->
+                    </li>
+                    <!-- End submenu (sub-master) -->
+
+                    <!-- Begin submenu (submenu master)
+                    ==================================== -->
+                    <li class="tt-submenu-wrap tt-submenu-master">
+                        <a href="{{ url('/the-valley') }}">The Valley</a>
+                            <!-- Begin submenu
+                            =================== -->
+                            {{-- <li class="tt-submenu-wrap">
+                                <a href="{{ url('/the-valley') }}">The Valley</a>
+                                </li> --}}
+                                <!-- /.tt-submenu -->
+                            </li>
+                            <!-- End submenu -->
+
+                            <!-- Begin submenu
+                            =================== -->
+                            <li class="tt-submenu-wrap">
+                                <a href="{{url('/plot/type') }}">Plot Typet</a>
+                                    <!-- Begin submenu
+                                    =================== -->
+                                    {{-- <li class="tt-submenu-wrap">
+                                        <a href="{{url('/plot/type') }}">Plot Typet</a>
+                                    </li> --}}
+                                    <!-- End submenu -->
+                            </li>
+                            <!-- End submenu -->
+
+                            <!-- Begin submenu
+                            =================== -->
+                            <li class="tt-submenu-wrap">
+                                <a href="{{ url('/the/nature') }}">The Nature</a>
+                                    {{-- <li><a href="{{ url('/the/nature') }}">The Nature</a></li> --}}
+                                 <!-- /.tt-submenu -->
+                            </li>
+                            <!-- End submenu -->
+                            <li >
+                                <a href="{{ url('/contact_us') }}">Contact</a>
+                            </li>
+
+                        </ul> <!-- /.tt-submenu -->
+                    </li>
+                    <!-- End submenu (sub-master) -->
+                </ul> <!-- /.tt-menu-nav -->
+            </div> <!-- /.tt-menu-collapse -->
+
+        </nav>
+        <!-- End main menu -->
+
+    </div>
+    <!-- End header inner -->
+
 </header>

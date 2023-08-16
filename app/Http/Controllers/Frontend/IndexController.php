@@ -32,7 +32,7 @@ class IndexController extends Controller
 {
   // Frontend Index show
    public function index(){
- 
+
   //valley
    $products = Project::orderBy('id', 'DESC')->limit(4)->get();
   // for  featureds
@@ -360,18 +360,18 @@ class IndexController extends Controller
     }
     //nature
     public function nature(){
+        $sliders = Slider::where('status', 1)->orderBy('id', 'DESC')->limit(10)->get();
         $projects = Project::limit(30)->orderBy('id', 'desc')->paginate(9);
-        return view('frontend.valley.nature');
+        return view('frontend.valley.nature',compact('sliders'));
     }
-    //upcomingProject
-    public function upcomingProject(){
-        $projects = Project::limit(30)->orderBy('id', 'desc')->paginate(9);
-        return view('frontend.valley.all.upcoming_project',compact('projects'));
+    //gallery
+    public function gallery(){
+        return view('frontend.valley.gallery');
     }
     //completedProject
-    public function completedProject(){
+    public function plotDetail(){
         $projects = Project::limit(30)->orderBy('id', 'desc')->paginate(9);
-        return view('frontend.valley.all.completed_project',compact('projects'));
+        return view('frontend.valley.plot_detail',compact('projects'));
     }
 
      //ProjectDetails

@@ -1,98 +1,268 @@
 <!DOCTYPE html>
-<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><!--<![endif]-->
 
-<head>
-    <!-- Basic Page Needs -->
-    <meta charset="utf-8">
-    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-    <title>The Valley</title>
-    <meta name="author" content="themesflat.com">
-    <!-- Mobile Specific Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <!-- Colors -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('frontend/assets/css/colors/color1.css') }}" id="colors">
-    <!-- Favicon and Touch Icons  -->
-    <link rel="shortcut icon" href="{{ asset('frontend/assets/img/amfl/Icon.png')}}">
-    <link rel="apple-touch-icon-precomposed" href="{{ asset('frontend/assets/icon/apple-touch-icon-158-precomposed.png') }}">
-    <!-- Theme Style -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('frontend/style.css') }}">
-    <!--[if lt IE 9]>
-        <script src="javascript/html5shiv.js"></script>
-        <script src="javascript/respond.min.js"></script>
-    <![endif]-->
-</head>
-<style>
-    @media only screen and (min-width:1191px) {
-        #main-nav-mobi {
-            width: 17%;
-            left: 71%;
-        }
-    }
-        @media only screen and (max-width:1191px) {
-            .top-bar-socials {
-            display: none;
-        }
-        .copyright{
-            margin-top: -30px;
-        }
-    }
-</style>
-<body class="header-fixed page no-sidebar header-style-3 topbar-style-3 site-header-absolute menu-has-search">
-<div id="wrapper" class="animsition">
-    <div id="page" class="clearfix">
-       <!-- Header Wrap -->
-       <div id="site-header-wrap">
-        <!-- Top Bar -->
-        @include('frontend.body.top_bar')
-        <!-- /#top-bar -->
-        <!-- Header -->
-        @include('frontend.body.header')
-        <!-- /#site-header -->
-    </div><!-- #site-header-wrap -->
-    <!-- Main Content -->
-    @yield('index')
-    <!-- /#main-content -->
-    <!-- Footer -->
-    @include('frontend.body.footer')
-    <!-- /#footer -->
-    <!-- Bottom -->
-    @include('frontend.body.bottom')
-    <!-- /#bottom -->
-    </div><!-- /#page -->
-</div><!-- /#wrapper -->
-<a id="scroll-top"></a>
-<!-- Javascript -->
-<script src="{{ asset('frontend/assets/js/jquery.min.js') }}"></script>
-<script src="{{ asset('frontend/assets/js/plugins.js') }}"></script>
-<script src="{{ asset('frontend/assets/js/tether.min.js') }}"></script>
-<script src="{{ asset('frontend/assets/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('frontend/assets/js/animsition.js') }}"></script>
-<script src="{{ asset('frontend/assets/js/owl.carousel.min.js') }}"></script>
-<script src="{{ asset('frontend/assets/js/countto.js') }}"></script>
-<script src="{{ asset('frontend/assets/js/equalize.min.js') }}"></script>
-<script src="{{ asset('frontend/assets/js/jquery.isotope.min.js') }}"></script>
-<script src="{{ asset('frontend/assets/js/owl.carousel2.thumbs.js') }}"></script>
-<script src="{{ asset('frontend/assets/js/jquery.cookie.js') }}"></script>
-<script src="{{ asset('frontend/assets/js/gmap3.min.js') }}"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIEU6OT3xqCksCetQeNLIPps6-AYrhq-s&region=GB"></script>
-<script src="{{ asset('frontend/assets/js/shortcodes.js') }}"></script>
-<script src="{{ asset('frontend/assets/js/main.js') }}"></script>
-<!-- Revolution Slider -->
-<script src="{{ asset('frontend/includes/rev-slider/js/jquery.themepunch.tools.min.js') }}"></script>
-<script src="{{ asset('frontend/includes/rev-slider/js/jquery.themepunch.revolution.min.js') }}"></script>
-<script src="{{ asset('frontend/assets/js/rev-slider.js') }}"></script>
-<!-- Load Extensions only on Local File Systems ! The following part can be removed on Server for On Demand Loading -->
-<script src="{{ asset('frontend/includes/rev-slider/js/extensions/revolution.extension.actions.min.js') }}"></script>
-<script src="{{ asset('frontend/includes/rev-slider/js/extensions/revolution.extension.carousel.min.js') }}"></script>
-<script src="{{ asset('frontend/includes/rev-slider/js/extensions/revolution.extension.kenburn.min.js') }}"></script>
-<script src="{{ asset('frontend/includes/rev-slider/js/extensions/revolution.extension.layeranimation.min.js') }}"></script>
-<script src="{{ asset('frontend/includes/rev-slider/js/extensions/revolution.extension.migration.min.js') }}"></script>
-<script src="{{ asset('frontend/includes/rev-slider/js/extensions/revolution.extension.navigation.min.js') }}"></script>
-<script src="{{ asset('frontend/includes/rev-slider/js/extensions/revolution.extension.parallax.min.js') }}"></script>
-<script src="{{ asset('frontend/includes/rev-slider/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
-<script src="{{ asset('frontend/includes/rev-slider/js/extensions/revolution.extension.video.min.js') }}"></script>
+<!--
+   Template:   Sepia - Photography Portfolio HTML Website Template
+   Author:     Themetorium
+   URL:        https://themetorium.net
+-->
 
-</body>
+<html lang="en">
+	<head>
+
+		<!-- Title -->
+		<title>The Valley</title>
+
+		<!-- Meta -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="Responsive Photography HTML5 Website Template">
+		<meta name="keywords" content="HTML5, CSS3, Bootsrtrap, Responsive, Photography, Portfolio, Template, Theme, Website, Themetorium" />
+		<meta name="author" content="themetorium.net">
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Favicon (http://www.favicon-generator.org/) -->
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+		<!-- Google Analytics (https://analytics.google.com/) -->
+		<!-- Add your Google Analytics code here -->
+
+		<!-- Google fonts (https://www.google.com/fonts) -->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"> <!-- Global font -->
+
+		<!-- Bootstrap CSS (http://getbootstrap.com) -->
+		<link rel="stylesheet" href="{{ asset('frontend/assets/vendor/bootstrap/css/bootstrap.min.css')}}"> <!-- bootstrap CSS (http://getbootstrap.com) -->
+
+		<!-- Libs and Plugins CSS -->
+		<link rel="stylesheet" href="{{ asset('frontend/assets/vendor/animsition/css/animsition.min.css')}}"> <!-- Animsition CSS (http://git.blivesta.com/animsition/) -->
+		<link rel="stylesheet" href="{{ asset('frontend/assets/vendor/fontawesome/css/fontawesome-all.min.css')}}"> <!-- Font Icons CSS (https://fontawesome.com) Free version! -->
+		<link rel="stylesheet" href="{{ asset('frontend/assets/vendor/lightgallery/css/lightgallery.min.css')}}"> <!-- lightGallery CSS (http://sachinchoolur.github.io/lightGallery) -->
+		<link rel="stylesheet" href="{{ asset('frontend/assets/vendor/owl-carousel/css/owl.carousel.min.css')}}"> <!-- Owl Carousel CSS (https://owlcarousel2.github.io/OwlCarousel2/) -->
+		<link rel="stylesheet" href="{{ asset('frontend/assets/vendor/owl-carousel/css/owl.theme.default.min.css')}}"> <!-- Owl Carousel CSS (https://owlcarousel2.github.io/OwlCarousel2/) -->
+		<link rel="stylesheet" href="{{ asset('frontend/assets/vendor/ytplayer/css/jquery.mb.YTPlayer.min.css')}}"> <!-- YTPlayer CSS (more info: https://github.com/pupunzi/jquery.mb.YTPlayer) -->
+
+		<!-- Template master CSS -->
+		<link rel="stylesheet" href="{{ asset('frontend/assets/css/helper.css')}}">
+		<link rel="stylesheet" href="{{ asset('frontend/assets/css/theme.css')}}">
+
+		<!-- Template dark style CSS (just uncomment line below to enable dark style) -->
+			{{-- <link rel="stylesheet" href="{{ asset('frontend/assets/css/dark-style.css')}}"> --}}
+
+		<!-- Template round style CSS (just uncomment line below to enable round style) -->
+			{{-- <link rel="stylesheet" href="{{ asset('frontend/assets/css/round-style.css')}}"> --}}
+
+		<!-- Template color skins CSS (just uncomment line below to enable color skin. One line at a time!) -->
+			{{-- <link rel="stylesheet" href="{{ asset('frontend/assets/css/color-skins/skin-red.css')}}">
+		 <link rel="stylesheet" href="{{ asset('frontend/assets/css/color-skins/skin-green.css')}}">
+			<link rel="stylesheet" href="{{ asset('frontend/assets/css/color-skins/skin-blue.css')}}">
+		<link rel="stylesheet" href="{{ asset('frontend/assets/css/color-skins/skin-orange.css')}}">
+			<link rel="stylesheet" href="{{ asset('frontend/assets/css/color-skins/skin-purple.css')}}">
+			<link rel="stylesheet" href="{{ asset('frontend/assets/css/color-skins/skin-pink.css')}}">
+			 <link rel="stylesheet" href="{{ asset('frontend/assets/css/color-skins/skin-brown.css')}}"> --}}
+
+		<!-- Template RTL mode CSS (just uncomment all 3 lines below to enable right to left mode) -->
+			<!-- <link rel="stylesheet" href="{{ asset('frontend/assets/vendor/bootstrap/css/bootstrap-rtl/bootstrap-rtl.min.css')}}"> -->
+			<!-- <link rel="stylesheet" href="{{ asset('frontend/assets/css/rtl/theme-rtl.css')}}"> -->
+			<!-- <link rel="stylesheet" href="{{ asset('frontend/assets/css/rtl/helper-rtl.css')}}"> -->
+
+			<!-- FOR DEMO SITE ONLY! -->
+			<link rel="stylesheet" href="{{ asset('frontend/assets/css/demo-panel.css') }}">
+			<link rel="stylesheet" href="{{ asset('frontend/assets/css/dark-style.css') }}">
+			<link rel="stylesheet" href="{{ asset('frontend/assets/css/round-style.css') }}">
+			<link rel="alternate stylesheet" media="screen" title="skin-red" href="{{ asset('frontend/assets/css/color-skins/skin-red.css') }}">
+			<link rel="alternate stylesheet" media="screen" title="skin-green" href="{{ asset('frontend/assets/css/color-skins/skin-green.css') }}">
+			<link rel="alternate stylesheet" media="screen" title="skin-blue" href="{{ asset('frontend/assets/css/color-skins/skin-blue.css') }}">
+			<link rel="alternate stylesheet" media="screen" title="skin-orange" href="{{ asset('frontend/assets/css/color-skins/skin-orange.css') }}">
+			<link rel="alternate stylesheet" media="screen" title="skin-purple" href="{{ asset('frontend/assets/css/color-skins/skin-purple.css') }}">
+			<link rel="alternate stylesheet" media="screen" title="skin-pink" href="{{ asset('frontend/assets/css/color-skins/skin-pink.css') }}">
+			<link rel="alternate stylesheet" media="screen" title="skin-brown" href="{{ asset('frontend/assets/css/color-skins/skin-brown.css') }}">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+        <!-- Begin demo page styles -->
+		<style type="text/css">
+
+			#tt-theme-stats { background-color: #111; padding: 5% 0; margin-bottom: 60px; color: #fff; padding: 5% 0; }
+			.tt-theme-stats-inner {}
+			.tt-stats-box { background-color: rgba(0, 43, 41, 0.46); padding: 60px 15px; box-shadow: 0 20px 30px -18px rgba(0, 0, 0, 0.7); }
+			.tt-stats-box span { font-size: 64px; font-weight: bold; font-weight: 600; }
+			.tt-stats-box p { font-size: 20px; font-weight: bold; font-weight: 500; }
+			@media (max-width: 768px) {
+				.tt-stats-box { padding: 40px 15px; }
+				.tt-stats-box span { font-size: 42px; }
+				.tt-stats-box p { font-size: 14px; }
+			}
+
+			#demo-section {}
+			.demo-section-inner {}
+			.demo-item {}
+			.demo-img {
+				overflow: hidden;
+				border: 1px solid rgba(128, 128, 128, 0.2);
+				box-shadow: 0 4px 23px rgba(0, 0, 0, 0.09);
+				-webkit-transition: all 0.3s ease-in-out;
+				-moz-transition: all 0.3s ease-in-out;
+				-o-transition: all 0.3s ease-in-out;
+				-ms-transition: all 0.3s ease-in-out;
+				transition: all 0.3s ease-in-out;
+			}
+			@media (min-width: 992px) {
+				.demo-img:hover {
+					box-shadow: 0 20px 50px 0 rgba(0, 0, 0, .4);
+					-webkit-transform: translateY(-7px) translateZ(0);
+					-moz-transform: translateY(-7px) translateZ(0);
+					-o-transform: translateY(-7px) translateZ(0);
+					-ms-transform: translateY(-7px) translateZ(0);
+					transform: translateY(-7px) translateZ(0);
+				}
+			}
+			.demo-img a { display: block; }
+			.demo-title { padding: 20px 0; text-align: center; }
+			.demo-title h2 { margin: 0; font-size: 17px; font-weight: 500; }
+			.demo-title span { color: #b1b1b1; }
+
+		</style>
+		<!-- End demo page styles -->
+
+	</head>
+
+
+
+    <!-- ===========
+        ///// Body /////
+        ================
+        * Use class "animsition" to enable page transition while page loads.
+        * Use class "tt-boxed" to enable page boxed layout globally (affects all elements containing class "tt-wrap").
+        -->
+        <body id="body" class="animsition">
+			<!-- BEGIN DEMO PANEL (FOR DEMO SITE ONLY!) -->
+		<div class="demo-panel">
+			<div class="demo-panel-trigger">
+				<span class="dpt-icon"></span>
+				<span class="dpt-close"></span>
+			</div>
+			<div class="demo-panel-inner">
+				<div class="demo-panel-header">Demo Panel</div>
+				<div class="demo-panel-content">
+					<div class="demo-panel-block light-sw-block">
+						<h2 class="dp-heading">Light Switcher:</h2>
+						<div class="light-switcher">
+							<div class="lsw-btn light-lsw-btn" title="Day Mode"></div>
+							<div class="lsw-btn dark-lsw-btn" title="Night Mode"></div>
+						</div>
+					</div>
+					<div class="demo-panel-block rtl-sw-block">
+						<h2 class="dp-heading">Round Style:</h2>
+						<div class="round-switcher">
+							<div class="roundsw-btn ltr-roundsw-btn" title="Round style OFF">OFF</div>
+							<div class="roundsw-btn round-roundsw-btn" title="Round style ON">ON</div>
+						</div>
+					</div>
+					<div class="demo-panel-block rtl-sw-block">
+						<h2 class="dp-heading">RTL Mode:</h2>
+						<div class="rtl-switcher">
+							<div class="rtlsw-btn ltr-rtlsw-btn" title="Left to right mode">LTR</div>
+							<div class="rtlsw-btn rtl-rtlsw-btn" title="Right to left mode">RTL</div>
+						</div>
+					</div>
+					<div class="demo-panel-block">
+						<h2 class="dp-heading">Color Switcher:</h2>
+						<div class="skin-switcher">
+							<a class="sksw-btn sksw-btn-default" href="javascript:chooseStyle('none', 60)" title="Default Skin"></a>
+							<a class="sksw-btn sksw-btn-red" href="javascript:chooseStyle('skin-red', 60)" data-class="tt-skin-red" title="Red Skin"></a>
+							<a class="sksw-btn sksw-btn-green" href="javascript:chooseStyle('skin-green', 60)" data-class="tt-skin-green" title="Green Skin"></a>
+							<a class="sksw-btn sksw-btn-blue" href="javascript:chooseStyle('skin-blue', 60)" data-class="tt-skin-blue" title="Blue Skin"></a>
+							<a class="sksw-btn sksw-btn-orange" href="javascript:chooseStyle('skin-orange', 60)" data-class="tt-skin-orange" title="Orange Skin"></a>
+							<a class="sksw-btn sksw-btn-purple" href="javascript:chooseStyle('skin-purple', 60)" data-class="tt-skin-purple" title="Purple Skin"></a>
+							<a class="sksw-btn sksw-btn-pink" href="javascript:chooseStyle('skin-pink', 60)" data-class="tt-skin-pink" title="Pink Skin"></a>
+							<a class="sksw-btn sksw-btn-brown" href="javascript:chooseStyle('skin-brown', 60)" data-class="tt-skin-brown" title="Brown Skin"></a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- END DEMO PANEL (FOR DEMO SITE ONLY!) -->
+
+            <!-- =================
+            //// Begin header ////
+            ======================
+            * Use class "header-show-hide-on-scroll" to hide header on scroll down and show on scroll up.
+            * Use class "header-fixed-top" to set header to fixed position.
+            * Use class "header-transparent" to set header to transparent.
+            * Use class "menu-align-left" to align menu to left.
+            * Use class "menu-align-right" to align menu to right.
+            * Use class "menu-align-center" to align menu to center (do not use with header classes!).
+            -->
+            @include('frontend.body.header')
+            <!-- End header -->
+
+
+            <!-- *************************************
+            *********** Begin body content ***********
+            ************************************** -->
+            <div id="body-content">
+
+
+                <!-- ==========================
+                ///// Begin intro section /////
+                =========================== -->
+                @yield('index')
+                <!-- End intro section -->
+
+
+                <!-- ============================================
+                ///// Begin footer section (footer minimal) /////
+                =================================================
+                * Use class "footer-dark" to enable dark footer.
+                * Use class "no-margin-top" if needed.
+                -->
+                @include('frontend.body.footer')
+                <!-- End footer section -->
+
+            </div>
+            <!-- End body content -->
+
+            </div>
+            <!-- End body content -->
+
+
+
+
+
+            <!-- ====================
+            ///// Scripts below /////
+            ===================== -->
+
+
+		<!-- Core JS -->
+		<script src="{{ asset('frontend/assets/vendor/jquery/jquery.min.js') }}"></script> <!-- jquery JS (https://jquery.com) -->
+		<script src="{{ asset('frontend/assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script> <!-- bootstrap JS (http://getbootstrap.com) -->
+
+		<!-- Libs and Plugins JS -->
+		<script src="{{ asset('frontend/assets/vendor/animsition/js/animsition.min.js') }}"></script> <!-- Animsition JS (http://git.blivesta.com/animsition/) -->
+		<script src="{{ asset('frontend/assets/vendor/jquery.easing.min.js') }}"></script> <!-- Easing JS (http://gsgd.co.uk/sandbox/jquery/easing/) -->
+		<script src="{{ asset('frontend/assets/vendor/isotope.pkgd.min.js') }}"></script> <!-- Isotope JS (http://isotope.metafizzy.co) -->
+		<script src="{{ asset('frontend/assets/vendor/imagesloaded.pkgd.min.js') }}"></script> <!-- ImagesLoaded JS (https://github.com/desandro/imagesloaded) -->
+		<script src="{{ asset('frontend/assets/vendor/owl-carousel/js/owl.carousel.min.js') }}"></script> <!-- Owl Carousel JS (https://owlcarousel2.github.io/OwlCarousel2/) -->
+		<script src="{{ asset('frontend/assets/vendor/jquery.mousewheel.min.js') }}"></script> <!-- A jQuery plugin that adds cross browser mouse wheel support (https://github.com/jquery/jquery-mousewheel) -->
+		<script src="{{ asset('frontend/assets/vendor/ytplayer/js/jquery.mb.YTPlayer.min.js') }}"></script> <!-- YTPlayer JS (more info: https://github.com/pupunzi/jquery.mb.YTPlayer) -->
+
+		<script src="{{ asset('frontend/assets/vendor/lightgallery/js/lightgallery-all.min.js') }}"></script> <!-- lightGallery Plugins JS (http://sachinchoolur.github.io/lightGallery) -->
+
+		<!-- Theme master JS -->
+		<script src="{{ asset('frontend/assets/js/theme.js') }}"></script>
+		<!-- FOR DEMO SITE ONLY! JS -->
+		<script src="{{ asset('frontend/assets/js/demo-panel.js') }}"></script>
+		<script src="{{ asset('frontend/assets/js/styleswitch.js') }}"></script>
+
+	</body>
+
 </html>
-

@@ -1,292 +1,368 @@
 @extends('frontend.main_master')
 
 @section('index')
-<style>
-    .faruk_cha{
-      background-color: #1a6888;
-      display:none;
-    }
-    @media (max-width: 600px) {
-        .faruk_char{
-      background-color: #1a6888;
-      display:none;
-    }
-    .faruk_cha{
-      background-color: #1a6888;
-      display:block;
-    }
-  }
-</style>
- <!-- Featured Title -->
- <div id="featured-title" class="featured-title clearfix">
-    <div id="featured-title-inner" class="container clearfix">
-        <div class="featured-title-inner-wrap">
-            <div id="breadcrumbs">
-                <div class="breadcrumbs-inner">
-                    <div class="breadcrumb-trail">
-                        <a href="{{ url('/') }}" class="trail-begin">Home</a>
-                        <span class="sep">|</span>
-                        <span class="trail-end">About Us</span>
-                    </div>
-                </div>
-            </div>
-            <div class="featured-title-heading-wrap">
-                <h1 class="feautured-title-heading">
-                    About Us
-                </h1>
-            </div>
-        </div><!-- /.featured-title-inner-wrap -->
-    </div><!-- /#featured-title-inner -->
-</div>
-<!-- End Featured Title -->
-<!-- Main Content -->
-<div id="main-content" class="site-main clearfix">
-    <div id="content-wrap">
-        <div id="site-content" class="site-content clearfix">
-            <div id="inner-content" class="inner-content-wrap">
-               <div class="page-content">
-                    <!-- ICONBOX -->
-                    <!-- ABOUT -->
-                    <div class="row-about">
-                        <div class="container-fluid">
-                            <div class="row equalize sm-equalize-auto faruk_char">
-                                <div class="col-md-6 bg-light-grey">
-                                    {{-- <div class="themesflat-spacer clearfix" data-desktop="64" data-mobile="35" data-smobile="35"></div> --}}
-                                    <div class="themesflat-content-box clearfix" data-margin="0 4% 0 4.5%" data-mobilemargin="0 0 0 4.5%">
-                                        <div class="themesflat-headings style-1 clearfix">
-                                            <h2 class="heading">
-                                                Amin Mohammad Holdings Ltd
-                                                </h2>
-                                            <div class="sep has-width w80 accent-bg margin-top-11 clearfix"></div>
-                                            <p class="sub-heading margin-top-30">AMIN MOHAMMAD FOUNDATION LIMITED (AMFL), a branded housing and commercial building developer has now grown up as a symbol of trust and confidence for the valued customers who need residential and commercial units.</p>
-                                            <p class="sub-heading margin-top-30">AMIN MOHAMMAD FOUNDATION LIMITED (AMFL), the flagship company has now emerged as one of the largest and fastest-growing housing developers in Bangladesh. The company has grown with the time and with Bangladesh aiming to improve the living standard of those who have placed their trust in it. The most precious asset of AMFL is its strong and dedicated human resources consisting of people.</p>
+	<!-- ========================
+			///// Begin page header /////
+			=============================
+			* Use classes "ph-xs", "ph-sm", "ph-lg" or "ph-xlg" to set page header size.
+			* Use class "ph-center" or "ph-right" to align page header caption.
+			-->
+			<section id="page-header">
 
-                                        </div>
-                                        {{-- <div class="themesflat-spacer clearfix" data-desktop="26" data-mobile="35" data-smobile="35"></div> --}}
-                                        <!-- /.content-list -->
-                                        <div class="themesflat-spacer clearfix" data-desktop="22" data-mobile="35" data-smobile="35"></div>
-                                    </div><!-- /.themesflat-content-box -->
+				<!-- Begin page header image
+				=============================
+				* Use class "parallax-bg-1" up to "parallax-bg-6" to enable background image parallax effect.
+				* Use class "fade-out-scroll-3" to enable fade out effect if page scroll.
+				* Use class "hide-ph-image" to hide page header image without removing the code.
+				-->
+				<div class="page-header-image parallax-bg-3 bg-image" style="background-image: url({{ asset('frontend') }}/assets/img/valley/about_13.png);">
 
-                                </div>
-                                <!-- /.col-md-6 -->
-                                <div class="col-md-6 half-background style-1" style="background-image: url('{{ asset('frontend/assets/img/amfl/about/1.png')}}');center center no-repeat; background-size: cover;">
-                                    <div class="col span_1_of_3">
-                                        <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="35" data-smobile="35"></div>
+					<!-- Element cover
+					===================
+					* You can use prepared background transparent classes depends on brightness of your page header image. More info: file "helper.css".
+					-->
+					<div class="cover bg-transparent-5-dark"></div>
 
-                                        <div class="widget widget_instagram">
-                                            <h2 class="widget-title margin-bottom-30"><span> PHOTOS</span></h2>
-                                            <div class="instagram-wrap data-effect clearfix col3 g10">
-                                                <div class="instagram_badge_image has-effect-icon">
-                                                    <a href="https://www.instagram.com/amflbd/" target="_blank" class="data-effect-item">
-                                                        <span class="item"><img src="{{ asset('frontend/assets/img/10.jpeg')}}" alt="Image" ></span>
-                                                        <div class="overlay-effect bg-color-2"></div>
-                                                        <div class="elm-link">
-                                                            <span class="icon-3"></span>
-                                                        </div>
-                                                    </a>
+				</div>
+				<!-- End page header image -->
+
+				<!-- Begin page header inner -->
+				<div class="page-header-inner tt-wrap">
+
+					<!-- Begin page header caption
+					===============================
+					* Use classes "ph-caption-xs", "ph-caption-sm", "ph-caption-lg" or "ph-caption-xlg" to set page header size.
+					* Use class "parallax-1" up to "parallax-6" to enable parallax effect.
+					* Use class "fade-out-scroll-1" up to "fade-out-scroll-6" to enable fade out effect if page scroll.
+					-->
+					<div class="page-header-caption ph-caption-lg parallax-4 fade-out-scroll-3">
+						<h1 class="page-header-title">Martin Vegas</h1>
+						<hr class="hr-short">
+
+						<!-- Use data attributes to set text maximum characters or words (example: data-max-characters="120" or data-max-words="40") -->
+						<div class="page-header-description" data-max-words="40">
+							Artist &amp; Photographer
+						</div>
+
+					</div>
+					<!-- End page header caption -->
+
+				</div>
+				<!-- End page header inner -->
+
+			</section>
+			<!-- End page header -->
+
+
+			<!-- =============================
+			///// Begin about me section /////
+			============================== -->
+			<section id="about-me-section">
+				<div class="about-me-inner tt-wrap"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag! ) -->
+
+					<!-- ======================
+					///// Begin split box /////
+					based on: http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-columns-of-same-height
+					======================= -->
+					<div class="split-box about-me">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="row-lg-height">
+
+									<!-- Column -->
+									<div class="col-lg-6 col-lg-height split-box-image no-padding bg-image" style="background-image: url({{ asset('frontend') }}/assets/img/valley/about.png); background-position: 50% 50%;">
+
+										<!-- Split box image height
+										============================
+										* You can use prepared "padding-height-*" helper classes to set split box image height. Example: "padding-height-85" (useful if "split-box-content" contend/text is very short). Also you can use class "full-height-vh" for full height image. Find out "helper.css" file for more info. Note: class "sbi-height" is required.
+										-->
+										<div class="sbi-height padding-height-85"></div>
+
+									</div> <!-- /.col -->
+
+									<!-- Column -->
+									<div class="col-lg-6 col-lg-height col-lg-middle no-padding">
+
+										<!-- Begin split box content
+										=============================
+										* Use class "shifted-left" or "shifted-right" to enable shifted content (do not use for long content).
+										-->
+										<div class="split-box-content sb-content-right">
+
+											<!-- Begin tt-heading
+											======================
+											* Use class "padding-on" to enable heading paddings (useful if you use tt-heading as stand alone element).
+											* Use class "text-center" or "text-right" to align tt-heading.
+											* Use classes "tt-heading-xs", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set tt-heading size.
+											-->
+											<div class="tt-heading">
+												<div class="tt-heading-inner">
+													<h1 class="tt-heading-title">WHO I AM ?</h1>
+													<div class="tt-heading-subtitle">A little bit about me</div>
+													<hr class="hr-short">
+												</div> <!-- /.tt-heading-inner -->
+											</div>
+											<!-- End tt-heading -->
+
+											<div class="margin-top-30">
+												<p>Hi, my name is <strong>Martin Vegas</strong>. I am an artist and photographer. Sollicitudin diam vitae, amet lacus donec eu, donec vulputate duis nullam nulla, suscipit nulla orci, ornare maecenas eget gravida.</p>
+
+												<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Vivamus at nibh tincidunt, bibendum ligula id. Nemo enim ipsam voluptatem quiatotam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas enimoa.</p>
+											</div>
+
+											<!-- Begin signature -->
+											<div class="signature">
+												<img class="signature-dark" src="{{ asset('frontend') }}/assets/img/signature-dark.png" alt="">
+												<img class="signature-light" src="{{ asset('frontend') }}/assets/img/signature-light.png" alt="">
+											</div>
+											<!-- End signature -->
+
+										</div>
+										<!-- End split box content -->
+
+									</div> <!-- /.col -->
+
+								</div> <!-- /.row-height -->
+							</div> <!-- /.row -->
+						</div> <!-- /.container -->
+					</div>
+					<!-- End split box -->
+
+					<!-- ======================
+					///// Begin split box /////
+					based on: http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-columns-of-same-height
+					======================= -->
+					<div class="split-box what-i-do">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="row-lg-height">
+
+									<!-- Column -->
+									<div class="col-lg-6 col-lg-push-6 col-lg-height split-box-image no-padding bg-image" style="background-image: url({{ asset('frontend') }}/assets/img/valley/about_1.png); background-position: 50% 50%;">
+
+										<!-- Split box image height
+										============================
+										* You can use prepared "padding-height-*" helper classes to set split box image height. Example: "padding-height-85" (useful if "split-box-content" contend/text is very short). Also you can use class "full-height-vh" for full height image. Find out "helper.css" file for more info. Note: class "sbi-height" is required.
+										-->
+										<div class="sbi-height padding-height-85"></div>
+
+									</div> <!-- /.col -->
+
+									<!-- Column -->
+									<div class="col-lg-6 col-lg-pull-6 col-lg-height col-lg-middle no-padding">
+
+										<!-- Begin split box content
+										=============================
+										* Use class "shifted-left" or "shifted-right" to enable shifted content (do not use for long content).
+										-->
+										<div class="split-box-content sb-content-left">
+
+											<!-- Begin tt-heading
+											======================
+											* Use class "padding-on" to enable heading paddings (useful if you use tt-heading as stand alone element).
+											* Use class "text-center" or "text-right" to align tt-heading.
+											* Use classes "tt-heading-xs", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set tt-heading size.
+											-->
+											<div class="tt-heading">
+												<div class="tt-heading-inner">
+													<h1 class="tt-heading-title">AMIN MOHAMMAD HOLDINGS LTD</h1>
+													<div class="tt-heading-subtitle">A little bit of our work</div>
+													<hr class="hr-short">
+												</div> <!-- /.tt-heading-inner -->
+											</div>
+											<!-- End tt-heading -->
+
+											<div class="margin-top-30">
+												<p>Pellentesque nec convallis nisi, in mollis nulla. Aliquam eget elit risus. Quisque vitae commodo libero, eu efficitur ligula. Cras vulputate arcu id interdum pretium. Cras eu blandit massa, at semper est. Curabitur id blandit purus. Curabitur egestas, lacus quis facilisis tempor.</p>
+
+												<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+											</div>
+											<a href="contact.html" class="btn btn-primary margin-top-20">Hire Me!</a>
+											<a href="categories-grid.html" class="btn btn-dark margin-top-20">View All My Work</a>
+										</div>
+										<!-- End split box content -->
+
+									</div> <!-- /.col -->
+
+								</div> <!-- /.row-height -->
+							</div> <!-- /.row -->
+						</div> <!-- /.container -->
+					</div>
+					<!-- End split box -->
+
+				</div> <!-- /.about-me-inner -->
+			</section>
+			<!-- End about me section -->
+
+
+			<!-- ================================
+			///// Begin latest work cection /////
+			================================= -->
+			<section id="latest-work-section" class="margin-top-40"> <!-- margin class is optional ) -->
+
+				<!-- Begin tt-heading
+				======================
+				* Use class "padding-on" to enable heading paddings (useful if you use tt-heading as stand alone element).
+				* Use class "text-center" or "text-right" to align tt-heading.
+				* Use classes "tt-heading-xs", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set tt-heading size.
+				-->
+				<div class="tt-heading padding-on text-center">
+					<div class="tt-heading-inner tt-wrap"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag! ) -->
+						<h1 class="tt-heading-title">BOARD OF DIRECTORS
+                        </h1>
+						<hr class="hr-short">
+					</div> <!-- /.tt-heading-inner -->
+				</div>
+				<!-- End tt-heading -->
+
+				<div class="latest-work-inner"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag! ) -->
+
+					<!-- Begin project carousel
+					============================ -->
+					<div class="project-carousel">
+						<div class="owl-carousel cc-height-1 cc-hover-dark nav-outside-top" data-items="4" data-margin="0" data-dots="false" data-nav="true" data-nav-speed="800" data-mobile-portrait="1" data-tablet-landscape="3" data-tablet-portrait="2" data-mobile-landscape="1" data-mobile-portrait="1">
+
+							<!-- Begin carousel item
+							========================= -->
+                            @foreach ($boardof_directors as $item)
+                            <a href="gallery-single-grid.html" class="cc-item">
+
+								<!-- cc image -->
+								<div class="cc-image full-cover bg-image" style="background-image: url({{ asset('frontend') }}/assets/img/gallery/gallery-list/auto-width/gallery-auto-width-7.jpg)"></div>
+
+								<!-- Begin caption
+								===================
+								* Position classes: "top-left", "top-center", "top-right", "center-left", "center", "center-right", "bottom-left", "bottom-center", "bottom-right".
+								* Size classes: "cc-caption-xs", "cc-caption-sm", "cc-caption-lg", "cc-caption-xlg", "cc-caption-xxlg".
+								-->
+								<div class="cc-caption center max-width-400"> <!-- max width class is optional -->
+									<h2 class="cc-title">Afternoon Photoshoot</h2>
+									<div class="cc-category"><span>Outdoor</span></div>
+								</div>
+								<!-- End caption -->
+
+							</a>
+                            @endforeach
+                            <a href="gallery-single-grid.html" class="cc-item">
+
+								<!-- cc image -->
+								<div class="cc-image full-cover bg-image" style="background-image: url({{ asset('frontend') }}/assets/img/gallery/gallery-list/auto-width/gallery-auto-width-7.jpg);"></div>
+
+								<!-- Begin caption
+								===================
+								* Position classes: "top-left", "top-center", "top-right", "center-left", "center", "center-right", "bottom-left", "bottom-center", "bottom-right".
+								* Size classes: "cc-caption-xs", "cc-caption-sm", "cc-caption-lg", "cc-caption-xlg", "cc-caption-xxlg".
+								-->
+								<div class="cc-caption center max-width-400"> <!-- max width class is optional -->
+									<h2 class="cc-title">Afternoon Photoshoot</h2>
+									<div class="cc-category"><span>Outdoor</span></div>
+								</div>
+								<!-- End caption -->
+
+							</a>
+							<!-- End carousel item -->
+						</div>
+						<!-- End content carousel -->
+
+					</div>
+					<!-- End project carousel -->
+
+				</div> <!-- /.latest-work-inner -->
+			</section>
+			<!-- End latest work cection -->
+            <div class="split-box">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="row-lg-height full-height-vh">
+                            <!-- Column -->
+                            <div class="col-lg-12 col-lg-height col-lg-middle no-padding">
+
+                                <!-- Begin split box content -->
+                                <div class="split-box-content">
+
+                                    <!-- Begin contact form
+                                    ========================= -->
+                                    <form id="contact-form">
+                                        <div class="contact-form-inner text-left">
+
+                                            <div class="contact-form-info">
+                                                <div class="tt-heading">
+                                                    <div class="tt-heading-inner">
+                                                        <h1 class="tt-heading-title">Contact With Us</h1>
+                                                        <!-- <div class="tt-heading-subtitle">Subtitle Here</div> -->
+                                                        <hr class="hr-short">
+                                                    </div> <!-- /.tt-heading-inner -->
+                                                </div>
+                                                <!-- End tt-heading -->
+
+                                                <div class="margin-top-30">
+                                                    <p>Nemo enim ipsam voluptatem quiatotam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
                                                 </div>
 
-                                                <div class="instagram_badge_image has-effect-icon">
-                                                    <a href="https://www.instagram.com/amflbd/" target="_blank" class="data-effect-item">
-                                                        <span class="item"><img src="{{ asset('frontend/assets/img/10.jpeg')}}" alt="Image" ></span>
-                                                        <div class="overlay-effect bg-color-2"></div>
-                                                        <div class="elm-link">
-                                                            <span class="icon-3"></span>
-                                                        </div>
-                                                    </a>
+                                            </div> <!-- /.contact-form-info -->
 
+                                            <!-- Begin hidden required fields (https://github.com/agragregra/uniMail) -->
+                                            <input type="hidden" name="project_name" value="yourwebsiteaddress.com"> <!-- Change value to your site name -->
+                                            <input type="hidden" name="admin_email" value="your@email.com"> <!-- Change value to your valid email address (where a message will be sent) -->
+                                            <input type="hidden" name="form_subject" value="Message from yourwebsiteaddress.com"> <!-- Change value to your own message subject -->
+                                            <!-- End Hidden Required Fields -->
+
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                                                    </div>
                                                 </div>
-
-                                                <div class="instagram_badge_image has-effect-icon">
-                                                    <a href="https://www.instagram.com/amflbd/" target="_blank" class="data-effect-item">
-                                                        <span class="item"><img src="{{ asset('frontend/assets/img/10.jpeg')}}" alt="Image"></span>
-                                                        <div class="overlay-effect bg-color-2"></div>
-                                                        <div class="elm-link">
-                                                            <span class="icon-3"></span>
-                                                        </div>
-                                                    </a>
-                                                </div>
-
-                                                <div class="instagram_badge_image has-effect-icon">
-                                                    <a href="https://www.instagram.com/amflbd/" target="_blank" class="data-effect-item">
-                                                        <span class="item"><img src="{{ asset('frontend/assets/img/11.jpg')}}" alt="Image"></span>
-                                                        <div class="overlay-effect bg-color-2"></div>
-                                                        <div class="elm-link">
-                                                            <span class="icon-3"></span>
-                                                        </div>
-                                                    </a>
-                                                </div>
-
-                                                <div class="instagram_badge_image has-effect-icon">
-                                                    <a href="https://www.instagram.com/amflbd/" target="_blank" class="data-effect-item">
-                                                        <span class="item"><img src="{{ asset('frontend/assets/img/11.jpg')}}" alt="Image"></span>
-                                                        <div class="overlay-effect bg-color-2"></div>
-                                                        <div class="elm-link">
-                                                            <span class="icon-3"></span>
-                                                        </div>
-                                                    </a>
-                                                </div>
-
-                                                <div class="instagram_badge_image has-effect-icon">
-                                                    <a href="https://www.instagram.com/amflbd/" target="_blank" class="data-effect-item">
-                                                        <span class="item"><img src="{{ asset('frontend/assets/img/11.jpg')}}" alt="Image"></span>
-                                                        <div class="overlay-effect bg-color-2"></div>
-                                                        <div class="elm-link">
-                                                            <span class="icon-3"></span>
-                                                        </div>
-                                                    </a>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div><!-- /.widget_instagram -->
-                                    </div><!-- /.col -->
-                                </div>
-                                <!-- /.col-md-6 -->
-                            </div><!-- /.row -->
-                            <div class="row-testimonials">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="themesflat-spacer clearfix" data-desktop="61" data-mobile="60" data-smobile="60"></div>
-                                    <div class="themesflat-headings style-1 text-center clearfix">
-                                        <h2 class="widget-title margin-bottom-30"><span>
-                                            Board of Directors
-                                            </span></h2>
-                                    </div>
-                                    <div class="themesflat-spacer clearfix" data-desktop="39" data-mobile="35" data-smobile="35"></div>
-                                            <div class="themesflat-carousel-box clearfix" data-gap="30" data-column="3" data-column2="2" data-column3="1" data-auto="true">
-                                                <div class="owl-carousel owl-theme">
-                                                    <div class="themesflat-testimonials style-3 align-center has-width w35 circle clearfix">
-                                                        <div class="testimonial-item">
-                                                            <div class="inner">
-                                                                <div class="thumb">
-                                                                   <img src="{{ asset('frontend/assets/img/11.jpg')}}" alt="Image">
-                                                                   <span class="icon-wrap">
-                                                                       <i class="fa fa-quote-left"></i>
-                                                                   </span>
-                                                                </div>
-                                                                <blockquote class="text">
-                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                                                                    <div class="name-pos clearfix">
-                                                                        <h6 class="name">RON TOMLINSON</h6>
-                                                                        <span class="position">CEO ThemesFlat</span>
-                                                                    </div>
-                                                                </blockquote>
-                                                            </div>
-                                                        </div>
-                                                    </div><!-- /.themesflat-testimonials -->
-                                                    <div class="themesflat-testimonials style-3 align-center has-width w35 circle clearfix">
-                                                        <div class="testimonial-item">
-                                                            <div class="inner">
-                                                                <div class="thumb">
-                                                                   <img src="{{ asset('frontend/assets/img/11.jpg')}}" alt="Image">
-                                                                   <span class="icon-wrap">
-                                                                       <i class="fa fa-quote-left"></i>
-                                                                   </span>
-                                                                </div>
-                                                                <blockquote class="text">
-                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                                                                    <div class="name-pos clearfix">
-                                                                        <h6 class="name">KEVIN CINQ-MARS</h6>
-                                                                        <span class="position">President</span>
-                                                                    </div>
-                                                                </blockquote>
-                                                            </div>
-                                                        </div>
-                                                    </div><!-- /.themesflat-testimonials -->
-                                                    <div class="themesflat-testimonials style-3 align-center has-width w35 circle clearfix">
-                                                        <div class="testimonial-item">
-                                                            <div class="inner">
-                                                                <div class="thumb">
-                                                                   <img src="{{ asset('frontend/assets/img/11.jpg')}}" alt="Image">
-                                                                   <span class="icon-wrap">
-                                                                       <i class="fa fa-quote-left"></i>
-                                                                   </span>
-                                                                </div>
-                                                                <blockquote class="text">
-                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                                                                    <div class="name-pos clearfix">
-                                                                        <h6 class="name">ADAM HENDRIKS</h6>
-                                                                        <span class="position">General Manager</span>
-                                                                    </div>
-                                                                </blockquote>
-                                                            </div>
-                                                        </div>
-                                                    </div><!-- /.themesflat-testimonials -->
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                                                    </div>
                                                 </div>
-                                            </div><!-- /.themesflat-carousel-box -->
-                                            <div class="themesflat-spacer clearfix" data-desktop="30" data-mobile="35" data-smobile="35"></div>
-                                            <div class="themesflat-carousel-box clearfix" data-gap="30" data-column="3" data-column2="2" data-column3="1" data-auto="true">
-                                                <div class="owl-carousel owl-theme">
-                                                    <div class="themesflat-testimonials style-3 align-center has-width w35 circle clearfix">
-                                                        <div class="testimonial-item">
-                                                            <div class="inner">
-                                                                <div class="thumb">
-                                                                   <img src="{{ asset('frontend/assets/img/11.jpg')}}" alt="Image">
-                                                                   <span class="icon-wrap">
-                                                                       <i class="fa fa-quote-left"></i>
-                                                                   </span>
-                                                                </div>
-                                                                <blockquote class="text">
-                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                                                                    <div class="name-pos clearfix">
-                                                                        <h6 class="name">CHRISTOPHER FLANN</h6>
-                                                                        <span class="position">Maketing Manager</span>
-                                                                    </div>
-                                                                </blockquote>
-                                                            </div>
-                                                        </div>
-                                                    </div><!-- /.themesflat-testimonials -->
-                                                    <div class="themesflat-testimonials style-3 align-center has-width w35 circle clearfix">
-                                                        <div class="testimonial-item">
-                                                            <div class="inner">
-                                                                <div class="thumb">
-                                                                   <img src="{{ asset('frontend/assets/img/11.jpg')}}" alt="Image">
-                                                                   <span class="icon-wrap">
-                                                                       <i class="fa fa-quote-left"></i>
-                                                                   </span>
-                                                                </div>
-                                                                <blockquote class="text">
-                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                                                                    <div class="name-pos clearfix">
-                                                                        <h6 class="name">MICHAEL CLEMENT</h6>
-                                                                        <span class="position">Design Manager</span>
-                                                                    </div>
-                                                                </blockquote>
-                                                            </div>
-                                                        </div>
-                                                    </div><!-- /.themesflat-testimonials -->
-                                                    <div class="themesflat-testimonials style-3 align-center has-width w35 circle clearfix">
-                                                        <div class="testimonial-item">
-                                                            <div class="inner">
-                                                                <div class="thumb">
-                                                                   <img src="{{ asset('frontend/assets/img/11.jpg')}}" alt="Image">
-                                                                   <span class="icon-wrap">
-                                                                       <i class="fa fa-quote-left"></i>
-                                                                   </span>
-                                                                </div>
-                                                                <blockquote class="text">
-                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                                                                    <div class="name-pos clearfix">
-                                                                        <h6 class="name">DANA LEWIS</h6>
-                                                                        <span class="position">Manager, Human Resources</span>
-                                                                    </div>
-                                                                </blockquote>
-                                                            </div>
-                                                        </div>
-                                                    </div><!-- /.themesflat-testimonials -->
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <select class="form-control" name="option" required>
+                                                            <option value="" disabled selected>Select an option</option>
+                                                            <option value="Say Hello">Say hello</option>
+                                                            <option value="New Project">New project</option>
+                                                            <option value="Feedback">Feedback</option>
+                                                            <option value="Other">Other</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="form-group">
+                                                        <textarea class="form-control" name="message" rows="4" placeholder="Your Message" required></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
 
-                                                </div>
-                                            </div><!-- /.themesflat-carousel-box -->
-                                            <div class="themesflat-spacer clearfix" data-desktop="80" data-mobile="60" data-smobile="60"></div>
-                                        </div><!-- /.col-md-12 -->
-                                    </div><!-- /.row -->
-                                </div><!-- /.container -->
-                            </div>
-                        </div><!-- /.container-fluid -->
-                    </div>
-               </div><!-- /.page-content -->
-            </div><!-- /#inner-content -->
-        </div><!-- /#site-content -->
-    </div><!-- /#content-wrap -->
-</div><!-- /#main-content -->
+                                            <div class="small text-gray"><em>* All fields are required!</em></div>
+
+                                        </div> <!-- /.contact-form-inner -->
+
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <button type="submit" class="btn btn-primary btn-lg margin-top-40">Send Message</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <!-- End contact form -->
+
+                                </div>
+                                <!-- End split box content -->
+
+                            </div> <!-- /.col -->
+                        </div> <!-- /.row-height -->
+                    </div> <!-- /.row -->
+                </div> <!-- /.container -->
+            </div>
 @endsection
