@@ -238,7 +238,7 @@
                 <div class="isotope-item">
 
                     <!-- Begin gallery single item -->
-                    <a href="{{asset('frontend') }}/assets/img/valley/1.png" class="gallery-single-item lg-trigger" data-exthumbnail="{{asset('frontend') }}/assets/img/valley/1.png" data-sub-html="<p>Yes, you can use image captions :)</p>">
+                    <a href="https://www.youtube.com/embed/mdRbkFcXIeE" class="gallery-single-item lg-trigger" data-exthumbnail="{{asset('frontend') }}/assets/img/valley/1.png" data-sub-html="<p>Yes, you can use image captions :)</p>">
 
                         <!-- Begin gallery single item image -->
                         <img src="{{asset('frontend') }}/assets/img/valley/1.png" class="gs-item-image" alt="">
@@ -248,7 +248,7 @@
                         <div class="gsi-image-caption">Yes, you can use image captions :</div>
 
                         <!-- Gallery single item icon -->
-                        <div class="gs-item-icon"><i class="fas fa-search"></i></div>
+                        <div class="gs-item-icon"><i class="fas fa-play"></i></div>
 
                     </a>
                     <!-- End gallery single item -->
@@ -264,14 +264,14 @@
                 <div class="isotope-item">
 
                     <!-- Begin gallery single item -->
-                    <a href="{{asset('frontend') }}/assets/img/valley/2.png" class="gallery-single-item lg-trigger" data-exthumbnail="{{asset('frontend') }}/assets/img/valley/2.png">
+                    <a href="https://www.youtube.com/embed/oksFqUfdUrI" class="gallery-single-item lg-trigger" data-exthumbnail="{{asset('frontend') }}/assets/img/valley/2.png">
 
                         <!-- Begin gallery single item image -->
                         <img src="{{asset('frontend') }}/assets/img/valley/2.png" class="gs-item-image" alt="">
                         <!-- End gallery single item image -->
 
                         <!-- Gallery single item icon -->
-                        <div class="gs-item-icon"><i class="fas fa-search"></i></div>
+                        <div class="gs-item-icon"><i class="fas fa-play"></i></div>
 
                     </a>
                     <!-- End gallery single item -->
@@ -287,7 +287,7 @@
                 <div class="isotope-item">
 
                     <!-- Begin gallery single item -->
-                    <a href="https://www.youtube.com/watch?v=ls0ayO5FIro" class="gallery-single-item lg-trigger">
+                    <a href="https://www.youtube.com/embed/d10aC1FjD7g" class="gallery-single-item lg-trigger">
 
                         <!-- Begin gallery single item image -->
                         <img src="{{asset('frontend') }}/assets/img/valley/3.png" class="gs-item-image" alt="">

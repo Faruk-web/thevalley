@@ -1656,16 +1656,16 @@
         <div class="cover bg-transparent-2-dark"></div>
         <div class="youtube-bg-wrap ytp-full"> <!-- Class "ytp-full" is for full cover (depend on parent element size). -->
             <div class="youtube-bg"
-                style="background-image: url({{asset('frontend') }}/assets/img/valley/about.png); background-position: 50% 50%;"
+                style="background-image: url({{asset('frontend') }}/assets/img/valley/about.png); background-position: 100% 100%;"
                 data-property="{
                     videoURL: 'https://www.youtube.com/embed/31nXbsXmhfs',
                     containment: 'self',
                     quality: 'default',
                     startAt: 12,
-                    stopAt: 80,
+                    stopAt:750,
                     autoPlay: true,
                     loop: true,
-                    mute: true,
+                    mute: false,
                     showControls: false,
                     showYTLogo: false,
                     realfullscreen: true,
