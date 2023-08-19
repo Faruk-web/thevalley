@@ -4,20 +4,15 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\AdminProfileController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\SubCategoryController;
-use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\Backend\ThenatureController;
 use App\Http\Controllers\Backend\SliderController;
-use App\Http\Controllers\Backend\CouponController;
 use App\Http\Controllers\Backend\BannerController;
 use App\Http\Controllers\Backend\BannerCatagoryController;
-use App\Http\Controllers\Backend\ReportController;
-use App\Http\Controllers\Backend\ReturnController;
 use App\Http\Controllers\Backend\SiteSettingController;
 use App\Http\Controllers\Backend\AdminUserController;
 use App\Http\Controllers\Backend\EmployeeController;
 //amfl location
 use App\Http\Controllers\VisitorController;
-
-
 use App\Http\Controllers\Backend\plotTypeController;
 use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Backend\LocationController;
@@ -30,12 +25,9 @@ use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController;
 // for frontend
 use App\Http\Controllers\Frontend\IndexController;
 use App\Http\Controllers\Frontend\LanguageController;
-use App\Http\Controllers\Frontend\ShopController;
 use Illuminate\Support\Facades\Auth;
 // for user
-use App\Http\Controllers\User\StripeController;
 use App\Http\Controllers\User\AllUserController;
-use App\Http\Controllers\User\CashController;
 use App\Http\Controllers\Frontend\SocialiteLoginController;
 use App\Models\User;
 use League\CommonMark\Extension\CommonMark\Node\Block\IndentedCode;
@@ -221,14 +213,14 @@ Route::prefix('plot')->group(function(){
     Route::post('/update',[plotTypeController::class,'PlotUpdate'])->name('plot.update');
 
 });
-// Admin Banner  Route Group
-// Route::prefix('banner')->group(function(){
-//     Route::get('/view',[BannerController::class,'BennarView'])->name('bennar.manage');
-//     Route::get('/show',[BannerController::class,'Bennarshow'])->name('bennar.show');
-//     Route::post('/store',[BannerController::class,'ValleyStore'])->name('valley.store');
-//     Route::get('/edit/{id}',[BannerController::class,'ValleyEdit'])->name('valley.edit');
-//     Route::post('/update',[BannerController::class,'ValleyUpdate'])->name('valley.update');
-// });
+// Ashim nature  Route Group
+Route::prefix('nature')->group(function(){
+    Route::get('/view',[ThenatureController::class,'NatureView'])->name('nature.show');
+    Route::post('/store',[ThenatureController::class,'NatureStore'])->name('natur.store');
+    Route::get('/dalete{id}',[ThenatureController::class,'NatureDelete'])->name('nature.delete');
+    Route::get('/edit/{id}',[ThenatureController::class,'NatureEdit'])->name('nature.edit');
+    Route::post('/update',[ThenatureController::class,'NatureUpdate'])->name('nature.update');
+});
 // Ashim bannerCategory  Route Group
 Route::prefix('bannerCategory')->group(function(){
     Route::get('/view',[BannerCatagoryController::class,'BennarView'])->name('bannerCategory.manage');
@@ -343,11 +335,4 @@ Route::prefix('bannerCategory')->group(function(){
         })->name('contact');
 
         Route::post('/contact-us/send',[IndexController::class,'contactUs'])->name('contactUs.send');
-// Admin All Department Route Group
-Route::prefix('department')->group(function(){
-    Route::get('/view', [DepartmentController::class, 'DepartmentView'])->name('department.view');
-    Route::post('/store', [DepartmentController::class, 'DepartmentStore'])->name('department.store');
-    Route::get('/edit/{id}', [DepartmentController::class, 'DepartmentEdit'])->name('department.edit');
-    Route::post('/update', [DepartmentController::class, 'DepartmentUpdate'])->name('department.update');
-    Route::get('/delete/{id}', [DepartmentController::class, 'DepartmentDelete'])->name('department.delete');
-});
+

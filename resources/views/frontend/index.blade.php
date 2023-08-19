@@ -52,8 +52,14 @@
 ///// Begin about me section /////
 ============================== -->
 <section id="about-me-section">
+    <div class="tt-heading tt-heading-lg padding-on text-center">
+        <div class="tt-heading-inner tt-wrap"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag! ) -->
+            <h1 class="tt-heading-title">Who we are ?</h1>
+            <div class="tt-heading-subtitle">My latest photo projects / <a href="categories-grid.html">View All</a></div>
+            <hr class="hr-short">
+        </div> <!-- /.tt-heading-inner -->
+    </div>
     <div class="about-me-inner"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag! ) -->
-
         <!-- ======================
         ///// Begin split box /////
         based on: http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-columns-of-same-height
@@ -923,25 +929,18 @@
     -->
     <div class="tt-heading tt-heading-lg padding-on">
         <div class="tt-heading-inner tt-wrap"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag! ) -->
-
             <div class="row">
-                <div class="col-md-4">
-
-                    <h1 class="tt-heading-title">Services &amp; Pricing</h1>
-                    <div class="tt-heading-subtitle">Please choose your package</div>
-                    <hr class="hr-short">
-
-                </div> <!-- /.col -->
-
-                <div class="col-md-8">
-                    <p>Nunc euismod ipsum vel metus rhoncus, a accumsan sapien mollis. Donec malesuada lacus rhoncus ipsum dignissim, sed fringilla orci faucibus. Proin non odio dui. Donec ut tristique dolor, at interdum sem. Quisque finibus viverra lectus vitae pulvinar.</p>
-                </div> <!-- /.col -->
+                <div class="tt-heading tt-heading-lg padding-on text-center">
+                    <div class="tt-heading-inner tt-wrap"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag! ) -->
+                        <h1 class="tt-heading-title">Services &amp; Pricing</h1>
+                        <div class="tt-heading-subtitle">Please choose your package</div>
+                        <hr class="hr-short">
+                    </div> <!-- /.tt-heading-inner -->
+                </div>
             </div> <!-- /.row -->
-
         </div> <!-- /.tt-heading-inner -->
     </div>
     <!-- End tt-heading -->
-
     <div class="prices-section-inner tt-wrap"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag! ) -->
 
         <!-- Begin price boxes container
@@ -1007,11 +1006,8 @@
                         </div>
                     </div>
                     <!-- End price box -->
-
                 </div> <!-- /.col -->
-
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-
                     <!-- Begin price box -->
                     <div class="price-box">
                         <div class="pr-box price-heading bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/7.png);">
@@ -1038,11 +1034,8 @@
                         </div>
                     </div>
                     <!-- End price box -->
-
                 </div> <!-- /.col -->
-
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-
                     <!-- Begin price box -->
                     <div class="price-box">
                         <div class="pr-box price-heading bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/about.png);">
@@ -1086,18 +1079,13 @@
     </div> <!-- /.prices-section-inner -->
 </section>
 <!-- End prices section -->
-
-
 <!-- =================================
 ///// Begin testimonials section /////
 ================================== -->
 <section id="testimonials-section" class="bg-dark bg-image-fixed" style="background-image: url({{asset('frontend') }}/assets/img/valley/about_1.png); background-position: 50% 50%;">
-
     <!-- Element cover -->
     <span class="cover bg-transparent-7-dark"></span>
-
     <div class="testimonials-section-inner tt-wrap"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag! ) -->
-
         <!-- Begin testimonials carousel
         =================================
         * Use class "tm-hide-image" to hide testimonial image.
@@ -1105,11 +1093,9 @@
         -->
         <div class="testimonials-carousel tm-center">
             <div class="owl-carousel cursor-grab nav-outside dots-outside" data-items="1" data-loop="true" data-autoheight="true" data-nav="true" data-nav-speed="500" data-dots-speed="500" data-autoplay="true" data-autoplay-timeout="8000" data-autoplay-speed="500" data-autoplay-hover-pause="true">
-
                 <!-- Begin carousel item
                 ========================= -->
                 <div class="cc-item">
-
                     <!-- Begin testimonial item -->
                     <div class="testimonial-item text-white">
                         <div class="tm-image bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/1.png); background-position: 50% 50%;"></div>
@@ -1665,7 +1651,7 @@
                     stopAt:750,
                     autoPlay: true,
                     loop: true,
-                    mute: false,
+                    mute: true,
                     showControls: false,
                     showYTLogo: false,
                     realfullscreen: true,

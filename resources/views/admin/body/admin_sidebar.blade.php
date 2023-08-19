@@ -57,22 +57,6 @@ $prefix = Request::route()->getPrefix();
           </ul>
         </li>
         @endif
-        {{-- @if($category == true)
-        <li class="treeview {{ ($prefix=='/category')?'active':'' }} ">
-          <a href="#">
-            <i class="fa fa-list-alt fa-5x"></i>
-            <span>Plot Category</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-right pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="{{ route('all.category') }}"><i class="ti-more"></i>All Category</a></li>
-            <li><a href="{{ route('all.subcategory') }}"><i class="ti-more"></i>All Sub Category</a></li>
-          </ul>
-        </li>
-        @else
-        @endif --}}
         @if($slider == true)
         <li class="treeview  {{ ($prefix=='/slider')?'active':'' }}  ">
           <a href="#">
@@ -98,10 +82,21 @@ $prefix = Request::route()->getPrefix();
             </span>
           </a>
           <ul class="treeview-menu">
-            {{-- <li><a href="{{ route('bennar.manage') }}"><i class="ti-more"></i>Add Valley</a></li> --}}
             <li><a href="{{ route('bennar.show') }}"><i class="ti-more"></i>Create Valley</a></li>
           </ul>
         </li>
+        <li class="treeview  {{ ($prefix=='/nature')?'active':'' }}  ">
+            <a href="#">
+              <i class="fa fa-picture-o fa-5x"></i>
+              <span>The Nature</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-right pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="{{ route('nature.show') }}"><i class="ti-more"></i>Create Nature</a></li>
+            </ul>
+          </li>
         <li class="treeview">
             <a href="#">
               <i class="fa fa-picture-o fa-5x"></i>
@@ -111,8 +106,6 @@ $prefix = Request::route()->getPrefix();
               </span>
             </a>
             <ul class="treeview-menu">
-              {{-- <li><a href="{{ route('bennar.manage') }}"><i class="ti-more"></i>Add Valley</a></li> --}}
-              {{-- <li><a href="{{ route('plot.manage') }}"><i class="ti-more"></i>Create Plot Type</a></li> --}}
               <li><a href="{{ route('plot.show') }}"><i class="ti-more"></i> Plot Show</a></li>
             </ul>
           </li>
@@ -127,94 +120,8 @@ $prefix = Request::route()->getPrefix();
             <ul class="treeview-menu">
               <li class="{{ ($route == 'bannerCategory.manage')? 'active':'' }}">
                 <a href="{{ route('bannerCategory.manage') }}"><i class="ti-more"></i>Manage Plot Category</a></li>
-              {{-- <li><a href="{{ route('manage.cupon')}}"><i class="ti-more"></i>Manage Cupon </a></li> --}}
             </ul>
           </li>
-        {{-- Ashim Banner Category --}}
-        @if($shipping == true)
-        <li class="treeview  {{ ($prefix=='/shipping')?'active':'' }}  ">
-          <a href="#">
-            <i class="fa fa-ship fa-5x"></i>
-            <span>Shipping Area</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-right pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-
-            <li class="{{ ($route == 'manage.division')? 'active':'' }}">
-              <a href="{{ route('manage.division') }}"><i class="ti-more">
-                </i>Shipping Division</a></li>
-
-          <li class="{{ ($route == 'manage.district')? 'active':'' }}">
-            <a href="{{ route('manage.district') }}"><i class="ti-more">
-              </i>Shipping District</a></li>
-
-              <li class="{{ ($route == 'manage.state')? 'active':'' }}">
-                <a href="{{ route('manage.state') }}"><i class="ti-more">
-                  </i>Shipping State</a></li>
-          </ul>
-        </li>
-        @else
-        @endif
-        @if($orders == true)
-        <li class="treeview  {{ ($prefix=='/orders')?'active':'' }}  ">
-          <a href="#">
-            <i class="fab fa-first-order"></i>
-            <span>Orders</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-right pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li class="{{ ($route == 'pending.orders')? 'active':'' }}">
-              <a href="{{ route('pending.orders') }}"><i class="ti-more"></i>Pending Order</a></li>
-              <li class="{{ ($route == 'confirmed-orders')? 'active':'' }}"><a href="{{ route('confirmed-orders') }}">
-                <i class="ti-more"></i>Confirmed Orders</a></li>
-              <li class="{{ ($route == 'confirm-processing')? 'active':'' }}"><a href="{{ route('confirm-processing') }}">
-                <i class="ti-more"></i>Processing Orders</a></li>
-            <li class="{{ ($route == 'picked-orders')? 'active':'' }}"><a href="{{ route('picked-orders') }}">
-              <i class="ti-more"></i> Picked Orders</a></li>
-            <li class="{{ ($route == 'shipped-orders')? 'active':'' }}"><a href="{{ route('shipped-orders') }}">
-              <i class="ti-more"></i> Shipped Orders</a></li>
-           <li class="{{ ($route == 'delivered-orders')? 'active':'' }}"><a href="{{ route('delivered-orders') }}">
-            <i class="ti-more"></i> Delivered Orders</a></li>
-        <li class="{{ ($route == 'cancel-orders')? 'active':'' }}"><a href="{{ route('cancel-orders') }}"><i class="ti-more"></i> Cancel Orders</a></li>
-          </ul>
-        </li>
-        @else
-        @endif
-       @if($returnorder == true)
-        <li class="treeview {{ ($prefix == '/return')?'active':'' }}  ">
-          <a href="#">
-            <i class="fa fa-undo fa-5x"></i>
-            <span>Return Order</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-right pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-        <li class="{{ ($route == 'return.request')? 'active':'' }}"><a href="{{ route('return.request') }}"><i class="ti-more"></i>Return Request</a></li>
-        <li class="{{ ($route == 'all.request')? 'active':'' }}"><a href="{{ route('all.request') }}"><i class="ti-more"></i>All Request</a></li>
-          </ul>
-        </li>
-        @else
-        @endif
-        @if($stock == true)
-        <li class="treeview {{ ($prefix == '/stock')?'active':'' }}  ">
-          <a href="#">
-            <i class="fa fa-list fa-5x"></i>
-            <span>Manage Stock </span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-right pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-        <li class="{{ ($route == 'product.stock')? 'active':'' }}"><a href="{{ route('product.stock') }}"><i class="ti-more"></i>Product Stock</a></li>
-          </ul>
-        </li>
-        @else
-        @endif
         @if($alluser == true)
         <li class="treeview {{ ($prefix == '/alluser')?'active':'' }}  ">
           <a href="#">
@@ -230,7 +137,7 @@ $prefix = Request::route()->getPrefix();
         </li>
         @else
         @endif
-  @if($adminuserrole == true)
+     @if($adminuserrole == true)
         <li class="treeview {{ ($prefix == '/adminuserrole')?'active':'' }}  ">
           <a href="#">
             <i class="fa fa-user-circle fa-5x"></i>
@@ -246,30 +153,9 @@ $prefix = Request::route()->getPrefix();
         </li>
         @else
         @endif
-        {{-- ashim start --}}
-         {{-- Ashim Start  Department  --}}
-        {{-- @if($department == true) --}}
-        <li class="treeview {{ ($prefix == '/department')?'active':'' }}  ">
-            <a href="#">
-              <i class="fa fa-building-o fa-5x"></i>
-
-              <span>Department</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-right pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li class="{{ ($route == 'department.view')? 'active':'' }}"><a href="{{route('department.view')}}"><i class="ti-more"></i>Manage Department</a></li>
-                </ul>
-          </li>
-          {{-- @else --}}
-
-          {{-- @endif --}}
-          {{-- @if($employee == true) --}}
           <li class="treeview {{ ($prefix == '/employee')?'active':'' }}  ">
             <a href="#">
               <i class="fa fa-user fa-5x"></i>
-
               <span>Employee Manage</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-right pull-right"></i>
@@ -280,56 +166,6 @@ $prefix = Request::route()->getPrefix();
               <li class="{{ ($route == 'employee.view')? 'active':'' }}"><a href="{{route('employee.view')}}"><i class="ti-more"></i>Manage Employee</a></li>
                 </ul>
           </li>
-           <li class="treeview">
-            <a href="#">
-              <i class="fa fa-money fa-5x"></i>
-              <span>Manage Salary</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-right pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-
-
-            </ul>
-          </li>
-
-               <li class="treeview {{ ($prefix == '/expense')?'active':'' }}  ">
-                 <a href="#">
-                   <i data-feather="file"></i>
-                   <span>Expanse </span>
-                   <span class="pull-right-container">
-                     <i class="fa fa-angle-right pull-right"></i>
-                   </span>
-                 </a>
-                 <ul class="treeview-menu">
-                 </ul>
-               </li>
-
-       @if($reports == true)
-
-        <li class="treeview {{ ($prefix == '/reports')?'active':'' }}  ">
-          <a href="#">
-            <i data-feather="file"></i>
-            <span>All Reports </span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-right pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-        <li class="{{ ($route == 'all-reports')? 'active':'' }}">
-        <li class="{{ ($route == 'all-reports')? 'active':'' }}"><a href="{{ route('all-reports') }}"><i class="ti-more"></i>Order Reports</a></li>
-        <li class="{{ ($route == 'sallary-report-view')? 'active':'' }}"><a href="{{ route('sallary-report-view') }}"><i class="ti-more"></i>Salary Reports</a></li>
-        <li class="{{ ($route == 'return-report-view')? 'active':'' }}"><a href="{{ route('return-report-view') }}"><i class="ti-more"></i>Return Product Reports</a></li>
-        <li class="{{ ($route == 'User-activity-view')? 'active':'' }}"><a href="{{ route('User-activity-view') }}"><i class="ti-more"></i>User Active Reports</a></li>
-        <li class="{{ ($route == 'profit.report')? 'active':'' }}"><a href="{{ route('profit.report') }}"><i class="ti-more"></i>Profit Reports</a></li>
-          </ul>
-        </li>
-
-        @else
-        @endif
-
-
         @if($setting == true)
         <li class="treeview {{ ($prefix == '/setting')?'active':'' }}  ">
           <a href="#">
@@ -341,60 +177,11 @@ $prefix = Request::route()->getPrefix();
           </a>
           <ul class="treeview-menu">
         <li class="{{ ($route == 'site.setting')? 'active':'' }}"><a href="{{ route('site.setting') }}"><i class="ti-more"></i>Site Setting</a></li>
-
         <li class="{{ ($route == 'seo.setting')? 'active':'' }}"><a href="{{ route('seo.setting') }}"><i class="ti-more"></i>Seo Setting</a></li>
           </ul>
         </li>
-
-
         @else
         @endif
-        {{-- <li class="treeview  {{ ($prefix=='/orders')?'active':'' }}  ">
-          <a href="#">
-            <i class="fa fa-industry fa-5x"></i>
-            <span>Suppliers</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-right pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-
-            <li class="{{ ($route == 'pending.orders')? 'active':'' }}">
-
-              <a href="{{ route('suppliers.show') }}"><i class="ti-more"></i>All Suppliers</a></li>
-
-          </ul>
-        </li> --}}
-        {{-- for purchase menu --}}
-
-
-        {{-- @if($purchase == true) --}}
-        {{-- <li class="treeview {{ ($prefix == '/purchase')?'active':'' }}  ">
-          <a href="#">
-            <i class="fa fa-shopping-cart fa-5x"></i>
-            <span>Purchase</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-right pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li class="{{ ($route == 'purchase.add')? 'active':'' }}"><a href="{{route('purchase.add')}}"><i class="ti-more"></i>Add Purchase</a></li>
-            <li class="{{ ($route == 'purchase.view')? 'active':'' }}"><a href="{{route('purchase.view')}}"><i class="ti-more"></i>Manage Purchase</a></li>
-          </ul>
-
-        </li> --}}
-
-
-        {{-- @else --}}
-
-        {{-- @endif --}}
-
-        {{-- end for purchase menu --}}
-
-
-
       </ul>
     </section>
-
-
   </aside>
