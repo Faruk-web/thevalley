@@ -22,12 +22,12 @@ class ThenatureController extends Controller
            $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
            Image::make($image)->resize(900,900)->save('upload/nature/'.$name_gen );
            $save_url = 'upload/nature/'.$name_gen;
-           if($request->file('b_image')){
-            $image = $request->file('b_image');
-            $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
-            Image::make($image)->resize(1900,860)->save('upload/nature/'.$name_gen );
-            $b_save_url = 'upload/nature/'.$name_gen;
-           }
+        //    if($request->file('b_image')){
+        //     $image = $request->file('b_image');
+        //     $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
+        //     Image::make($image)->resize(1900,860)->save('upload/nature/'.$name_gen );
+        //     $b_save_url = 'upload/nature/'.$name_gen;
+        //    }
            Nature::insert([
                     'name' => $request->name,
                     'image' => $request->image,
@@ -35,7 +35,7 @@ class ThenatureController extends Controller
                     'short_descrip' => $request->short_descrip,
                     'long_descrip' => $request->long_descrip,
                     'image' => $save_url,
-                    'b_image' => $b_save_url,
+                    // 'b_image' => $b_save_url,
                 ]);
                 $notification = array(
                     'message' =>'The nature create sucessfully',
@@ -59,17 +59,17 @@ class ThenatureController extends Controller
             }
         $image = $request->file('image');
         $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
-        Image::make($image)->resize(500,500)->save('upload/nature/'.$name_gen );
+        Image::make($image)->resize(900,800)->save('upload/nature/'.$name_gen );
         $save_url = 'upload/nature/'.$name_gen;
-        if ( $request->file('b_image')) {
-            if (file_exists($old_b_img)){
-                unlink($old_b_img);
-            }
-            $image = $request->file('b_image');
-            $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
-            Image::make($image)->resize(500,500)->save('upload/nature/'.$name_gen );
-            $b_save_url = 'upload/nature/'.$name_gen;
-        }
+        // if ( $request->file('b_image')) {
+        //     if (file_exists($old_b_img)){
+        //         unlink($old_b_img);
+        //     }
+        //     $image = $request->file('b_image');
+        //     $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
+        //     Image::make($image)->resize(900,800)->save('upload/nature/'.$name_gen );
+        //     $b_save_url = 'upload/nature/'.$name_gen;
+        // }
         if(isset($b_save_url)){
             Nature::findOrFail($nature_id)->update([
                 'name' => $request->name,

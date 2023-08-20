@@ -65,30 +65,32 @@
                     * Use class "col-1", "col-2", "col-3", "col-4", "col-5" or "col-6" for columns.
                     -->
                     <div class="isotope col-3 gutter-3">
-
                         <!-- Begin isotope items wrap
                         ============================== -->
                         <div class="isotope-items-wrap no-margin">
-
                             <!-- Grid sizer (do not remove!!!) -->
                             <div class="grid-sizer"></div>
-
-
+                            @php
+                            $nature = App\Models\Nature::limit(10)->get();
+                            @endphp
+                            <!-- Begin carousel item
+                            ========================= -->
                             <!-- =====================
                             /// Begin isotope item ///
                             ====================== -->
+                            @foreach ($nature as $item)
                             <div class="isotope-item">
 
                                 <!-- Begin blog list item -->
                                 <article class="blog-list-item">
 
                                     <!-- Blog list item image -->
-                                    <a href="{{ route('user.nature.detail') }}"><img src="{{asset('frontend') }}/assets/img/valley/7.png" alt="image"></a>
+                                    <a href="{{ route('user.nature.detail',$item->id) }}"><img src="{{asset($item->image) }}" alt="image"></a>
 
                                     <!-- Begin blog list item info -->
                                     <div class="bl-item-info">
-                                        <div class="bl-item-category"><a href="blog-archive.html">Photography</a></div>
-                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-title"><h2>5 Reasons You Should Fall In Love With Photography</h2></a>
+                                        <div class="bl-item-category"><a href="{{ route('user.nature.detail',$item->id) }}">{{ $item->name }}</a></div>
+                                        <a href="{{ route('user.nature.detail',$item->id) }}" class="bl-item-title"><h2>5 Reasons You Should Fall In Love With Photography</h2></a>
                                         <div class="bl-item-meta">
                                             <span class="published">May 26, 2017</span>
                                             <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">Martin Vegas</a></span>
@@ -97,13 +99,13 @@
                                         <!-- Use data attributes to set text maximum characters or words (example: data-max-characters="120" or data-max-words="40") -->
                                         <div class="bl-item-desc" data-max-words="14">Suspendisse imperdiet ante at tortor consequat consectetur. Quisque rhoncus blandit justo praesen congue convallis artula ellis.</div>
 
-                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-read-more" title="Read More"><span></span></a>
+                                        <a href="{{ route('user.nature.detail',$item->id) }}" class="bl-item-read-more" title="Read More"><span></span></a>
 
                                         <!-- Begin blog list item attributes -->
                                         <ul class="bl-item-attr">
                                             <li>
                                                 <!-- Begin comments count -->
-                                                <a href="{{ route('user.nature.detail') }}" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 10</a>
+                                                <a href="{{ route('user.nature.detail',$item->id) }}" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 10</a>
                                                 <!-- End comments count -->
                                             </li>
                                             <li>
@@ -129,459 +131,7 @@
                                 <!-- End blog list item -->
 
                             </div>
-                            <!-- End isotope item -->
-
-                            <!-- =====================
-                            /// Begin isotope item ///
-                            ====================== -->
-                            <div class="isotope-item">
-
-                                <!-- Begin blog list item -->
-                                <article class="blog-list-item">
-
-                                    <!-- Blog list item image -->
-                                    <a href="{{ route('user.nature.detail') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/6.png" alt="image"></a>
-
-                                    <!-- Begin blog list item info -->
-                                    <div class="bl-item-info">
-                                        <div class="bl-item-category"><a href="blog-archive.html">Equipment</a></div>
-                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-title"><h2>10 Top Choices for Aerial Photography</h2></a>
-                                        <div class="bl-item-meta">
-                                            <span class="published">May 26, 2017</span>
-                                            <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">John Young</a></span>
-                                        </div>
-
-                                        <!-- Use data attributes to set text maximum characters or words (example: data-max-characters="120" or data-max-words="40") -->
-                                        <div class="bl-item-desc" data-max-words="14">Suspendisse imperdiet ante at tortor consequat consectetur. Quisque rhoncus blandit justo praesen congue convallis artula ellis.</div>
-
-                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-read-more" title="Read More"><span></span></a>
-
-                                        <!-- Begin blog list item attributes -->
-                                        <ul class="bl-item-attr">
-                                            <li>
-                                                <!-- Begin comments count -->
-                                                <a href="{{ route('user.nature.detail') }}" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 66</a>
-                                                <!-- End comments count -->
-                                            </li>
-                                            <li>
-                                                <!-- Begin favorite button -->
-                                                <div class="favorite-btn">
-                                                    <div class="fav-inner">
-                                                        <div class="icon-heart">
-                                                            <span class="icon-heart-empty"></span>
-                                                            <span class="icon-heart-filled"></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="fav-count">98</div>
-                                                </div>
-                                                <!-- End favorite button -->
-                                            </li>
-                                        </ul>
-                                        <!-- End blog list item attributes -->
-
-                                    </div>
-                                    <!-- End blog list item info -->
-
-                                </article>
-                                <!-- End blog list item -->
-
-                            </div>
-                            <!-- End isotope item -->
-
-                            <!-- =====================
-                            /// Begin isotope item ///
-                            ====================== -->
-                            <div class="isotope-item">
-
-                                <!-- Begin blog list item -->
-                                <article class="blog-list-item">
-
-                                    <!-- Blog list item image -->
-                                    <a href="{{ route('user.nature.detail') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/7.png" alt="image"></a>
-
-                                    <!-- Begin blog list item info -->
-                                    <div class="bl-item-info">
-                                        <div class="bl-item-category"><a href="blog-archive.html">Travel</a></div>
-                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-title"><h2>How to Take Professional Travel Photos</h2></a>
-                                        <div class="bl-item-meta">
-                                            <span class="published">May 26, 2017</span>
-                                            <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">Anna Vernik</a></span>
-                                        </div>
-
-                                        <!-- Use data attributes to set text maximum characters or words (example: data-max-characters="120" or data-max-words="40") -->
-                                        <div class="bl-item-desc" data-max-words="14">Suspendisse imperdiet ante at tortor consequat consectetur. Quisque rhoncus blandit justo praesen congue convallis artula ellis.</div>
-
-                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-read-more" title="Read More"><span></span></a>
-
-                                        <!-- Begin blog list item attributes -->
-                                        <ul class="bl-item-attr">
-                                            <li>
-                                                <!-- Begin comments count -->
-                                                <a href="{{ route('user.nature.detail') }}" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 3</a>
-                                                <!-- End comments count -->
-                                            </li>
-                                            <li>
-                                                <!-- Begin favorite button -->
-                                                <div class="favorite-btn active">
-                                                    <div class="fav-inner">
-                                                        <div class="icon-heart">
-                                                            <span class="icon-heart-empty"></span>
-                                                            <span class="icon-heart-filled"></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="fav-count">54</div>
-                                                </div>
-                                                <!-- End favorite button -->
-                                            </li>
-                                        </ul>
-                                        <!-- End blog list item attributes -->
-
-                                    </div>
-                                    <!-- End blog list item info -->
-
-                                </article>
-                                <!-- End blog list item -->
-
-                            </div>
-                            <!-- End isotope item -->
-
-                            <!-- =====================
-                            /// Begin isotope item ///
-                            ====================== -->
-                            <div class="isotope-item">
-
-                                <!-- Begin blog list item -->
-                                <article class="blog-list-item">
-
-                                    <!-- Blog list item image -->
-                                    <a href="{{ route('user.nature.detail') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/about_1.png" alt="image"></a>
-
-                                    <!-- Begin blog list item info -->
-                                    <div class="bl-item-info">
-                                        <div class="bl-item-category"><a href="blog-archive.html">Photography</a></div>
-                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-title"><h2>5 Tips Your Camera Manual Never Told You About Portrait Photography</h2></a>
-                                        <div class="bl-item-meta">
-                                            <span class="published">May 26, 2017</span>
-                                            <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">Julia Beck</a></span>
-                                        </div>
-
-                                        <!-- Use data attributes to set text maximum characters or words (example: data-max-characters="120" or data-max-words="40") -->
-                                        <div class="bl-item-desc" data-max-words="14">Suspendisse imperdiet ante at tortor consequat consectetur. Quisque rhoncus blandit justo praesen congue convallis artula ellis.</div>
-
-                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-read-more" title="Read More"><span></span></a>
-
-                                        <!-- Begin blog list item attributes -->
-                                        <ul class="bl-item-attr">
-                                            <li>
-                                                <!-- Begin comments count -->
-                                                <a href="{{ route('user.nature.detail') }}" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 0</a>
-                                                <!-- End comments count -->
-                                            </li>
-                                            <li>
-                                                <!-- Begin favorite button -->
-                                                <div class="favorite-btn">
-                                                    <div class="fav-inner">
-                                                        <div class="icon-heart">
-                                                            <span class="icon-heart-empty"></span>
-                                                            <span class="icon-heart-filled"></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="fav-count">3</div>
-                                                </div>
-                                                <!-- End favorite button -->
-                                            </li>
-                                        </ul>
-                                        <!-- End blog list item attributes -->
-
-                                    </div>
-                                    <!-- End blog list item info -->
-
-                                </article>
-                                <!-- End blog list item -->
-
-                            </div>
-                            <!-- End isotope item -->
-
-                            <!-- =====================
-                            /// Begin isotope item ///
-                            ====================== -->
-                            <div class="isotope-item">
-
-                                <!-- Begin blog list item -->
-                                <article class="blog-list-item">
-
-                                    <!-- Blog list item image -->
-                                    <a href="{{ route('user.nature.detail') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/about.png" alt="image"></a>
-
-                                    <!-- Begin blog list item info -->
-                                    <div class="bl-item-info">
-                                        <div class="bl-item-category"><a href="blog-archive.html">Photography</a></div>
-                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-title"><h2>Most Common Wedding Photography Mistakes Every Beginner Will Make</h2></a>
-                                        <div class="bl-item-meta">
-                                            <span class="published">May 26, 2017</span>
-                                            <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">Martin Vegas</a></span>
-                                        </div>
-
-                                        <!-- Use data attributes to set text maximum characters or words (example: data-max-characters="120" or data-max-words="40") -->
-                                        <div class="bl-item-desc" data-max-words="14">Suspendisse imperdiet ante at tortor consequat consectetur. Quisque rhoncus blandit justo praesen congue convallis artula ellis.</div>
-
-                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-read-more" title="Read More"><span></span></a>
-
-                                        <!-- Begin blog list item attributes -->
-                                        <ul class="bl-item-attr">
-                                            <li>
-                                                <!-- Begin comments count -->
-                                                <a href="{{ route('user.nature.detail') }}" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 8</a>
-                                                <!-- End comments count -->
-                                            </li>
-                                            <li>
-                                                <!-- Begin favorite button -->
-                                                <div class="favorite-btn">
-                                                    <div class="fav-inner">
-                                                        <div class="icon-heart">
-                                                            <span class="icon-heart-empty"></span>
-                                                            <span class="icon-heart-filled"></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="fav-count">71</div>
-                                                </div>
-                                                <!-- End favorite button -->
-                                            </li>
-                                        </ul>
-                                        <!-- End blog list item attributes -->
-
-                                    </div>
-                                    <!-- End blog list item info -->
-
-                                </article>
-                                <!-- End blog list item -->
-
-                            </div>
-                            <!-- End isotope item -->
-
-                            <!-- =====================
-                            /// Begin isotope item ///
-                            ====================== -->
-                            <div class="isotope-item">
-
-                                <!-- Begin blog list item -->
-                                <article class="blog-list-item">
-
-                                    <!-- Blog list item image -->
-                                    <a href="{{ route('user.nature.detail') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/1.png" alt="image"></a>
-
-                                    <!-- Begin blog list item info -->
-                                    <div class="bl-item-info">
-                                        <div class="bl-item-category"><a href="blog-archive.html">Food</a> <a href="#">Photography</a></div>
-                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-title"><h2>The Serious Eats Guide to Food Photography</h2></a>
-                                        <div class="bl-item-meta">
-                                            <span class="published">May 26, 2017</span>
-                                            <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">Martin Vegas</a></span>
-                                        </div>
-
-                                        <!-- Use data attributes to set text maximum characters or words (example: data-max-characters="120" or data-max-words="40") -->
-                                        <div class="bl-item-desc" data-max-words="14">Suspendisse imperdiet ante at tortor consequat consectetur. Quisque rhoncus blandit justo praesen congue convallis artula ellis.</div>
-
-                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-read-more" title="Read More"><span></span></a>
-
-                                        <!-- Begin blog list item attributes -->
-                                        <ul class="bl-item-attr">
-                                            <li>
-                                                <!-- Begin comments count -->
-                                                <a href="{{ route('user.nature.detail') }}" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 28</a>
-                                                <!-- End comments count -->
-                                            </li>
-                                            <li>
-                                                <!-- Begin favorite button -->
-                                                <div class="favorite-btn">
-                                                    <div class="fav-inner">
-                                                        <div class="icon-heart">
-                                                            <span class="icon-heart-empty"></span>
-                                                            <span class="icon-heart-filled"></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="fav-count">65</div>
-                                                </div>
-                                                <!-- End favorite button -->
-                                            </li>
-                                        </ul>
-                                        <!-- End blog list item attributes -->
-
-                                    </div>
-                                    <!-- End blog list item info -->
-
-                                </article>
-                                <!-- End blog list item -->
-
-                            </div>
-                            <!-- End isotope item -->
-
-                            <!-- =====================
-                            /// Begin isotope item ///
-                            ====================== -->
-                            <div class="isotope-item">
-
-                                <!-- Begin blog list item -->
-                                <article class="blog-list-item">
-
-                                    <!-- Blog list item image -->
-                                    <a href="{{ route('user.nature.detail') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/2.png" alt="image"></a>
-
-                                    <!-- Begin blog list item info -->
-                                    <div class="bl-item-info">
-                                        <div class="bl-item-category"><a href="blog-archive.html">Fashion</a></div>
-                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-title"><h2>How to Become a Fashion Photographer</h2></a>
-                                        <div class="bl-item-meta">
-                                            <span class="published">May 26, 2017</span>
-                                            <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">Jack Jackson</a></span>
-                                        </div>
-
-                                        <!-- Use data attributes to set text maximum characters or words (example: data-max-characters="120" or data-max-words="40") -->
-                                        <div class="bl-item-desc" data-max-words="14">Suspendisse imperdiet ante at tortor consequat consectetur. Quisque rhoncus blandit justo praesen congue convallis artula ellis.</div>
-
-                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-read-more" title="Read More"><span></span></a>
-
-                                        <!-- Begin blog list item attributes -->
-                                        <ul class="bl-item-attr">
-                                            <li>
-                                                <!-- Begin comments count -->
-                                                <a href="{{ route('user.nature.detail') }}" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 2</a>
-                                                <!-- End comments count -->
-                                            </li>
-                                            <li>
-                                                <!-- Begin favorite button -->
-                                                <div class="favorite-btn active">
-                                                    <div class="fav-inner">
-                                                        <div class="icon-heart">
-                                                            <span class="icon-heart-empty"></span>
-                                                            <span class="icon-heart-filled"></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="fav-count">14</div>
-                                                </div>
-                                                <!-- End favorite button -->
-                                            </li>
-                                        </ul>
-                                        <!-- End blog list item attributes -->
-
-                                    </div>
-                                    <!-- End blog list item info -->
-
-                                </article>
-                                <!-- End blog list item -->
-
-                            </div>
-                            <!-- End isotope item -->
-
-                            <!-- =====================
-                            /// Begin isotope item ///
-                            ====================== -->
-                            <div class="isotope-item">
-
-                                <!-- Begin blog list item -->
-                                <article class="blog-list-item">
-
-                                    <!-- Blog list item image -->
-                                    <a href="{{ route('user.nature.detail') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/3.png" alt="image"></a>
-
-                                    <!-- Begin blog list item info -->
-                                    <div class="bl-item-info">
-                                        <div class="bl-item-category"><a href="blog-archive.html">Fashion</a></div>
-                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-title"><h2>Best Lighting Tips For High Fashion Photography</h2></a>
-                                        <div class="bl-item-meta">
-                                            <span class="published">May 26, 2017</span>
-                                            <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">Martin Vegas</a></span>
-                                        </div>
-
-                                        <!-- Use data attributes to set text maximum characters or words (example: data-max-characters="120" or data-max-words="40") -->
-                                        <div class="bl-item-desc" data-max-words="14">Suspendisse imperdiet ante at tortor consequat consectetur. Quisque rhoncus blandit justo praesen congue convallis artula ellis.</div>
-
-                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-read-more" title="Read More"><span></span></a>
-
-                                        <!-- Begin blog list item attributes -->
-                                        <ul class="bl-item-attr">
-                                            <li>
-                                                <!-- Begin comments count -->
-                                                <a href="{{ route('user.nature.detail') }}" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 79</a>
-                                                <!-- End comments count -->
-                                            </li>
-                                            <li>
-                                                <!-- Begin favorite button -->
-                                                <div class="favorite-btn">
-                                                    <div class="fav-inner">
-                                                        <div class="icon-heart">
-                                                            <span class="icon-heart-empty"></span>
-                                                            <span class="icon-heart-filled"></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="fav-count">114</div>
-                                                </div>
-                                                <!-- End favorite button -->
-                                            </li>
-                                        </ul>
-                                        <!-- End blog list item attributes -->
-
-                                    </div>
-                                    <!-- End blog list item info -->
-
-                                </article>
-                                <!-- End blog list item -->
-
-                            </div>
-                            <!-- End isotope item -->
-
-                            <!-- =====================
-                            /// Begin isotope item ///
-                            ====================== -->
-                            <div class="isotope-item">
-
-                                <!-- Begin blog list item -->
-                                <article class="blog-list-item">
-
-                                    <!-- Blog list item image -->
-                                    <a href="{{ route('user.nature.detail') }}" class="bl-item-image"><img src="{{asset('frontend') }}/assets/img/valley/4.png" alt="image"></a>
-
-                                    <!-- Begin blog list item info -->
-                                    <div class="bl-item-info">
-                                        <div class="bl-item-category"><a href="blog-archive.html">Streets</a></div>
-                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-title"><h2>These Ideas Will Get Your Street Photography Rocking</h2></a>
-                                        <div class="bl-item-meta">
-                                            <span class="published">May 26, 2017</span>
-                                            <span class="posted-by">- by <a href="#" title="View all posts by Martin Vegas">Mike Leon</a></span>
-                                        </div>
-
-                                        <!-- Use data attributes to set text maximum characters or words (example: data-max-characters="120" or data-max-words="40") -->
-                                        <div class="bl-item-desc" data-max-words="14">Suspendisse imperdiet ante at tortor consequat consectetur. Quisque rhoncus blandit justo praesen congue convallis artula ellis.</div>
-
-                                        <a href="{{ route('user.nature.detail') }}" class="bl-item-read-more" title="Read More"><span></span></a>
-
-                                        <!-- Begin blog list item attributes -->
-                                        <ul class="bl-item-attr">
-                                            <li>
-                                                <!-- Begin comments count -->
-                                                <a href="{{ route('user.nature.detail') }}" class="bl-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 9</a>
-                                                <!-- End comments count -->
-                                            </li>
-                                            <li>
-                                                <!-- Begin favorite button -->
-                                                <div class="favorite-btn">
-                                                    <div class="fav-inner">
-                                                        <div class="icon-heart">
-                                                            <span class="icon-heart-empty"></span>
-                                                            <span class="icon-heart-filled"></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="fav-count">6</div>
-                                                </div>
-                                                <!-- End favorite button -->
-                                            </li>
-                                        </ul>
-                                        <!-- End blog list item attributes -->
-                                    </div>
-                                    <!-- End blog list item info -->
-                                </article>
-                                <!-- End blog list item -->
-                            </div>
+                            @endforeach
                             <!-- End isotope item -->
                         </div>
                         <!-- End isotope items wrap -->

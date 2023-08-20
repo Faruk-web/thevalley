@@ -225,95 +225,39 @@
             * Use classes "gsi-color", "gsi-zoom" or "gsi-simple" to change gallery single item cover variations.
             -->
             <div id="gallery" class="isotope-items-wrap lightgallery">
-
                 <!-- Grid sizer (do not remove!!!) -->
                 <div class="grid-sizer"></div>
-
-
+                @php
+                    $nature = App\Models\BannerCatagory::get();
+                 @endphp
                 <!-- =====================
                 /// Begin isotope item ///
                 ==========================
                 * If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
                 -->
+                @foreach ($nature as $item)
+                @if(isset($item->video_link))
                 <div class="isotope-item">
-
                     <!-- Begin gallery single item -->
-                    <a href="https://www.youtube.com/embed/mdRbkFcXIeE" class="gallery-single-item lg-trigger" data-exthumbnail="{{asset('frontend') }}/assets/img/valley/1.png" data-sub-html="<p>Yes, you can use image captions :)</p>">
-
+                    <a href="{{$item->video_link}}" class="gallery-single-item lg-trigger" data-exthumbnail="{{asset($item->bennar_img) }}" data-sub-html="<p>Yes, you can use image captions :)</p>">
                         <!-- Begin gallery single item image -->
-                        <img src="{{asset('frontend') }}/assets/img/valley/1.png" class="gs-item-image" alt="">
+                        <img src="{{asset($item->bennar_img) }}" class="gs-item-image" alt="">
                         <!-- End gallery single item image -->
-
                         <!-- Gallery single item image caption -->
                         <div class="gsi-image-caption">Yes, you can use image captions :</div>
-
                         <!-- Gallery single item icon -->
                         <div class="gs-item-icon"><i class="fas fa-play"></i></div>
-
                     </a>
                     <!-- End gallery single item -->
-
                 </div>
-                <!-- End isotope item -->
-
-                <!-- =====================
-                /// Begin isotope item ///
-                ==========================
-                * If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
-                -->
+                @else
                 <div class="isotope-item">
 
                     <!-- Begin gallery single item -->
-                    <a href="https://www.youtube.com/embed/oksFqUfdUrI" class="gallery-single-item lg-trigger" data-exthumbnail="{{asset('frontend') }}/assets/img/valley/2.png">
+                    <a href="{{asset($item->bennar_img) }}" class="gallery-single-item lg-trigger" data-exthumbnail="{{asset($item->bennar_img) }}">
 
                         <!-- Begin gallery single item image -->
-                        <img src="{{asset('frontend') }}/assets/img/valley/2.png" class="gs-item-image" alt="">
-                        <!-- End gallery single item image -->
-
-                        <!-- Gallery single item icon -->
-                        <div class="gs-item-icon"><i class="fas fa-play"></i></div>
-
-                    </a>
-                    <!-- End gallery single item -->
-
-                </div>
-                <!-- End isotope item -->
-
-                <!-- =====================
-                /// Begin isotope item ///
-                ==========================
-                * If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
-                -->
-                <div class="isotope-item">
-
-                    <!-- Begin gallery single item -->
-                    <a href="https://www.youtube.com/embed/d10aC1FjD7g" class="gallery-single-item lg-trigger">
-
-                        <!-- Begin gallery single item image -->
-                        <img src="{{asset('frontend') }}/assets/img/valley/3.png" class="gs-item-image" alt="">
-                        <!-- End gallery single item image -->
-
-                        <!-- Gallery single item icon -->
-                        <div class="gs-item-icon"><i class="fas fa-play"></i></div>
-
-                    </a>
-                    <!-- End gallery single item -->
-
-                </div>
-                <!-- End isotope item -->
-
-                <!-- =====================
-                /// Begin isotope item ///
-                ==========================
-                * If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
-                -->
-                <div class="isotope-item">
-
-                    <!-- Begin gallery single item -->
-                    <a href="{{asset('frontend') }}/assets/img/valley/3.png" class="gallery-single-item lg-trigger" data-exthumbnail="{{asset('frontend') }}/assets/img/valley/4.png">
-
-                        <!-- Begin gallery single item image -->
-                        <img src="{{asset('frontend') }}/assets/img/valley/4.png" class="gs-item-image" alt="">
+                        <img src="{{asset($item->bennar_img) }}" class="gs-item-image" alt="">
                         <!-- End gallery single item image -->
 
                         <!-- Gallery single item icon -->
@@ -324,266 +268,8 @@
 
                 </div>
                 <!-- End isotope item -->
-
-                <!-- =====================
-                /// Begin isotope item ///
-                ==========================
-                * If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
-                -->
-                <div class="isotope-item">
-
-                    <!-- Begin gallery single item -->
-                    <a href="{{asset('frontend') }}/assets/img/valley/5.png" class="gallery-single-item lg-trigger" data-exthumbnail="{{asset('frontend') }}/assets/img/valley/5.png">
-
-                        <!-- Begin gallery single item image -->
-                        <img src="{{asset('frontend') }}/assets/img/valley/5.png" class="gs-item-image" alt="">
-                        <!-- End gallery single item image -->
-
-                        <!-- Gallery single item icon -->
-                        <div class="gs-item-icon"><i class="fas fa-search"></i></div>
-
-                    </a>
-                    <!-- End gallery single item -->
-
-                </div>
-                <!-- End isotope item -->
-
-                <!-- =====================
-                /// Begin isotope item ///
-                ==========================
-                * If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
-                -->
-                <div class="isotope-item">
-
-                    <!-- Begin gallery single item -->
-                    <a href="https://vimeo.com/20047720" class="gallery-single-item lg-trigger">
-
-                        <!-- Begin gallery single item image -->
-                        <img src="{{asset('frontend') }}/assets/img/valley/6.png" class="gs-item-image" alt="">
-                        <!-- End gallery single item image -->
-
-                        <!-- Gallery single item icon -->
-                        <div class="gs-item-icon"><i class="fas fa-play"></i></div>
-
-                    </a>
-                    <!-- End gallery single item -->
-
-                </div>
-                <!-- End isotope item -->
-
-                <!-- =====================
-                /// Begin isotope item ///
-                ==========================
-                * If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
-                -->
-                <div class="isotope-item">
-
-                    <!-- Begin gallery single item -->
-                    <a href="{{asset('frontend') }}/assets/img/valley/7.png" class="gallery-single-item lg-trigger" data-exthumbnail="{{asset('frontend') }}/assets/img/valley/7.png">
-
-                        <!-- Begin gallery single item image -->
-                        <img src="{{asset('frontend') }}/assets/img/valley/7.png" class="gs-item-image" alt="">
-                        <!-- End gallery single item image -->
-
-                        <!-- Gallery single item icon -->
-                        <div class="gs-item-icon"><i class="fas fa-search"></i></div>
-
-                    </a>
-                    <!-- End gallery single item -->
-
-                </div>
-                <!-- End isotope item -->
-
-                <!-- =====================
-                /// Begin isotope item ///
-                ==========================
-                * If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
-                -->
-                <div class="isotope-item">
-
-                    <!-- Begin gallery single item -->
-                    <a href="{{asset('frontend') }}/assets/img/valley/1.png" class="gallery-single-item lg-trigger" data-exthumbnail="{{asset('frontend') }}/assets/img/valley/1.png" data-sub-html="<p>Another awesome image caption :)</p>">
-
-                        <!-- Begin gallery single item image -->
-                        <img src="{{asset('frontend') }}/assets/img/valley/1.png" class="gs-item-image" alt="">
-                        <!-- End gallery single item image -->
-
-                        <!-- Gallery single item image caption -->
-                        <div class="gsi-image-caption">Another awesome image caption :</div>
-
-                        <!-- Gallery single item icon -->
-                        <div class="gs-item-icon"><i class="fas fa-search"></i></div>
-
-                    </a>
-                    <!-- End gallery single item -->
-
-                </div>
-                <!-- End isotope item -->
-
-                <!-- =====================
-                /// Begin isotope item ///
-                ==========================
-                * If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
-                -->
-                <div class="isotope-item">
-
-                    <!-- Begin gallery single item -->
-                    <a href="{{asset('frontend') }}/assets/img/valley/about.png" class="gallery-single-item lg-trigger" data-exthumbnail="{{asset('frontend') }}/assets/img/valley/about.png">
-
-                        <!-- Begin gallery single item image -->
-                        <img src="{{asset('frontend') }}/assets/img/valley/about.png" class="gs-item-image" alt="">
-                        <!-- End gallery single item image -->
-
-                        <!-- Gallery single item icon -->
-                        <div class="gs-item-icon"><i class="fas fa-search"></i></div>
-
-                    </a>
-                    <!-- End gallery single item -->
-
-                </div>
-                <!-- End isotope item -->
-
-                <!-- =====================
-                /// Begin isotope item ///
-                ==========================
-                * If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
-                -->
-                <div class="isotope-item">
-
-                    <!-- Begin gallery single item -->
-                    <a href="{{asset('frontend') }}/assets/img/valley/2.png" class="gallery-single-item lg-trigger" data-exthumbnail="{{asset('frontend') }}/assets/img/valley/2.png">
-
-                        <!-- Begin gallery single item image -->
-                        <img src="{{asset('frontend') }}/assets/img/valley/2.png" class="gs-item-image" alt="">
-                        <!-- End gallery single item image -->
-
-                        <!-- Gallery single item icon -->
-                        <div class="gs-item-icon"><i class="fas fa-search"></i></div>
-
-                    </a>
-                    <!-- End gallery single item -->
-
-                </div>
-                <!-- End isotope item -->
-
-                <!-- =====================
-                /// Begin isotope item ///
-                ==========================
-                * If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
-                -->
-                <div class="isotope-item">
-
-                    <!-- Begin gallery single item -->
-                    <a href="{{asset('frontend') }}/assets/img/valley/about_1.png" class="gallery-single-item lg-trigger" data-exthumbnail="{{asset('frontend') }}/assets/img/valley/about_1.png">
-
-                        <!-- Begin gallery single item image -->
-                        <img src="{{asset('frontend') }}/assets/img/valley/about_1.png" class="gs-item-image" alt="">
-                        <!-- End gallery single item image -->
-
-                        <!-- Gallery single item icon -->
-                        <div class="gs-item-icon"><i class="fas fa-search"></i></div>
-
-                    </a>
-                    <!-- End gallery single item -->
-
-                </div>
-                <!-- End isotope item -->
-
-                <!-- =====================
-                /// Begin isotope item ///
-                ==========================
-                * If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
-                -->
-                <div class="isotope-item">
-
-                    <!-- Begin gallery single item -->
-                    <a href="{{asset('frontend') }}/assets/img/valley/3.png" class="gallery-single-item lg-trigger" data-exthumbnail="{{asset('frontend') }}/assets/img/valley/3.png">
-
-                        <!-- Begin gallery single item image -->
-                        <img src="{{asset('frontend') }}/assets/img/valley/3.png" class="gs-item-image" alt="">
-                        <!-- End gallery single item image -->
-
-                        <!-- Gallery single item icon -->
-                        <div class="gs-item-icon"><i class="fas fa-search"></i></div>
-
-                    </a>
-                    <!-- End gallery single item -->
-
-                </div>
-                <!-- End isotope item -->
-
-                <!-- =====================
-                /// Begin isotope item ///
-                ==========================
-                * If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
-                -->
-                <div class="isotope-item">
-
-                    <!-- Begin gallery single item -->
-                    <a href="{{asset('frontend') }}/assets/img/valley/4.png" class="gallery-single-item lg-trigger" data-exthumbnail="{{asset('frontend') }}/assets/img/valley/4.png">
-
-                        <!-- Begin gallery single item image -->
-                        <img src="{{asset('frontend') }}/assets/img/valley/4.png" class="gs-item-image" alt="">
-                        <!-- End gallery single item image -->
-
-                        <!-- Gallery single item icon -->
-                        <div class="gs-item-icon"><i class="fas fa-search"></i></div>
-
-                    </a>
-                    <!-- End gallery single item -->
-
-                </div>
-                <!-- End isotope item -->
-
-                <!-- =====================
-                /// Begin isotope item ///
-                ==========================
-                * If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
-                -->
-                <div class="isotope-item">
-
-                    <!-- Begin gallery single item -->
-                    <a href="{{asset('frontend') }}/assets/img/valley/4.png" class="gallery-single-item lg-trigger" data-exthumbnail="{{asset('frontend') }}/assets/img/valley/5.png">
-
-                        <!-- Begin gallery single item image -->
-                        <img src="{{asset('frontend') }}/assets/img/valley/5.png" class="gs-item-image" alt="">
-                        <!-- End gallery single item image -->
-
-                        <!-- Gallery single item icon -->
-                        <div class="gs-item-icon"><i class="fas fa-search"></i></div>
-
-                    </a>
-                    <!-- End gallery single item -->
-
-                </div>
-                <!-- End isotope item -->
-
-                <!-- =====================
-                /// Begin isotope item ///
-                ==========================
-                * If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
-                -->
-                <div class="isotope-item">
-
-                    <!-- Begin gallery single item -->
-                    <a href="{{asset('frontend') }}/assets/img/valley/6.png" class="gallery-single-item lg-trigger" data-exthumbnail="{{asset('frontend') }}/assets/img/valley/6.png" data-sub-html="<p>Yes, you can use a little longer image captions. Pellentesque men egestas odio mi, vitae egestas massa elementum utesa.</p>">
-
-                        <!-- Begin gallery single item image -->
-                        <img src="{{asset('frontend') }}/assets/img/valley/6.png" class="gs-item-image" alt="">
-                        <!-- End gallery single item image -->
-
-                        <!-- Gallery single item image caption -->
-                        <div class="gsi-image-caption">You can use a little longer image captions. Pellentesque men egestas odio mi, vitae egestas massa elementum utesa.</div>
-
-                        <!-- Gallery single item icon -->
-                        <div class="gs-item-icon"><i class="fas fa-search"></i></div>
-
-                    </a>
-                    <!-- End gallery single item -->
-
-                </div>
-                <!-- End isotope item -->
-
+                @endif
+                @endforeach
             </div>
             <!-- End isotope items wrap -->
 

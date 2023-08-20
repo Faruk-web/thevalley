@@ -74,6 +74,7 @@ return array(
     'App\\Models\\Comment' => $baseDir . '/app/Models/Comment.php',
     'App\\Models\\ContactUs' => $baseDir . '/app/Models/ContactUs.php',
     'App\\Models\\Employee' => $baseDir . '/app/Models/Employee.php',
+    'App\\Models\\Gallery' => $baseDir . '/app/Models/Gallery.php',
     'App\\Models\\Leading' => $baseDir . '/app/Models/Leading.php',
     'App\\Models\\Location' => $baseDir . '/app/Models/Location.php',
     'App\\Models\\MultiImg' => $baseDir . '/app/Models/MultiImg.php',

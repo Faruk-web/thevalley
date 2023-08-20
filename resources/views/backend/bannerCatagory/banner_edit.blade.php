@@ -7,7 +7,7 @@
 <div class="col-lg-12">
     <div class="box mt-2">
         <div class="box-header with-border">
-          <h3 class="box-title">Plot Category Update</h3>
+          <h3 class="box-title">Update The Valley</h3>
         </div>
         <!-- /.box-header -->
         <div class="box-body">
@@ -17,7 +17,7 @@
                 <input type="hidden" name="id" value="{{ $bennars->id }}">
                 <input type="hidden" name="old_img" value="{{ $bennars->bennar_img}}">
                         <div class="form-group">
-                            <h5> <span class="text-danger">*</span> Category Name</h5>
+                            <h5> <span class="text-danger">*</span>Name</h5>
                             <div class="controls">
                             <input type="text" id="category_name" value="{{ $bennars->category_name }}" name="category_name" class="form-control" >
                             @error('category_name')
@@ -26,7 +26,7 @@
                         </div>
                             </div>
                            <div class="form-group">
-                           <h5> Banner Img <span class="text-danger">*</span></h5>
+                           <h5>Img <span class="text-danger">*</span></h5>
                            <div class="controls">
                            <input type="file" id=" bennar_img"  name="bennar_img" class="form-control" required="Input Img">
 
@@ -38,16 +38,9 @@
                         </div>
                            </div>
                            <div class="form-group">
-                            <h5>Plot Type <span class="text-danger">*</span></h5>
-                            <select name="plot_type" class="form-control"  >
-                              <option value="" selected="" disabled="">Select plot</option>
-                              <option value="{{ $bennars->plot_type }}" {{$bennars->plot_type ? 'selected': '' }}  >{{ $bennars->plot_type }}</option>
-                              <option value="3katha">3 Katha </option>
-                              <option value="4katha">4 Katha</option>
-                              <option value="5katha">5 Katha</option>
-                              <option value="6katha">6 Katha</option>
-                              <option value="7katha">7 Katha</option>
-                          </select>
+                                <h5>Video Link <span class="text-danger">*</span></h5>
+                                <input type="text" id="video_link" name="video_link" value="{{ $bennars->video_link }}" class="form-control">
+                                </div>
                             </div>
                           <div class="form-group">
                           <h5>Short Descraption<span class="text-danger">*</span></h5>

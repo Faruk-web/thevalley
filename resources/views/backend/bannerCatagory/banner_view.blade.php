@@ -7,18 +7,14 @@
     <div class="col-lg-8">
         <div class="box mt-2">
             <div class="box-header with-border text-center bg-secondary">
-              <h3 class="box-title ">Plot Category List</h3>
+              <h3 class="box-title ">The valley List</h3>
           </div>
         <!-- /.box-header -->
   <div class="box-body">
-
     <div class="table-responsive">
         <div id="example1_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4">
             <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
-
-
                 <thead>
-
                     <tr role="row" class="btn-primary"><th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 133.734px;">Bennar Img</th>
                     <th>Status</th>
                     <th>Plot Type</th>
@@ -26,7 +22,6 @@
                     <th>Delete</th>
                     <th>Active/Deactive</th>
                     </tr>
-
                 </thead>
                 <tbody>
                     @foreach ($bennars as $item)
@@ -46,16 +41,13 @@
 
                             @endif
                         </td>
-
                         <td>
                             <a href="{{route('bannerCategory.edit',$item->id )}}" class="btn btn-primary">edit</a>
                         </td>
                         <td>
                         <a href="{{route('bannerCategory.delete',$item->id)}}" class="btn btn-primary">Delete</a>
                         </td>
-
                         <td>
-
                            @if($item->status == 1)
                            <a href="{{ route('bannerCategory.deactive',$item->id) }}" class="btn btn-danger" title="Product Deactive Now"><i class="fa fa-arrow-down"></i></a>
                            @else
@@ -63,7 +55,6 @@
                            @endif
                        </td>
                    </tr>
-
                    @endforeach
                </tbody>
            </table>
@@ -72,36 +63,28 @@
 </div>
    </div>
 </div>
-
-
-
-
-
-
 <div class="col-lg-4">
     <div class="box mt-2">
         <div class="box-header with-border">
-          <h3 class="box-title">Add Plot Category</h3>
+          <h3 class="box-title">Create The Valley</h3>
       </div>
       <!-- /.box-header -->
       <div class="box-body">
-
         <form method="POST" action="{{ route('bannerCategory.store')  }}" enctype="multipart/form-data">
             @csrf
             {{-- <input type="hidden" name="id" value="{{ $bennars->id }}">
             <input type="hidden" name="old_img" value="{{ $bennars->bennar_img}}">      --}}
             <div class="form-group">
-                <h5> <span class="text-danger">*</span> Category Name</h5>
+                <h5> <span class="text-danger">*</span>Name</h5>
                 <div class="controls">
                 <input type="text" id="category_name" name="category_name" class="form-control" >
-
                 @error('category_name')
                 <span class="text-danger">{{ $message }}</span>
                 @enderror
                </div>
                 </div>
          <div class="form-group">
-             <h5> Banner Img <span class="text-danger">*</span></h5>
+             <h5>Img <span class="text-danger">*</span></h5>
              <div class="controls">
                  <input type="file" id=" bennar_img" name="bennar_img" class="form-control" required="Input Img">
                  @error('bennar_img')
@@ -112,15 +95,8 @@
            </div>
           </div>
           <div class="form-group">
-            <h5>Plot Type <span class="text-danger">*</span></h5>
-            <select name="plot_type" class="form-control"  >
-              <option value="" selected="" disabled="">Select plot</option>
-              <option value="3katha">3 Katha </option>
-              <option value="4katha">4 Katha</option>
-              <option value="5katha">5 Katha</option>
-              <option value="6katha">6 Katha</option>
-              <option value="7katha">7 Katha</option>
-          </select>
+            <h5>Video Link <span class="text-danger">*</span></h5>
+            <input type="text" id="video_link" name="video_link" class="form-control">
             </div>
           <div class="form-group">
           <h5>Short Descraption<span class="text-danger">*</span></h5>
@@ -129,7 +105,6 @@
               <span class="text-danger">{{ $message }}</span>
               @enderror
           </div>
-
           <div class="text-xs-right">
             <input type="submit" class="btn btn-rounded btn-info" value="Add Banner">
         </div>

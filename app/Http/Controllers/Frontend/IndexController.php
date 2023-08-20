@@ -20,10 +20,10 @@ use App\Models\ContactUs;
 use App\Models\PlotType;
 use App\Models\News;
 use App\Models\Subscriber;
-use App\Models\review;
+use App\Models\Gallery;
 use Illuminate\Support\Carbon;
-use App\Models\Leading;
-use App\Models\OrderItem;
+use App\Models\Nature;
+use App\Models\Brand;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
@@ -43,9 +43,8 @@ class IndexController extends Controller
     $categories = Category::all();
     // home page banner-category
     $todayDate = Carbon::now();
-      $leadings=Leading::orderBy('id','ASC')->limit(6)->get();
        return view('frontend.index',
-        compact('categories','sliders', 'products','featureds','leadings'));
+        compact('categories','sliders', 'products','featureds'));
    }
   // user logout
    public function UserLogout(){
@@ -125,195 +124,8 @@ class IndexController extends Controller
            }
 
           }  // end mahod
-       // product_detalis
-       public function ProductDetails($id){
-         // for multi img show
-         $product = Product::findOrFail($id);
-         Product::find($id)->increment('product_views');
-          $product_color = $product->product_color;
-          $product_color_all = explode (',',$product_color);
-          // for color and size
-          $product_size = $product->product_size;
-          $product_size_all = explode (',',$product_size);
-           // for related product show
-          $cat_id = $product->category_id;
-          $relatedProduct = Product::where('category_id',$cat_id)->where('id','!=',$id)->orderBy('id','DESC')->get();
-        $multiimgs =  MultiImg::where('product_id',$id)->limit(5)->get();
-        return view('frontend.product.product_detalis', compact('product','multiimgs','product_color_all',
-        'product_size_all','relatedProduct'));
-       } // end mathod
-
-   public function TagWiseProduct($tag){
-     // for tag page
-    $categories = Category::orderBy('category_name', 'ASC')->get();
-    $products = Product::where('status', 1)->where('product_tags', $tag)->orderBy('id', 'DESC')->paginate(4);
-
-    return view('frontend.tags.tags_view', compact('products','categories'));
-
-   }
-    // Subcategory wise data
-	public function SubCatWiseProduct($subcat_id){
-
-    $breadsubcat = SubCategory::with(['category'])->where('id',$subcat_id)->get();
-
-		$products = Product::where('status',1)->where('subcategory_id',$subcat_id)->orderBy('id','DESC')->paginate(4);
-		$categories = Category::orderBy('category_name','ASC')->get();
-		// return view('frontend.product.subcategory_view',compact('products','categories'));
-    return view('frontend.product.subcategory_view',compact('products','categories','breadsubcat'));
-
-	}
-
-     // Subcategory wise data
-	public function SubSubCatWiseProduct($subsubcat_id){
-		$products = Product::where('status',1)->where('subsubcategory_id',$subsubcat_id)->orderBy('id','DESC')->paginate(4);
-		$categories = Category::orderBy('category_name','ASC')->get();
-		// return view('frontend.product.sub_subcategory_view',compact('products','categories'));
-
-    $breadsubsubcat = SubSubCategory::with(['category','subcategory'])->where('id',$subsubcat_id)->get();
-
-    return view('frontend.product.sub_subcategory_view',compact('products','categories','breadsubsubcat'));
-
-	}
-
- /// Product View With Ajax
- public function ProductViewAjax($id){
-  $product = Product::with('category', 'brand')->findOrFail($id);
-  $color = $product->product_color;
-  $product_colors = explode(',', $color);
-  // size varibale is messing
-  $size = $product->product_size;
-  $product_sizes = explode(',', $size);
-  return response()->json(array(
-    'product' =>$product,
-    'color' => $product_colors,
-    'size' => $product_sizes,
-// problem is same varibale
-  ));
-
- } // end mathod
 
     // Product Seach
-    public function ProductSearch(Request $request){
-      if(isset($request->cat))
-      {
-        $categories = $request->cat;
-      }
-      if(isset($request->search))
-      {
-        $item = $request->search;
-      }
-      if(isset($item)&&!isset($categories))
-      {
-        $products = Product::where('product_name','LIKE',"%$item%")->paginate(9);
-
-        return view('frontend.product.search',compact('products'));
-
-      }else if(!isset($item)&&isset($categories))
-      {
-        $products = Product::where('category_id','=',$categories)->paginate(9);
-        return view('frontend.product.search',compact('products'));
-
-      }else if(isset($item)&&isset($categories))
-      {
-        $products = Product::where('category_id','=',$categories)->where('product_name','LIKE',"%$item%")->paginate(9);
-        return view('frontend.product.search',compact('products'));
-
-      }
-       return redirect()->route('user.index');
-    }
-    public function searchByColor($color)
-    {
-      $products  = Product::where('product_color','like','%'.$color.'%')->paginate(6);
-      return view('frontend.product.search',compact('products'));
-    }
-    public function searchByCategory($category)
-    {
-      $subcategory_id = $category;
-      $products  = Product::where('subcategory_id',$subcategory_id)->paginate(6);
-      return view('frontend.product.search',compact('products'));
-    }
-    public function categoryByProduct($category)
-    {
-      $category_id = $category;
-      $products  = Product::where('category_id',$category_id)->paginate(6);
-      return view('frontend.product.search',compact('products'));
-    }
-    public function searchBySubSubCategory($category)
-    {
-      $subsubcategory_id = $category;
-      $products  = Product::where('subsubcategory_id',$subsubcategory_id)->paginate(6);
-      return view('frontend.product.search',compact('products'));
-    }
-    public function latestProduct()
-    {
-      $products = Product::latest()->limit(30)->paginate(9);
-      return view('frontend.product.search',compact('products'));
-    }
-    public function allProduct()
-    {
-      $products = Product::limit(30)->paginate(9);
-      return view('frontend.product.search',compact('products'));
-    }
-    public function popularProduct()
-    {
-      $products = Product::where('status',1)->orderBy('product_views','DESC')->limit(30)->paginate(9);
-      return view('frontend.product.search',compact('products'));
-    }
-    public function specialOffer()
-    {
-      $products = Product::where('special_offer','1')->limit(30)->paginate(9);
-      return view('frontend.product.search',compact('products'));
-    }
-    public function specialDeal()
-    {
-      $products = Product::where('special_deals','1')->limit(30)->paginate(9);
-      return view('frontend.product.search',compact('products'));
-    }
-    public function subscribe(Request $request)
-    {
-          $validated = $request->validate([
-              'email' => 'required|unique:subscribers|max:255',
-          ]);
-          if($validated)
-          {
-            $subscriber = new Subscriber();
-            $subscriber->email = $request->email;
-            $subscriber->save();
-
-            return redirect()->back()->with('message', 'Thanks For Subscribe');
-          }
-    }
-    public function review(Request $request,$id)
-    {
-
-      if(!Auth::check())
-      {
-        return redirect()->route('login');
-      }else
-      {
-          $validated = $request->validate([
-              'name' => 'required|max:50',
-              'review' => 'required|max:255',
-              'quality' => 'required',
-          ]);
-          if($validated)
-          {
-            $review = new review();
-            $review->user_name = $request->name;
-            $review->review = $request->review;
-            $review->product_id = $id;
-            $review->user_id = Auth::id();
-            $review->star = $request->quality;
-            $review->save();
-            $notification = array(
-                'message' =>  'Thank you for your rating.',
-                'alert-type' => 'success'
-            );
-              return redirect()->back()->with($notification);
-          }
-        }
-
-    }
    public function contactUs(Request $request)
    {
     $validated = $request->validate([
@@ -369,9 +181,10 @@ class IndexController extends Controller
         return view('frontend.valley.gallery');
     }
     //completedProject
-    public function plotDetail(){
-        $projects = Project::limit(30)->orderBy('id', 'desc')->paginate(9);
-        return view('frontend.valley.plot_detail',compact('projects'));
+    public function plotDetail($id){
+        $brand = Brand::find($id);
+        $plottype = PlotType::where('plot_id',$brand->id)->first();
+        return view('frontend.valley.plot_detail',compact('plottype','brand'));
     }
 
      //ProjectDetails
@@ -415,8 +228,13 @@ class IndexController extends Controller
         $boardof_directors = BoardDirector::find($id);
         return view('frontend.valley.boardof_director',compact('boardof_directors'));
     }
-    public function natureDetail(){
-        return view('frontend.valley.nature_detail');
+    public function natureDetail($id){
+        $nature = Nature::find($id);
+        return view('frontend.valley.nature_detail',compact('nature'));
+    }
+    public function GalleryDetail($id){
+        $galley = Gallery::find($id);
+        return view('frontend.valley.gallery_detail',compact('galley'));
     }
 
 } // main end

@@ -77,7 +77,7 @@
            <div class="form-group">
             <h5>Background Image <span class="text-danger">*</span></h5>
             <div class="controls">
-                <input type="file" id="b_image" name="b_image" class="form-control" required="Input Img">
+                <input type="file" id="b_image" name="b_image" class="form-control">
                 @error('b_image')
                 <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>

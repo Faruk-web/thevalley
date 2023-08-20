@@ -83,9 +83,9 @@
                     <!-- Begin page sidebar -->
                     <div class="page-sidebar sidebar-right">
 
-                        <p><img src="{{asset('frontend') }}/assets/img/valley/4.png" alt="Image"></p>
+                        <p><img src="{{asset($nature->image) }}" alt="Image"></p>
 
-                        <p>Donec mattis, arcu vel vehicula feugiat, sem turpis dignissim ex, eu sollicitudin neque massa eget ante. In hac habitasse platea dictumst. Pellentesque non interdum dolor, et imperdiet metus.</p>
+                        <p>{{ $nature->name}}</p>
 
                     </div>
                     <!-- End page sidebar -->

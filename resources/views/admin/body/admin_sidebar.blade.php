@@ -42,21 +42,33 @@ $prefix = Request::route()->getPrefix();
         $alluser = (auth()->guard('admin')->user()->alluser == 1);
         $adminuserrole = (auth()->guard('admin')->user()->adminuserrole == 1);
         @endphp
-        @if($brand == true)
+
         <li class="treeview {{ ($prefix=='/brand')?'active':'' }}">
           <a href="#">
             {{-- <i class="fab fa-app-store"></i> --}}
             <i class="fa fa-list-alt fa-5x"></i>
-            <span>Brands</span>
+            <span>Plot Type</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{ route('all.brand') }}"><i class="ti-more"></i>All Brands</a></li>
+            <li><a href="{{ route('all.brand') }}"><i class="ti-more"></i>Plot Type</a></li>
+            <li><a href="{{ route('plot.create') }}"><i class="ti-more"></i>Create Plot</a></li>
           </ul>
         </li>
-        @endif
+        <li class="treeview">
+            <a href="#">
+              <i class="fa fa-picture-o fa-5x"></i>
+              <span>Update Plot Type</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-right pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="{{ route('plot.show') }}"><i class="ti-more"></i> Plot Show</a></li>
+            </ul>
+          </li>
         @if($slider == true)
         <li class="treeview  {{ ($prefix=='/slider')?'active':'' }}  ">
           <a href="#">
@@ -73,18 +85,31 @@ $prefix = Request::route()->getPrefix();
         </li>
         @else
         @endif
-        <li class="treeview  {{ ($prefix=='/banner')?'active':'' }}  ">
+        <li class="treeview  {{ ($prefix=='/bannerCategory')?'active':'' }}  ">
+            <a href="#">
+              <i class="fa fa-picture-o fa-5x"></i>
+              <span>The Valley</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-right pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li class="{{ ($route == 'bannerCategory.manage')? 'active':'' }}">
+                <a href="{{ route('bannerCategory.manage') }}"><i class="ti-more"></i>Create The Valley</a></li>
+            </ul>
+          </li>
+        {{-- <li class="treeview  {{ ($prefix=='/banner')?'active':'' }}  ">
           <a href="#">
             <i class="fa fa-picture-o fa-5x"></i>
-            <span>The Valley</span>
+            <span>Detail The Valley</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{ route('bennar.show') }}"><i class="ti-more"></i>Create Valley</a></li>
+            <li><a href="{{ route('bennar.show') }}"><i class="ti-more"></i>Update The Valley</a></li>
           </ul>
-        </li>
+        </li> --}}
         <li class="treeview  {{ ($prefix=='/nature')?'active':'' }}  ">
             <a href="#">
               <i class="fa fa-picture-o fa-5x"></i>
@@ -97,29 +122,17 @@ $prefix = Request::route()->getPrefix();
               <li><a href="{{ route('nature.show') }}"><i class="ti-more"></i>Create Nature</a></li>
             </ul>
           </li>
-        <li class="treeview">
+          <li class="treeview  {{ ($prefix=='/gallery')?'active':'' }}  ">
             <a href="#">
               <i class="fa fa-picture-o fa-5x"></i>
-              <span>Plot Type</span>
+              <span>Gallery Feture</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-right pull-right"></i>
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="{{ route('plot.show') }}"><i class="ti-more"></i> Plot Show</a></li>
-            </ul>
-          </li>
-          <li class="treeview  {{ ($prefix=='/bannerCategory')?'active':'' }}  ">
-            <a href="#">
-              <i class="fa fa-picture-o fa-5x"></i>
-              <span>Plot Category</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-right pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li class="{{ ($route == 'bannerCategory.manage')? 'active':'' }}">
-                <a href="{{ route('bannerCategory.manage') }}"><i class="ti-more"></i>Manage Plot Category</a></li>
+              <li class="{{ ($route == 'gallery.manage')? 'active':'' }}">
+                <a href="{{ route('gallery.show') }}"><i class="ti-more"></i>Create Gallery</a></li>
             </ul>
           </li>
         @if($alluser == true)

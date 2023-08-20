@@ -11,10 +11,12 @@ use App\Http\Controllers\Backend\BannerCatagoryController;
 use App\Http\Controllers\Backend\SiteSettingController;
 use App\Http\Controllers\Backend\AdminUserController;
 use App\Http\Controllers\Backend\EmployeeController;
+use App\Http\Controllers\Backend\BrandController;
 //amfl location
 use App\Http\Controllers\VisitorController;
 use App\Http\Controllers\Backend\plotTypeController;
 use App\Http\Controllers\Backend\BlogController;
+use App\Http\Controllers\Backend\GalleryController;
 use App\Http\Controllers\Backend\LocationController;
 use App\Http\Controllers\Backend\NewsController;
 use App\Http\Controllers\Backend\BoardOfDirectorController;
@@ -68,7 +70,7 @@ Route::get('/the-valley', [IndexController::class, 'theValley'])->name('user.the
 Route::get('/plot/type', [IndexController::class, 'plotType'])->name('user.plot.type');
 Route::get('/the/nature', [IndexController::class, 'nature'])->name('user.nature');
 Route::get('/gallery', [IndexController::class, 'gallery'])->name('user.gallery');
-Route::get('/plot_detail', [IndexController::class, 'plotDetail'])->name('user.plot_detail');
+Route::get('/plot_detail/{id}', [IndexController::class, 'plotDetail'])->name('user.plot_detail');
 Route::get('/news', [IndexController::class, 'news'])->name('user.news');
 Route::get('/news/details/{id}', [IndexController::class, 'newsDetails'])->name('user.news.details');
 Route::get('/blog', [IndexController::class, 'blog'])->name('user.blog');
@@ -77,7 +79,8 @@ Route::get('/contact_us', [IndexController::class, 'contactamfl'])->name('user.c
 Route::get('/boardof/director/{id}', [IndexController::class, 'BoardOfDirector'])->name('user.director');
 Route::get('/project/details/{id}', [IndexController::class, 'ProjectDetails'])->name('user.project.details');
 Route::get('/project/details/slide/{id}', [IndexController::class, 'ProjectDetailsSlide'])->name('user.project.details.slide');
-Route::get('/nature/detail', [IndexController::class, 'natureDetail'])->name('user.nature.detail');
+Route::get('/nature/detail/{id}', [IndexController::class, 'natureDetail'])->name('user.nature.detail');
+Route::get('/gallery/detail/{id}', [IndexController::class, 'GalleryDetail'])->name('user.gallery.detail');
 // User Logout Route
 Route::get('/user/logout', [IndexController::class, 'UserLogout'])->name('user.logout');
 // User Update Profile
@@ -89,7 +92,15 @@ Route::get('/user/change/password', [IndexController::class, 'UserChnagePassword
 // user  Password Update
 Route::post('/user/password/update', [IndexController::class, 'UserPasswordUpdate'])->name('user.password.update');
 Route::get('/visitor-count', [VisitorController::class, 'count']);
-
+// Admin All Brands Route Group
+Route::prefix('brand')->group(function(){
+    Route::get('/view', [BrandController::class, 'BrandView'])->name('all.brand');
+     Route::post('/store', [BrandController::class, 'BrandStore'])->name('brand.store');
+     Route::get('/edit/{id}', [BrandController::class, 'BrandEdit'])->name('brand.edit');
+     Route::post('/update', [BrandController::class, 'BrandUpdate'])->name('brand.update');
+     Route::get('/delete/{id}', [BrandController::class, 'BrandDelete'])->name('brand.delete');
+     // Route::get('/brand/destroy/{brand_id}', [BrandController::class, 'destroy']);
+ });
 // Admin All Category Route Group
 Route::prefix('category')->group(function(){
     Route::get('/view', [CategoryController::class, 'CategoryView'])->name('all.category');
@@ -207,7 +218,8 @@ Route::prefix('banner')->group(function(){
 });
 // Plot Tupe  Route Group
 Route::prefix('plot')->group(function(){
-    Route::get('/view',[plotTypeController::class,'PlotCreate'])->name('plot.manage');
+    Route::get('/create',[plotTypeController::class,'PlotCreate'])->name('plot.create');
+    Route::post('/store',[plotTypeController::class,'PlotStore'])->name('plot.store');
     Route::get('/show',[plotTypeController::class,'plotshow'])->name('plot.show');
     Route::get('/edit/{id}',[plotTypeController::class,'PlotEdit'])->name('plot.edit');
     Route::post('/update',[plotTypeController::class,'PlotUpdate'])->name('plot.update');
@@ -220,6 +232,14 @@ Route::prefix('nature')->group(function(){
     Route::get('/dalete{id}',[ThenatureController::class,'NatureDelete'])->name('nature.delete');
     Route::get('/edit/{id}',[ThenatureController::class,'NatureEdit'])->name('nature.edit');
     Route::post('/update',[ThenatureController::class,'NatureUpdate'])->name('nature.update');
+});
+// Ashim nature  Route Group
+Route::prefix('gallery')->group(function(){
+    Route::get('/view',[GalleryController::class,'GalleryView'])->name('gallery.show');
+    Route::post('/store',[GalleryController::class,'GalleryStore'])->name('gallery.store');
+    Route::get('/dalete{id}',[GalleryController::class,'GalleryDelete'])->name('gallery.delete');
+    Route::get('/edit/{id}',[GalleryController::class,'GalleryEdit'])->name('gallery.edit');
+    Route::post('/update',[GalleryController::class,'GalleryUpdate'])->name('gallery.update');
 });
 // Ashim bannerCategory  Route Group
 Route::prefix('bannerCategory')->group(function(){

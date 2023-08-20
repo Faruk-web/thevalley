@@ -5,79 +5,27 @@
             <div class="gl-carousel-wrap no-padding"> <!-- Optional: add class "no-padding" to disable paddings -->
                 <div style="overflow: scroll;" class="owl-carousel cc-height-full nav-bottom-right cc-hover-dark cc-hover-zoom" data-items="4" data-dots="false" data-nav="true" data-nav-speed="800" data-autoplay="true" data-autoplay-timeout="8000" data-autoplay-speed="800" data-autoplay-hover-pause="true" data-tablet-landscape="3" data-tablet-portrait="3" data-mobile-landscape="2" data-mobile-portrait="2">
                     <!-- Begin carousel item
+                        @php
+                        $plot_type = App\Models\Brand::get();
+                      @endphp
                     ========================= -->
-                    <a href="{{ url('/plot_detail') }}" class="cc-item">
+                    @foreach ($plot_type as $item)
+                    <a href="{{ route('user.plot_detail',$item->id) }}" class="cc-item">
                         <!-- cc image -->
-                        <div class="cc-image bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/3.png); background-position: 50% 50%;"></div>
-                        <!-- Begin caption
-                        ===================
-                        * Position classes: "top-left", "top-center", "top-right", "center-left", "center", "center-right", "bottom-left", "bottom-center", "bottom-right".
-                        * Size classes: "cc-caption-xs", "cc-caption-sm", "cc-caption-lg", "cc-caption-xlg", "cc-caption-xxlg".
-                        -->
+                        <div class="cc-image bg-image" style="background-image: url({{asset($item->brand_image) }}); background-position: 50% 50%;"></div>
                         <div class="cc-caption center cc-caption-lg">
-                            <h2 class="cc-title">3  katha </h2>
+                            <h2 class="cc-title">{{ $item->brand_name_cats_eye}} </h2>
                         </div>
                         <!-- End caption -->
                     </a>
-                    <!-- End carousel item -->
-                    <!-- Begin carousel item
-                    ========================= -->
-                    <a href="{{ url('/plot_detail') }}" class="cc-item">
-                        <!-- cc image -->
-                        <div class="cc-image bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/4.png); background-position: 50% 50%;"></div>
-                        <!-- Begin caption
-                        ===================
-                        * Position classes: "top-left", "top-center", "top-right", "center-left", "center", "center-right", "bottom-left", "bottom-center", "bottom-right".
-                        * Size classes: "cc-caption-xs", "cc-caption-sm", "cc-caption-lg", "cc-caption-xlg", "cc-caption-xxlg".
-                        -->
-                        <div class="cc-caption center cc-caption-lg">
-                            <h2 class="cc-title">4 Katha</h2>
-                        </div>
-                        <!-- End caption -->
-                    </a>
-                    <!-- End carousel item -->
-
-                    <!-- Begin carousel item
-                    ========================= -->
-                    <a href="{{ url('/plot_detail') }}" class="cc-item">
-                        <!-- cc image -->
-                        <div class="cc-image bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/5.png); background-position: 50% 50%;"></div>
-                        <!-- Begin caption
-                        ===================
-                        * Position classes: "top-left", "top-center", "top-right", "center-left", "center", "center-right", "bottom-left", "bottom-center", "bottom-right".
-                        * Size classes: "cc-caption-xs", "cc-caption-sm", "cc-caption-lg", "cc-caption-xlg", "cc-caption-xxlg".
-                        -->
-                        <div class="cc-caption center cc-caption-lg">
-                            <h2 class="cc-title">5 Katha</h2>
-                        </div>
-                        <!-- End caption -->
-                    </a>
-                    <!-- End carousel item -->
-
-                    <!-- Begin carousel item
-                    ========================= -->
-                    <a href="{{ url('/plot_detail') }}" class="cc-item">
-                        <!-- cc image -->
-                        <div class="cc-image bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/6.png); background-position: 50% 50%;"></div>
-                        <!-- Begin caption
-                        ===================
-                        * Position classes: "top-left", "top-center", "top-right", "center-left", "center", "center-right", "bottom-left", "bottom-center", "bottom-right".
-                        * Size classes: "cc-caption-xs", "cc-caption-sm", "cc-caption-lg", "cc-caption-xlg", "cc-caption-xxlg".
-                        -->
-                        <div class="cc-caption center cc-caption-lg">
-                            <h2 class="cc-title">Commertial</h2>
-                        </div>
-                        <!-- End caption -->
-                    </a>
+                    @endforeach
                     <!-- End carousel item -->
                 </div>
                 <!-- End content carousel -->
-
             </div> <!-- /.gl-carousel-wrap -->
         </div> <!-- /.gallery-list-carousel-inner -->
     </section>
     <!-- End gallery list section -->
-
             <div class="tt-heading text-center">
                 <div class="tt-heading-inner">
                     <hr class="hr-short" style="border-color: black;">
