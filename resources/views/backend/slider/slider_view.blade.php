@@ -21,6 +21,7 @@
                  <thead>
                      <tr>
                          <th>Slider Image</th>
+                         <th>ID</th>
                          <th>Title</th>
                          <th>Discraption</th>
                          <th>Status</th>
@@ -32,6 +33,7 @@
                    @foreach ($sliders as $item)
                    <tr>
                     <td> <img src="{{ asset($item->slider_img) }}" style="height:80px; width:200px;"> </td>
+                    <td>{{ $item->id }}</td>
                        <td>{{ $item->title }}</td>
                        <td>{{ $item->description }}</td>
                        <td>

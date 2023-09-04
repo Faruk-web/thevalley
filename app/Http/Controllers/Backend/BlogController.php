@@ -89,16 +89,16 @@ class BlogController extends Controller
         // unlink($old_img);
         $image = $request->file('blog_image');
     $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
-    Image::make($image)->resize(700,700)->save('upload/director/'.$name_gen );
-    $save_url = 'upload/director/'.$name_gen;
+    Image::make($image)->resize(700,700)->save('upload/blog/'.$name_gen );
+    $save_url = 'upload/blog/'.$name_gen;
     // unlink($old_img);
     if (file_exists($old_sub_image)){
         unlink($old_sub_image);
     }
     $image = $request->file('blog_sub_image');
     $name_gen_sub = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
-    Image::make($image)->resize(400,400)->save('upload/director/'.$name_gen_sub );
-    $save_url_sub = 'upload/director/'.$name_gen_sub;
+    Image::make($image)->resize(400,400)->save('upload/blog/'.$name_gen_sub );
+    $save_url_sub = 'upload/blog/'.$name_gen_sub;
 
     Blog::findOrFail($blog_id)->update([
         'blog_name' => $request->blog_name,

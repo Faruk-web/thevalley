@@ -68,33 +68,13 @@
 						<div class="container-fluid">
 							<div class="row">
 								<div class="row-lg-height">
-
 									<!-- Column -->
 									<div class="col-lg-6 col-lg-height split-box-image no-padding bg-image" style="background-image: url({{ asset('frontend') }}/assets/img/valley/about.png); background-position: 50% 50%;">
-
-										<!-- Split box image height
-										============================
-										* You can use prepared "padding-height-*" helper classes to set split box image height. Example: "padding-height-85" (useful if "split-box-content" contend/text is very short). Also you can use class "full-height-vh" for full height image. Find out "helper.css" file for more info. Note: class "sbi-height" is required.
-										-->
 										<div class="sbi-height padding-height-85"></div>
-
 									</div> <!-- /.col -->
-
 									<!-- Column -->
-									<div class="col-lg-6 col-lg-height col-lg-middle no-padding">
-
-										<!-- Begin split box content
-										=============================
-										* Use class "shifted-left" or "shifted-right" to enable shifted content (do not use for long content).
-										-->
+									<div class="col-lg-6 col-lg-height col-lg-middle no-padding" style="background-image: url({{asset('frontend') }}/assets/img/valley/Background.png);">
 										<div class="split-box-content sb-content-right">
-
-											<!-- Begin tt-heading
-											======================
-											* Use class "padding-on" to enable heading paddings (useful if you use tt-heading as stand alone element).
-											* Use class "text-center" or "text-right" to align tt-heading.
-											* Use classes "tt-heading-xs", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set tt-heading size.
-											-->
 											<div class="tt-heading">
 												<div class="tt-heading-inner">
 													<h1 class="tt-heading-title">WHO I AM ?</h1>
@@ -103,20 +83,11 @@
 												</div> <!-- /.tt-heading-inner -->
 											</div>
 											<!-- End tt-heading -->
-
 											<div class="margin-top-30">
 												<p>Hi, my name is <strong>Martin Vegas</strong>. I am an artist and photographer. Sollicitudin diam vitae, amet lacus donec eu, donec vulputate duis nullam nulla, suscipit nulla orci, ornare maecenas eget gravida.</p>
 
 												<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Vivamus at nibh tincidunt, bibendum ligula id. Nemo enim ipsam voluptatem quiatotam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas enimoa.</p>
 											</div>
-
-											<!-- Begin signature -->
-											<div class="signature">
-												<img class="signature-dark" src="{{ asset('frontend') }}/assets/img/signature-dark.png" alt="">
-												<img class="signature-light" src="{{ asset('frontend') }}/assets/img/signature-light.png" alt="">
-											</div>
-											<!-- End signature -->
-
 										</div>
 										<!-- End split box content -->
 
@@ -149,20 +120,8 @@
 									</div> <!-- /.col -->
 
 									<!-- Column -->
-									<div class="col-lg-6 col-lg-pull-6 col-lg-height col-lg-middle no-padding">
-
-										<!-- Begin split box content
-										=============================
-										* Use class "shifted-left" or "shifted-right" to enable shifted content (do not use for long content).
-										-->
+									<div class="col-lg-6 col-lg-pull-6 col-lg-height col-lg-middle no-padding" style="background-image: url({{asset('frontend') }}/assets/img/valley/Background.png);">
 										<div class="split-box-content sb-content-left">
-
-											<!-- Begin tt-heading
-											======================
-											* Use class "padding-on" to enable heading paddings (useful if you use tt-heading as stand alone element).
-											* Use class "text-center" or "text-right" to align tt-heading.
-											* Use classes "tt-heading-xs", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set tt-heading size.
-											-->
 											<div class="tt-heading">
 												<div class="tt-heading-inner">
 													<h1 class="tt-heading-title">AMIN MOHAMMAD HOLDINGS LTD</h1>
@@ -177,8 +136,6 @@
 
 												<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
 											</div>
-											<a href="contact.html" class="btn btn-primary margin-top-20">Hire Me!</a>
-											<a href="categories-grid.html" class="btn btn-dark margin-top-20">View All My Work</a>
 										</div>
 										<!-- End split box content -->
 
@@ -199,13 +156,6 @@
 			///// Begin latest work cection /////
 			================================= -->
 			<section id="latest-work-section" class="margin-top-40"> <!-- margin class is optional ) -->
-
-				<!-- Begin tt-heading
-				======================
-				* Use class "padding-on" to enable heading paddings (useful if you use tt-heading as stand alone element).
-				* Use class "text-center" or "text-right" to align tt-heading.
-				* Use classes "tt-heading-xs", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set tt-heading size.
-				-->
 				<div class="tt-heading padding-on text-center">
 					<div class="tt-heading-inner tt-wrap"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag! ) -->
 						<h1 class="tt-heading-title">BOARD OF DIRECTORS
@@ -229,12 +179,6 @@
 
 								<!-- cc image -->
 								<div class="cc-image full-cover bg-image" style="background-image: url({{ asset('frontend') }}/assets/img/gallery/gallery-list/auto-width/gallery-auto-width-7.jpg)"></div>
-
-								<!-- Begin caption
-								===================
-								* Position classes: "top-left", "top-center", "top-right", "center-left", "center", "center-right", "bottom-left", "bottom-center", "bottom-right".
-								* Size classes: "cc-caption-xs", "cc-caption-sm", "cc-caption-lg", "cc-caption-xlg", "cc-caption-xxlg".
-								-->
 								<div class="cc-caption center max-width-400"> <!-- max width class is optional -->
 									<h2 class="cc-title">Afternoon Photoshoot</h2>
 									<div class="cc-category"><span>Outdoor</span></div>
@@ -247,12 +191,6 @@
 
 								<!-- cc image -->
 								<div class="cc-image full-cover bg-image" style="background-image: url({{ asset('frontend') }}/assets/img/gallery/gallery-list/auto-width/gallery-auto-width-7.jpg);"></div>
-
-								<!-- Begin caption
-								===================
-								* Position classes: "top-left", "top-center", "top-right", "center-left", "center", "center-right", "bottom-left", "bottom-center", "bottom-right".
-								* Size classes: "cc-caption-xs", "cc-caption-sm", "cc-caption-lg", "cc-caption-xlg", "cc-caption-xxlg".
-								-->
 								<div class="cc-caption center max-width-400"> <!-- max width class is optional -->
 									<h2 class="cc-title">Afternoon Photoshoot</h2>
 									<div class="cc-category"><span>Outdoor</span></div>
@@ -270,7 +208,7 @@
 				</div> <!-- /.latest-work-inner -->
 			</section>
 			<!-- End latest work cection -->
-            <div class="split-box">
+            <div class="split-box" style="background-image: url({{asset('frontend') }}/assets/img/valley/Background.png);">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="row-lg-height full-height-vh">

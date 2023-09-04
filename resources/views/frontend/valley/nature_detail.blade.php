@@ -2,19 +2,7 @@
 
 @section('index')
 <section id="page-header">
-
-    <!-- Begin page header image
-    =============================
-    * Use class "parallax-bg-1" up to "parallax-bg-6" to enable background image parallax effect.
-    * Use class "fade-out-scroll-3" to enable fade out effect if page scroll.
-    * Use class "hide-ph-image" to hide page header image without removing the code.
-    -->
     <div class="page-header-image parallax-bg-3 bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/about_13.png);">
-
-        <!-- Element cover
-        ===================
-        * You can use prepared background transparent classes depends on brightness of your page header image. More info: file "helper.css".
-        -->
         <div class="cover bg-transparent-5-dark"></div>
 
     </div>
@@ -22,13 +10,6 @@
 
     <!-- Begin page header inner -->
     <div class="page-header-inner tt-wrap">
-
-        <!-- Begin page header caption
-        ===============================
-        * Use classes "ph-caption-xs", "ph-caption-sm", "ph-caption-lg" or "ph-caption-xlg" to set page header size.
-        * Use class "parallax-1" up to "parallax-6" to enable parallax effect.
-        * Use class "fade-out-scroll-1" up to "fade-out-scroll-6" to enable fade out effect if page scroll.
-        -->
         <div class="page-header-caption ph-caption-lg parallax-4 fade-out-scroll-3">
             <h1 class="page-header-title">Dummy Page</h1>
             <hr class="hr-short">
@@ -40,23 +21,16 @@
 
         </div>
         <!-- End page header caption -->
-
     </div>
     <!-- End page header inner -->
-
 </section>
 <!-- End page header -->
-
-
-<!-- =========================
-///// Begin page section /////
-========================== -->
 <section id="page-section" class="page-classic">
     <div class="page-section-inner tt-wrap"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag! ) -->
 
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-7 col-lg-8 no-padding margin-bottom-40">
+                <div class="col-md-7 col-lg-8 no-padding margin-bottom-40" style="background-image: url({{asset('frontend') }}/assets/img/valley/Background.png);background-position: 50% 50%;">
 
                     <!-- Begin page content -->
                     <div class="page-content">

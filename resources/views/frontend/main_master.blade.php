@@ -47,20 +47,8 @@
 		<link rel="stylesheet" href="{{ asset('frontend/assets/css/helper.css')}}">
 		<link rel="stylesheet" href="{{ asset('frontend/assets/css/theme.css')}}">
 
-		<!-- Template dark style CSS (just uncomment line below to enable dark style) -->
-			{{-- <link rel="stylesheet" href="{{ asset('frontend/assets/css/dark-style.css')}}"> --}}
-
-		<!-- Template round style CSS (just uncomment line below to enable round style) -->
-			{{-- <link rel="stylesheet" href="{{ asset('frontend/assets/css/round-style.css')}}"> --}}
-
-		<!-- Template color skins CSS (just uncomment line below to enable color skin. One line at a time!) -->
-			{{-- <link rel="stylesheet" href="{{ asset('frontend/assets/css/color-skins/skin-red.css')}}">
-		 <link rel="stylesheet" href="{{ asset('frontend/assets/css/color-skins/skin-green.css')}}">
-			<link rel="stylesheet" href="{{ asset('frontend/assets/css/color-skins/skin-blue.css')}}">
-		<link rel="stylesheet" href="{{ asset('frontend/assets/css/color-skins/skin-orange.css')}}">
-			<link rel="stylesheet" href="{{ asset('frontend/assets/css/color-skins/skin-purple.css')}}">
-			<link rel="stylesheet" href="{{ asset('frontend/assets/css/color-skins/skin-pink.css')}}">
-			 <link rel="stylesheet" href="{{ asset('frontend/assets/css/color-skins/skin-brown.css')}}"> --}}
+        <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500|Roboto:400,500,700&display=swap" rel="stylesheet">
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css'><link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css')}}">
 
 		<!-- Template RTL mode CSS (just uncomment all 3 lines below to enable right to left mode) -->
 			<!-- <link rel="stylesheet" href="{{ asset('frontend/assets/vendor/bootstrap/css/bootstrap-rtl/bootstrap-rtl.min.css')}}"> -->
@@ -78,15 +66,6 @@
 			<link rel="alternate stylesheet" media="screen" title="skin-purple" href="{{ asset('frontend/assets/css/color-skins/skin-purple.css') }}">
 			<link rel="alternate stylesheet" media="screen" title="skin-pink" href="{{ asset('frontend/assets/css/color-skins/skin-pink.css') }}">
 			<link rel="alternate stylesheet" media="screen" title="skin-brown" href="{{ asset('frontend/assets/css/color-skins/skin-brown.css') }}">
-
-		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-
-		<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
-        <!-- Begin demo page styles -->
 		<style type="text/css">
 
 			#tt-theme-stats { background-color: #111; padding: 5% 0; margin-bottom: 60px; color: #fff; padding: 5% 0; }
@@ -132,15 +111,6 @@
 		<!-- End demo page styles -->
 
 	</head>
-
-
-
-    <!-- ===========
-        ///// Body /////
-        ================
-        * Use class "animsition" to enable page transition while page loads.
-        * Use class "tt-boxed" to enable page boxed layout globally (affects all elements containing class "tt-wrap").
-        -->
         <body id="body" class="animsition">
 			<!-- BEGIN DEMO PANEL (FOR DEMO SITE ONLY!) -->
 		<div class="demo-panel">
@@ -190,62 +160,20 @@
 			</div>
 		</div>
 		<!-- END DEMO PANEL (FOR DEMO SITE ONLY!) -->
-
-            <!-- =================
-            //// Begin header ////
-            ======================
-            * Use class "header-show-hide-on-scroll" to hide header on scroll down and show on scroll up.
-            * Use class "header-fixed-top" to set header to fixed position.
-            * Use class "header-transparent" to set header to transparent.
-            * Use class "menu-align-left" to align menu to left.
-            * Use class "menu-align-right" to align menu to right.
-            * Use class "menu-align-center" to align menu to center (do not use with header classes!).
-            -->
             @include('frontend.body.header')
             <!-- End header -->
-
-
-            <!-- *************************************
-            *********** Begin body content ***********
-            ************************************** -->
             <div id="body-content">
-
-
-                <!-- ==========================
-                ///// Begin intro section /////
-                =========================== -->
                 @yield('index')
                 <!-- End intro section -->
-
-
-                <!-- ============================================
-                ///// Begin footer section (footer minimal) /////
-                =================================================
-                * Use class "footer-dark" to enable dark footer.
-                * Use class "no-margin-top" if needed.
-                -->
                 @include('frontend.body.footer')
                 <!-- End footer section -->
-
             </div>
             <!-- End body content -->
-
             </div>
             <!-- End body content -->
-
-
-
-
-
-            <!-- ====================
-            ///// Scripts below /////
-            ===================== -->
-
-
 		<!-- Core JS -->
 		<script src="{{ asset('frontend/assets/vendor/jquery/jquery.min.js') }}"></script> <!-- jquery JS (https://jquery.com) -->
 		<script src="{{ asset('frontend/assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script> <!-- bootstrap JS (http://getbootstrap.com) -->
-
 		<!-- Libs and Plugins JS -->
 		<script src="{{ asset('frontend/assets/vendor/animsition/js/animsition.min.js') }}"></script> <!-- Animsition JS (http://git.blivesta.com/animsition/) -->
 		<script src="{{ asset('frontend/assets/vendor/jquery.easing.min.js') }}"></script> <!-- Easing JS (http://gsgd.co.uk/sandbox/jquery/easing/) -->
@@ -254,15 +182,14 @@
 		<script src="{{ asset('frontend/assets/vendor/owl-carousel/js/owl.carousel.min.js') }}"></script> <!-- Owl Carousel JS (https://owlcarousel2.github.io/OwlCarousel2/) -->
 		<script src="{{ asset('frontend/assets/vendor/jquery.mousewheel.min.js') }}"></script> <!-- A jQuery plugin that adds cross browser mouse wheel support (https://github.com/jquery/jquery-mousewheel) -->
 		<script src="{{ asset('frontend/assets/vendor/ytplayer/js/jquery.mb.YTPlayer.min.js') }}"></script> <!-- YTPlayer JS (more info: https://github.com/pupunzi/jquery.mb.YTPlayer) -->
-
 		<script src="{{ asset('frontend/assets/vendor/lightgallery/js/lightgallery-all.min.js') }}"></script> <!-- lightGallery Plugins JS (http://sachinchoolur.github.io/lightGallery) -->
-
 		<!-- Theme master JS -->
 		<script src="{{ asset('frontend/assets/js/theme.js') }}"></script>
 		<!-- FOR DEMO SITE ONLY! JS -->
 		<script src="{{ asset('frontend/assets/js/demo-panel.js') }}"></script>
 		<script src="{{ asset('frontend/assets/js/styleswitch.js') }}"></script>
-
+        <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+  <script src='https://rawgit.com/cfoehrdes/slick/master/slick/slick.js'></script><script  src="{{ asset('frontend/assets/js/script.js') }}"></script>
 	</body>
-
 </html>

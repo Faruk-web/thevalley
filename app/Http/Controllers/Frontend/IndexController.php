@@ -38,7 +38,7 @@ class IndexController extends Controller
   // for  featureds
     $featureds = Project::where('feature_project', 1)->orderBy('id', 'DESC')->limit(8)->get();
     // end product
-    $sliders = Slider::where('status', 1)->orderBy('id', 'DESC')->limit(10)->get();
+    $sliders = Slider::orderBy('id', 'ASC')->get();
     // end slider
     $categories = Category::all();
     // home page banner-category

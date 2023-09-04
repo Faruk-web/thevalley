@@ -56,7 +56,7 @@
 
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-7 col-md-push-5 col-lg-8 col-lg-push-4 no-padding margin-bottom-40">
+                <div class="col-md-7 col-md-push-5 col-lg-8 col-lg-push-4 no-padding margin-bottom-40" style="background-image: url({{asset('frontend') }}/assets/img/valley/Background.png);background-position: 50% 50%;">
 
                     <!-- Begin page content -->
                     <div class="page-content">

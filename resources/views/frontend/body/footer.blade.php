@@ -1,4 +1,4 @@
-<section id="footer" class="footer-dark no-margin-top">
+<section id="footer" class="footer-dark no-margin-top" style="background-image: url({{asset('frontend') }}/assets/img/valley/Background.png);">
     <div class="footer-inner">
         <div class="footer-container tt-wrap">
             <div class="row">
@@ -141,12 +141,6 @@
         margin-top: 16px;
         }
         </style>
-
-        <!--<a href="tel:16711" class="themesflat-button bg-white small"><span> 16711 <span class="icon"><i class="autora-icon-phone-contact"></i></span></span></a>-->
-       <!-- <a href="tel:16711" class="floating" target="_blank">-->
-       <!-- <i style="margin-top: 15px;" class="fa fa-phone-square" aria-hidden="true"></i>-->
-       <!--</a>-->
-
         <!-- render the button and direct it to wa.me -->
         <a href="https://api.WhatsApp.com/send?phone=+88 01810-103999&text=Can I speak to an Agent ?" class="floating" target="_blank">
         <i class="fab fa-whatsapp fab-icon"></i>

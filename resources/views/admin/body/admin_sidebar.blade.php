@@ -135,6 +135,19 @@ $prefix = Request::route()->getPrefix();
                 <a href="{{ route('gallery.show') }}"><i class="ti-more"></i>Create Gallery</a></li>
             </ul>
           </li>
+          <li class="treeview  {{ ($prefix=='/blog')?'active':'' }}  ">
+            <a href="#">
+              <i class="fa fa-sliders fa-5x"></i>
+              <span>Event Option</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-right pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="{{ route('blog.add')}}"><i class="ti-more"></i>Create Event</a></li>
+              <li><a href="{{ route('manage_blog')}}"><i class="ti-more"></i>Event View</a></li>
+            </ul>
+          </li>
         @if($alluser == true)
         <li class="treeview {{ ($prefix == '/alluser')?'active':'' }}  ">
           <a href="#">

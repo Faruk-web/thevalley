@@ -13,7 +13,7 @@ class SliderController extends Controller
 {
     // Slider View
     public function SliderView(){
-		$sliders = Slider::latest()->get();
+        $sliders = Slider::orderBy('id', 'ASC')->get();
         $projects = Project::latest()->select('id','project_name')->get();
 		return view('backend.slider.slider_view',compact('sliders','projects'));
 	} // end mathod
@@ -30,7 +30,7 @@ class SliderController extends Controller
           // img upload and save
           $image = $request->file('slider_img');
           $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
-          Image::make($image)->resize(1920,860)->save('upload/slider/'.$name_gen);
+          Image::make($image)->save('upload/slider/'.$name_gen);
           $save_url = 'upload/slider/'.$name_gen;
        // Brand Insert
           Slider::insert([
@@ -63,7 +63,7 @@ class SliderController extends Controller
                 }
             $image = $request->file('slider_img');
             $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
-            Image::make($image)->resize(1920,860)->save('upload/slider/'.$name_gen);
+            Image::make($image)->save('upload/slider/'.$name_gen);
             $save_url = 'upload/slider/'.$name_gen;
         Slider::findOrFail($slider_id)->update([
             'title' => $request->title,

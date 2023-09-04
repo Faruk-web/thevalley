@@ -155,14 +155,6 @@
                 * Use class "gs-right" to align gallery share button.
                 -->
                 <a href="#0" class="gallery-share gs-right" data-toggle="modal" data-target="#modal-64253091" title="Share this gallery"><i class="fas fa-share-alt"></i></a>
-                <!-- End gallery share button -->
-
-                <!-- Begin modal
-                =================
-                * Use class "modal-center" to enable modal center position (use for short content only!).
-                * Use class "modal-left" to enable left sidebar modal.
-                * Use class "modal-right" to enable right sidebar modal.
-                -->
                 <div id="modal-64253091" class="modal modal-center fade" tabindex="-1" role="dialog" aria-hidden="false">
                    <div class="modal-dialog">
                         <div class="modal-content">
@@ -287,7 +279,7 @@
     </div> <!-- /.isotope-wrap -->
 </section>
 <!-- End gallery single section -->
-<div class="split-box">
+<div class="split-box" style="background-image: url({{asset('frontend') }}/assets/img/valley/Background.png);">
     <div class="container-fluid">
         <div class="row">
             <div class="row-lg-height full-height-vh">

@@ -1,51 +1,33 @@
 
 @extends('frontend.main_master')
-
 @section('index')
-<section id="tt-intro" class="slideshow-intro">
-    <div class="tt-intro-inner"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag! ) -->
-        <div class="gl-carousel-wrap no-padding"> <!-- Optional: use class "no-padding" to disable paddings -->
-            <div class="owl-carousel cc-height-5 cursor-grab dots-right bg-dark" data-items="1" data-loop="true" data-nav="true" data-nav-speed="500" data-dots-speed="500" data-autoplay="true" data-autoplay-timeout="4000" data-autoplay-speed="500" data-autoplay-hover-pause="true">
-                <!-- Begin carousel item
-                ========================= -->
-                @foreach ($sliders as $item)
-                <div class="cc-item">
-                    <!-- Element cover -->
-                    <span class="cover bg-transparent-3-dark"></span>
-                    <!-- cc image -->
-                    <div class="cc-image bg-image" style="background-image: url({{ asset($item->slider_img) }}); background-position: 50% 50%;"></div>
-                    <!-- Begin intro caption
-                    =========================
-                    * Position classes: "top-left", "top-center", "top-right", "center-left", "center", "center-right", "bottom-left", "bottom-center", "bottom-right".
-                    * Size classes: "intro-caption-xs", "intro-caption-sm", "intro-caption-lg", "intro-caption-xlg", "intro-caption-xxlg".
-                    -->
-                    <div class="intro-caption caption-animate intro-caption-xxlg center-left">
-                        <h1 class="intro-title">Invest for a lifetime benefit</h1>
-                        <h2 class="intro-subtitle">Photography Portfolio Theme</h2>
 
-                        <p class="intro-description max-width-650">
-                            Made for photographers, photo studios, design agencies. <br>
-                            Create your own unique and beautiful photography website!
-                        </p>
-
-                        <div class="margin-top-30">
-                            <a href="http://www.thevalleybd.com/" class="btn btn-primary margin-top-5 margin-right-10" target="_blank">Buy It Now!</a>
-                            <a href="albums-grid-fluid-2.html" class="btn btn-white-bordered margin-top-5">Discover More</a>
-                        </div>
-                    </div>
-                    <!-- End intro caption -->
-
-                </div>
-                @endforeach
-                <!-- End carousel item -->
-            </div>
-            <!-- End content carousel -->
-        </div> <!-- /.gl-carousel-wrap -->
-    </div> <!-- /.tt-intro-inner -->
-</section>
 <!-- End intro section -->
-
-
+<section class='c-slider'>
+    <div class='c-slider-init' style="background-image: url(http://127.0.0.1:8000/frontend/assets/img/valley/Background.png);
+    ">
+        @foreach ($sliders as $item)
+      <div class='c-slide' style='background-image:url({{ asset($item->slider_img) }})' style="width:1103em">
+        <div class='c-slide-content'>
+          <div class='c-wrap c-wrap--line'>
+            <h2 class='c-slide__title'>
+               <b>Invest for a lifetime benefit</b>
+              {{-- <span class='c-slide__title--large'>Monsters</span> --}}
+            </h2>
+          </div>
+          <div class='c-wrap c-wrap--small'>
+            <div class='c-slide__info'>
+              <h3 class='c-slide__subtitle'>Saltwater Crocodile</h3>
+              <p class='c-slide__body'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      @endforeach
+    </div>
+  </section>
+ 
 <!-- =============================
 ///// Begin about me section /////
 ============================== -->
@@ -81,21 +63,9 @@
                         <!-- Column -->
                         <div class="col-lg-7 col-lg-height col-lg-middle no-padding">
 
-                            <div class="full-cover for-light-style bg-gray-3 bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/1.png); background-position: 50% 50%;"></div>
-                            <div class="full-cover for-dark-style bg-gray-3 bg-image" style="background-image: url(assets/img/valley/1.png); background-position: 50% 50%;"></div>
-
-                            <!-- Begin split box content
-                            =============================
-                            * Use class "shifted-left" or "shifted-right" to enable shifted content (do not use for long content).
-                            -->
+                            <div class="full-cover for-light-style bg-gray-3 bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/Background.png); background-position: 50% 50%;"></div>
+                            <div class="full-cover for-dark-style bg-gray-3 bg-image" style="background-image: url({{asset('frontend') }}/assets/img/valley/Background.png); background-position: 50% 50%;"></div>
                             <div class="split-box-content sb-content-right" >
-
-                                <!-- Begin tt-heading
-                                ======================
-                                * Use class "padding-on" to enable heading paddings (useful if you use tt-heading as stand alone element).
-                                * Use class "text-center" or "text-right" to align tt-heading.
-                                * Use classes "tt-heading-xs", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set tt-heading size.
-                                -->
                                 <div class="tt-heading">
                                     <div class="tt-heading-inner">
                                         <h1 class="tt-heading-title">About</h1>
@@ -109,16 +79,7 @@
                                     <p>Hi, my name is <strong>Martin Vegas</strong>. I am an artist and photographer. Nemo enim ipsam voluptatem quia voluptas aspernatur aut odit aut fugit. Vivamus at nibh tincidunt, bibendum ligula id. Nemo enim ipsam voluptatem quiatotam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem.</p>
                                 </div>
 
-                                <a href="about-me-fluid.html" class="btn btn-primary margin-top-20">Read More</a>
-                                <a href="contact.html" class="btn btn-dark margin-top-20">Hire Me!</a>
-
-                                <!-- Begin signature -->
-                                <!-- <div class="signature">
-                                    <img class="signature-dark" src="assets/img/signature-dark.png" alt="">
-                                    <img class="signature-light" src="assets/img/signature-light.png" alt="">
-                                </div> -->
-                                <!-- End signature -->
-
+                                <a href="{{ url('/about') }}" class="btn btn-primary margin-top-20">Read More</a>
                             </div>
                             <!-- End split box content -->
 
@@ -345,19 +306,7 @@
     </div> <!-- /.tt-intro-inner -->
 </section>
 <!-- End testimonials section -->
-
-
-<!-- ================================
-///// Begin latest news section /////
-================================= -->
 <section id="latest-news-section">
-
-    <!-- Begin tt-heading
-    ======================
-    * Use class "padding-on" to enable heading paddings (useful if you use tt-heading as stand alone element).
-    * Use class "text-center" or "text-right" to align tt-heading.
-    * Use classes "tt-heading-xs", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set tt-heading size.
-    -->
     <div class="tt-heading tt-heading-lg padding-on text-center">
         <div class="tt-heading-inner tt-wrap">
             <h1 class="tt-heading-title">Latest Feature of Nature</h1>
@@ -439,26 +388,22 @@
 <!-- End latest news section -->
 
 <!-- End about me section -->
-<div class="split-box">
+<div class="split-box" style="background-image: url({{asset('frontend') }}/assets/img/valley/Background.png); background-position: 50% 50%;">
     <div class="container-fluid">
         <div class="row">
             <div class="row-lg-height full-height-vh">
                 <!-- Column -->
                 <div class="col-lg-12 col-lg-height col-lg-middle no-padding">
-
                     <!-- Begin split box content -->
                     <div class="split-box-content" style="padding:0px 10%!important;">
-
-                        <!-- Begin contact form
+                        <!-- Bgin contact form
                         ========================= -->
                         <form id="contact-form">
                             <div class="contact-form-inner text-left">
-
                                 <div class="contact-form-info">
                                     <div class="tt-heading">
                                         <div class="tt-heading-inner">
-                                            <h1 class="tt-heading-title">SET AN ONLINE APPOINTMENT WITH US</h1>
-                                            <!-- <div class="tt-heading-subtitle">Subtitle Here</div> -->
+                                            <h1 class="tt-heading-title">Set an Online Appointment with us</h1>
                                             <hr class="hr-short">
                                         </div> <!-- /.tt-heading-inner -->
                                     </div>
@@ -469,7 +414,6 @@
                                     </div>
 
                                 </div> <!-- /.contact-form-info -->
-
                                 <!-- Begin hidden required fields (https://github.com/agragregra/uniMail) -->
                                 <input type="hidden" name="project_name" value="yourwebsiteaddress.com"> <!-- Change value to your site name -->
                                 <input type="hidden" name="admin_email" value="your@email.com"> <!-- Change value to your valid email address (where a message will be sent) -->

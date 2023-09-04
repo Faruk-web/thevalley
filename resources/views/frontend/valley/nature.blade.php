@@ -174,7 +174,7 @@
     </div> <!-- /.blog-list-inner -->
 </section>
 <!-- End blog list section -->
-<div class="split-box">
+<div class="split-box" style="background-image: url({{asset('frontend') }}/assets/img/valley/Background.png);">
     <div class="container-fluid">
         <div class="row">
             <div class="row-lg-height full-height-vh">

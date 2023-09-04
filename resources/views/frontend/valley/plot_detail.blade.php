@@ -76,20 +76,8 @@
 										<div class="sbi-height padding-height-85"></div>
 									</div> <!-- /.col -->
 									<!-- Column -->
-									<div class="col-lg-6 col-lg-height col-lg-middle no-padding">
-
-										<!-- Begin split box content
-										=============================
-										* Use class "shifted-left" or "shifted-right" to enable shifted content (do not use for long content).
-										-->
+									<div class="col-lg-6 col-lg-height col-lg-middle no-padding" style="background-image: url({{asset('frontend') }}/assets/img/valley/Background.png);">
 										<div class="split-box-content sb-content-right">
-
-											<!-- Begin tt-heading
-											======================
-											* Use class "padding-on" to enable heading paddings (useful if you use tt-heading as stand alone element).
-											* Use class "text-center" or "text-right" to align tt-heading.
-											* Use classes "tt-heading-xs", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set tt-heading size.
-											-->
 											<div class="tt-heading">
 												<div class="tt-heading-inner">
 													<h1 class="tt-heading-title">{{ $brand->brand_name_cats_eye }}</h1>
@@ -104,14 +92,6 @@
 
 												<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Vivamus at nibh tincidunt, bibendum ligula id. Nemo enim ipsam voluptatem quiatotam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas enimoa.</p>
 											</div>
-
-											<!-- Begin signature -->
-											<div class="signature">
-												<img class="signature-dark" src="{{ asset('frontend') }}/assets/img/signature-dark.png" alt="">
-												<img class="signature-light" src="{{ asset('frontend') }}/assets/img/signature-light.png" alt="">
-											</div>
-											<!-- End signature -->
-
 										</div>
 										<!-- End split box content -->
 
@@ -141,20 +121,8 @@
 									</div> <!-- /.col -->
 
 									<!-- Column -->
-									<div class="col-lg-6 col-lg-pull-6 col-lg-height col-lg-middle no-padding">
-
-										<!-- Begin split box content
-										=============================
-										* Use class "shifted-left" or "shifted-right" to enable shifted content (do not use for long content).
-										-->
+									<div class="col-lg-6 col-lg-pull-6 col-lg-height col-lg-middle no-padding" style="background-image: url({{asset('frontend') }}/assets/img/valley/Background.png);">
 										<div class="split-box-content sb-content-left">
-
-											<!-- Begin tt-heading
-											======================
-											* Use class "padding-on" to enable heading paddings (useful if you use tt-heading as stand alone element).
-											* Use class "text-center" or "text-right" to align tt-heading.
-											* Use classes "tt-heading-xs", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set tt-heading size.
-											-->
 											<div class="tt-heading">
 												<div class="tt-heading-inner">
 													<h1 class="tt-heading-title">{{ $plottype->frist_name }}</h1>
@@ -193,20 +161,8 @@
 										<div class="sbi-height padding-height-85"></div>
 									</div> <!-- /.col -->
 									<!-- Column -->
-									<div class="col-lg-6 col-lg-height col-lg-middle no-padding">
-
-										<!-- Begin split box content
-										=============================
-										* Use class "shifted-left" or "shifted-right" to enable shifted content (do not use for long content).
-										-->
+									<div class="col-lg-6 col-lg-height col-lg-middle no-padding" style="background-image: url({{asset('frontend') }}/assets/img/valley/Background.png);">
 										<div class="split-box-content sb-content-right">
-
-											<!-- Begin tt-heading
-											======================
-											* Use class "padding-on" to enable heading paddings (useful if you use tt-heading as stand alone element).
-											* Use class "text-center" or "text-right" to align tt-heading.
-											* Use classes "tt-heading-xs", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set tt-heading size.
-											-->
 											<div class="tt-heading">
 												<div class="tt-heading-inner">
 													<h1 class="tt-heading-title">{{ $plottype->sec_name }}</h1>
@@ -221,17 +177,8 @@
 
 												<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Vivamus at nibh tincidunt, bibendum ligula id. Nemo enim ipsam voluptatem quiatotam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas enimoa.</p>
 											</div>
-
-											<!-- Begin signature -->
-											<div class="signature">
-												<img class="signature-dark" src="{{ asset('frontend') }}/assets/img/signature-dark.png" alt="">
-												<img class="signature-light" src="{{ asset('frontend') }}/assets/img/signature-light.png" alt="">
-											</div>
-											<!-- End signature -->
-
 										</div>
 										<!-- End split box content -->
-
 									</div> <!-- /.col -->
 
 								</div> <!-- /.row-height -->
@@ -252,20 +199,8 @@
                                     </div> <!-- /.col -->
 
                                     <!-- Column -->
-                                    <div class="col-lg-6 col-lg-pull-6 col-lg-height col-lg-middle no-padding">
-
-                                        <!-- Begin split box content
-                                        =============================
-                                        * Use class "shifted-left" or "shifted-right" to enable shifted content (do not use for long content).
-                                        -->
+                                    <div class="col-lg-6 col-lg-pull-6 col-lg-height col-lg-middle no-padding" style="background-image: url({{asset('frontend') }}/assets/img/valley/Background.png);">
                                         <div class="split-box-content sb-content-left">
-
-                                            <!-- Begin tt-heading
-                                            ======================
-                                            * Use class "padding-on" to enable heading paddings (useful if you use tt-heading as stand alone element).
-                                            * Use class "text-center" or "text-right" to align tt-heading.
-                                            * Use classes "tt-heading-xs", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set tt-heading size.
-                                            -->
                                             <div class="tt-heading">
                                                 <div class="tt-heading-inner">
                                                     <h1 class="tt-heading-title">{{ $plottype->thi_name }}</h1>
@@ -305,20 +240,9 @@
 										<div class="sbi-height padding-height-85"></div>
 									</div> <!-- /.col -->
 									<!-- Column -->
-									<div class="col-lg-6 col-lg-height col-lg-middle no-padding">
-
-										<!-- Begin split box content
-										=============================
-										* Use class "shifted-left" or "shifted-right" to enable shifted content (do not use for long content).
-										-->
+									<div class="col-lg-6 col-lg-height col-lg-middle no-padding" style="background-image: url({{asset('frontend') }}/assets/img/valley/Background.png);">
 										<div class="split-box-content sb-content-right">
 
-											<!-- Begin tt-heading
-											======================
-											* Use class "padding-on" to enable heading paddings (useful if you use tt-heading as stand alone element).
-											* Use class "text-center" or "text-right" to align tt-heading.
-											* Use classes "tt-heading-xs", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set tt-heading size.
-											-->
 											<div class="tt-heading">
 												<div class="tt-heading-inner">
 													<h1 class="tt-heading-title">{{ $plottype->four_name }}</h1>
@@ -333,14 +257,6 @@
 
 												<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Vivamus at nibh tincidunt, bibendum ligula id. Nemo enim ipsam voluptatem quiatotam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas enimoa.</p>
 											</div>
-
-											<!-- Begin signature -->
-											<div class="signature">
-												<img class="signature-dark" src="{{ asset('frontend') }}/assets/img/signature-dark.png" alt="">
-												<img class="signature-light" src="{{ asset('frontend') }}/assets/img/signature-light.png" alt="">
-											</div>
-											<!-- End signature -->
-
 										</div>
 										<!-- End split box content -->
 
@@ -353,7 +269,7 @@
 				</div> <!-- /.about-me-inner -->
 			</section>
 			<!-- End about me section -->
-            <div class="split-box">
+            <div class="split-box" style="background-image: url({{asset('frontend') }}/assets/img/valley/Background.png);">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="row-lg-height full-height-vh">

@@ -92,6 +92,7 @@ class ComposerStaticInit836942e1b4cc4a33c925cf86b25d06a7
         ),
         'R' => 
         array (
+            'RenatoMarinho\\LaravelPageSpeed\\' => 31,
             'Ramsey\\Uuid\\' => 12,
             'Ramsey\\Collection\\' => 18,
         ),
@@ -344,6 +345,10 @@ class ComposerStaticInit836942e1b4cc4a33c925cf86b25d06a7
         'Sabberworm\\CSS\\' => 
         array (
             0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/src',
+        ),
+        'RenatoMarinho\\LaravelPageSpeed\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/renatomarinho/laravel-page-speed/src',
         ),
         'Ramsey\\Uuid\\' => 
         array (
@@ -650,6 +655,7 @@ class ComposerStaticInit836942e1b4cc4a33c925cf86b25d06a7
         'App\\Http\\Controllers\\Backend\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/Controller.php',
         'App\\Http\\Controllers\\Backend\\EmployeeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/EmployeeController.php',
         'App\\Http\\Controllers\\Backend\\EmployeeSalary' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/EmployeeSalary.php',
+        'App\\Http\\Controllers\\Backend\\GalleryController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/GalleryController.php',
         'App\\Http\\Controllers\\Backend\\LocationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/LocationController.php',
         'App\\Http\\Controllers\\Backend\\NewsController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/NewsController.php',
         'App\\Http\\Controllers\\Backend\\ProjectController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/ProjectController.php',
@@ -5265,6 +5271,17 @@ class ComposerStaticInit836942e1b4cc4a33c925cf86b25d06a7
         'Ramsey\\Uuid\\UuidInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidInterface.php',
         'Ramsey\\Uuid\\Validator\\GenericValidator' => __DIR__ . '/..' . '/ramsey/uuid/src/Validator/GenericValidator.php',
         'Ramsey\\Uuid\\Validator\\ValidatorInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/Validator/ValidatorInterface.php',
+        'RenatoMarinho\\LaravelPageSpeed\\Entities\\HtmlSpecs' => __DIR__ . '/..' . '/renatomarinho/laravel-page-speed/src/Entities/HtmlSpecs.php',
+        'RenatoMarinho\\LaravelPageSpeed\\Middleware\\CollapseWhitespace' => __DIR__ . '/..' . '/renatomarinho/laravel-page-speed/src/Middleware/CollapseWhitespace.php',
+        'RenatoMarinho\\LaravelPageSpeed\\Middleware\\DeferJavascript' => __DIR__ . '/..' . '/renatomarinho/laravel-page-speed/src/Middleware/DeferJavascript.php',
+        'RenatoMarinho\\LaravelPageSpeed\\Middleware\\ElideAttributes' => __DIR__ . '/..' . '/renatomarinho/laravel-page-speed/src/Middleware/ElideAttributes.php',
+        'RenatoMarinho\\LaravelPageSpeed\\Middleware\\InlineCss' => __DIR__ . '/..' . '/renatomarinho/laravel-page-speed/src/Middleware/InlineCss.php',
+        'RenatoMarinho\\LaravelPageSpeed\\Middleware\\InsertDNSPrefetch' => __DIR__ . '/..' . '/renatomarinho/laravel-page-speed/src/Middleware/InsertDNSPrefetch.php',
+        'RenatoMarinho\\LaravelPageSpeed\\Middleware\\PageSpeed' => __DIR__ . '/..' . '/renatomarinho/laravel-page-speed/src/Middleware/PageSpeed.php',
+        'RenatoMarinho\\LaravelPageSpeed\\Middleware\\RemoveComments' => __DIR__ . '/..' . '/renatomarinho/laravel-page-speed/src/Middleware/RemoveComments.php',
+        'RenatoMarinho\\LaravelPageSpeed\\Middleware\\RemoveQuotes' => __DIR__ . '/..' . '/renatomarinho/laravel-page-speed/src/Middleware/RemoveQuotes.php',
+        'RenatoMarinho\\LaravelPageSpeed\\Middleware\\TrimUrls' => __DIR__ . '/..' . '/renatomarinho/laravel-page-speed/src/Middleware/TrimUrls.php',
+        'RenatoMarinho\\LaravelPageSpeed\\ServiceProvider' => __DIR__ . '/..' . '/renatomarinho/laravel-page-speed/src/ServiceProvider.php',
         'ReturnTypeWillChange' => __DIR__ . '/..' . '/symfony/polyfill-php81/Resources/stubs/ReturnTypeWillChange.php',
         'Sabberworm\\CSS\\CSSList\\AtRuleBlockList' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/CSSList/AtRuleBlockList.php',
         'Sabberworm\\CSS\\CSSList\\CSSBlockList' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/CSSList/CSSBlockList.php',
